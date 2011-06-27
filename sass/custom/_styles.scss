@@ -17,7 +17,6 @@ body > header {
   background-color: $header-bg;
   @include transition(font-size, .5);
   $header-bg: darken($header-bg, 8);
-  //@include background(linear-gradient(darken($header-bg, 6), $header-bg .6, lighten($header-bg, 8) .6, lighten($header-bg, 25) .9));
   a.button {
     font-size: .75em;
     margin-top: 1em;
