@@ -23,6 +23,7 @@ repository is named `your_username.github.com` or `your_organization.github.com`
     git branch -m master source
     git push origin source
 
+*Due to the way Github user/organization pages work, you may get an email saying your site has been built. Ignore that for now. It's probably not true. Also, don't panic*
 
 Next, setup an [RVM](http://beginrescueend.com/) and install dependencies.
 
