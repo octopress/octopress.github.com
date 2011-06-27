@@ -124,12 +124,6 @@ desc "setup _deploy folder and deploy branch"
 task :config_deploy, :branch do |t, args|
   puts "!! Please provide a deploy branch, eg. rake init_deploy[gh-pages] !!" unless args.branch
   puts "## Creating a clean #{args.branch} branch in ./#{deploy_dir} for Github pages deployment"
-  cd "#{deploy_dir}" do
-    system "git symbolic-ref HEAD refs/heads/#{args.branch}"
-    system "rm .git/index"
-    system "git clean -fdx"
-    system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
-    system "git add ."
     system "git commit -m 'Octopress init'"
     rakefile = IO.read(__FILE__)
     rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3#{args.branch}\\3")
