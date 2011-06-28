@@ -4,29 +4,28 @@ destination: public
 code_dir: downloads/code
 port: 4000
 
-url: http://yoursite.com
-title: My Octopress Blog
+url: http://octopress.org
+title: Octopress
 permalink: /blog/:year/:month/:day/:title
 subtitle: A blogging framework for hackers.
-author: Your Name
+author: Brandon Mathis
 subscribe_rss: /atom.xml
 subscribe_email:
 
 markdown: rdiscount
 pygments: true
-#posts_per_page: 10
-paginate: 5
+paginate: 10
 recent_posts: 5
-category_dir: category
+category_dir: blog/category
 simple_search: http://google.com/search
 
 # Optional configurations
 
 # For RSS Feed
-email:
+email: brandon@imathis.com
 
 # Twitter
-twitter_user:
+twitter_user: imathis
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -42,7 +41,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: octopress
 
 # Google Analytics
 google_analytics_tracking_id:

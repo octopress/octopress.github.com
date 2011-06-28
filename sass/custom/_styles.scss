@@ -1,2 +1,90 @@
-// This File is imported last, and will override other styles in the cascade
-// Add styles here to make changes without digging in too much
+@include font-face("Bebas-Neue", font-files("bebasneue-web.woff", woff, "bebasneue-web.ttf", truetype, "bebasneue-web.svg#BebasNeueRegular", svg), $eot: "bebasneue-web.eot" );
+
+body > header h1 {
+  font-size: 2em;
+  font-family: "Bebas-Neue", serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 0.6667em;
+  a { font-family: inherit !important;}
+}
+
+
+body > header {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: $header-bg;
+  @include transition(font-size, .5);
+  $header-bg: darken($header-bg, 8);
+  //@include background(linear-gradient(darken($header-bg, 6), $header-bg .6, lighten($header-bg, 8) .6, lighten($header-bg, 25) .9));
+  a.button {
+    font-size: .75em;
+    margin-top: 1em;
+  }
+  hgroup {
+    position: relative;
+    left: -4.3em;
+    width: 21em;
+    padding: .5em 0;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    display: inline-block;
+    line-height: .8em;
+    font-size: 7em;
+    margin: 0;
+    position: relative;
+    text-shadow: rgba(#000, .8) 0 0 8px;
+    a, a:visited {
+      color: $title_color;
+      text-decoration: none;
+    }
+    &:after {
+      content: "";
+      @include replace-text-with-dimensions('octopress-2.png');
+      @include background-size(100%);
+      position: absolute;
+      right: -.8em;
+      top: -.15em;
+      @media only screen and (max-width: 992px) {
+        height: 1.6em;
+        width: 1.6em;
+      }
+    }
+  }
+  h2 {
+    margin: .3em 0 .3em;
+    @extend .sans;
+    font-size: 1.2em;
+    color: $subtitle-color;
+    position: relative; left: .3em;
+    text-shadow: $header-bg 0 1px 1px;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: .85em;
+    h2 { margin-bottom: 0; }
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: .7em;
+    hgroup {
+      left: auto; width: 100%;
+      text-align: center;
+      //padding-top: 3em;
+    }
+    h1 {
+      padding-bottom: 1.75em;
+      &:after {
+        height: image-height('octopress-2.png');
+        @include background-size(auto);
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: .1em;
+      }
+    }
+    h2 { font-size: 1.6em; position: relative; top: .4em; }
+  }
+}
+

@@ -4,7 +4,7 @@ require "bundler/setup"
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user      = "mathisweb@imathis.com"
-document_root = "~/dev.octopress.org/"
+document_root = "~/octopress.org/"
 
 ## -- Misc Configs, you probably have no reason to changes these -- ##
 
