@@ -3,12 +3,17 @@ require "bundler/setup"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
+<<<<<<< HEAD
 ssh_user       = "user@domain.com"
 document_root  = "~/website.com/"
 deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
+=======
+ssh_user      = "mathisweb@imathis.com"
+document_root = "~/octopress.org/"
+>>>>>>> added Octopress theme and setup config for deployment
 
 ## -- Misc Configs, you probably have no reason to changes these -- ##
 
