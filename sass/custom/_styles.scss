@@ -12,6 +12,7 @@ body > header h1 {
 
 
 body > header {
+  font-size: 1em;
   padding-top: 2em;
   padding-bottom: 2em;
   background-color: $header-bg;
@@ -42,15 +43,13 @@ body > header {
     }
     &:after {
       content: "";
-      @include replace-text-with-dimensions('octopress-2.png');
+      @include replace-text('octopress-2.png');
       @include background-size(100%);
       position: absolute;
       right: -.8em;
       top: -.15em;
-      @media only screen and (max-width: 992px) {
-        height: 1.6em;
-        width: 1.6em;
-      }
+      height: 1.6em;
+      width: 1.6em;
     }
   }
   h2 {
@@ -70,7 +69,6 @@ body > header {
     hgroup {
       left: auto; width: 100%;
       text-align: center;
-      //padding-top: 3em;
     }
     h1 {
       padding-bottom: 1.75em;
