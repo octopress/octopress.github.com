@@ -3,12 +3,12 @@ require "bundler/setup"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user      = "mathisweb@imathis.com"
-document_root = "~/octopress.org/"
-deploy_default = "push"
+ssh_user       = "user@domain.com"
+document_root  = "~/website.com/"
+deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "master"
+deploy_branch  = "gh-pages"
 
 ## -- Misc Configs, you probably have no reason to changes these -- ##
 
@@ -30,6 +30,15 @@ task :install, :theme do |t, args|
   system "mkdir -p sass; cp -R #{themes_dir}/"+theme+"/sass/ sass/"
   system "mkdir -p _plugins; cp -R #{themes_dir}/"+theme+"/_plugins/ _plugins/"
   system "mkdir -p #{source_dir}/#{posts_dir}";
+end
+
+desc "Move sass to _old_sass and copy over new theme, then copy customizations over into new sass theme"
+task :update_style, :theme do |t, args|
+  theme = args.theme || 'classic'
+  system "mv sass _old_sass"
+  puts "moved styles into _old_sass/"
+  system "mkdir -p sass; cp -R #{themes_dir}/"+theme+"/sass/ sass/"
+  system "cp -f _old_sass/custom/* sass/custom/"
 end
 
 #######################
@@ -124,6 +133,12 @@ desc "setup _deploy folder and deploy branch"
 task :config_deploy, :branch do |t, args|
   puts "!! Please provide a deploy branch, eg. rake init_deploy[gh-pages] !!" unless args.branch
   puts "## Creating a clean #{args.branch} branch in ./#{deploy_dir} for Github pages deployment"
+  cd "#{deploy_dir}" do
+    system "git symbolic-ref HEAD refs/heads/#{args.branch}"
+    system "rm .git/index"
+    system "git clean -fdx"
+    system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
+    system "git add ."
     system "git commit -m 'Octopress init'"
     rakefile = IO.read(__FILE__)
     rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3#{args.branch}\\3")
