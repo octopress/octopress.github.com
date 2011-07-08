@@ -21,7 +21,9 @@ recent_posts: 5
 category_dir: blog/categories
 simple_search: http://google.com/search
 
-# Optional configurations
+# ----------------------- #
+# Optional configurations #
+# ----------------------- #
 
 # RSS feeds can list your email address if you like
 email: brandon@imathis.com
