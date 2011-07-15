@@ -25,11 +25,15 @@ desc "Initial setup for Octopress: copies the default theme into the path of Jek
 task :install, :theme do |t, args|
   # copy theme into working Jekyll directories
   theme = args.theme || 'classic'
-  puts "## Copying "+theme+" theme into ./#{source_dir} ./sass and ./_plugins "
-  system "mkdir -p #{source_dir}; cp -R #{themes_dir}/"+theme+"/source/ #{source_dir}/"
-  system "mkdir -p sass; cp -R #{themes_dir}/"+theme+"/sass/ sass/"
-  system "mkdir -p _plugins; cp -R #{themes_dir}/"+theme+"/_plugins/ _plugins/"
-  system "mkdir -p #{source_dir}/#{posts_dir}";
+  puts "## Copying "+theme+" theme into ./#{source_dir} ./sass and ./plugins "
+  mkdir_p source_dir
+  cp_r "#{themes_dir}/#{theme}/source/.", source_dir
+  mkdir_p "sass"
+  cp_r "#{themes_dir}/#{theme}/sass/.", "sass"
+  mkdir_p "plugins"
+  cp_r "#{themes_dir}/#{theme}/plugins/.", "plugins"
+  mkdir_p "#{source_dir}/#{posts_dir}"
+  mkdir_p public_dir
 end
 
 desc "Move sass to _old_sass and copy over new theme, then copy customizations over into new sass theme"
@@ -147,6 +151,7 @@ task :config_deploy, :branch do |t, args|
       f.write rakefile
     end
   end
+  puts "## Deployment configured. Now you can deploy to the #{args.branch} branch with `rake deploy` ##"
 end
 
 def ok_failed(condition)
