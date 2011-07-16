@@ -1,86 +1,77 @@
 @include font-face("Bebas-Neue", font-files("bebasneue-web.woff", woff, "bebasneue-web.ttf", truetype, "bebasneue-web.svg#BebasNeueRegular", svg), $eot: "bebasneue-web.eot" );
 
 body > header h1 {
-  font-size: 2em;
   font-family: "Bebas-Neue", serif;
   text-transform: uppercase;
   font-weight: normal;
-  line-height: 1.2em;
-  margin-bottom: 0.6667em;
-  a { font-family: inherit !important;}
 }
 
 
 body > header {
-  font-size: 1em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background-color: $header-bg;
-  @include transition(font-size, .5);
-  $header-bg: darken($header-bg, 8);
-  a.button {
-    font-size: .75em;
-    margin-top: 1em;
-  }
+  font-size: .7em;
   hgroup {
+    text-align: center;
     position: relative;
-    left: -4.3em;
-    width: 21em;
     padding: .5em 0;
     margin: 0 auto;
   }
   h1 {
-    text-align: center;
-    display: inline-block;
-    line-height: .8em;
-    font-size: 7em;
-    margin: 0;
-    position: relative;
     text-shadow: rgba(#000, .8) 0 0 8px;
-    a, a:visited {
-      color: $title_color;
-      text-decoration: none;
-    }
+    font-size: 7em;
+    line-height: .8em;
+    position: relative;
+    padding-bottom: 1.75em;
+    margin: 0;
+    a:hover { color: #fff; }
     &:after {
       content: "";
+      position: absolute; left: 0; right: 0; top: .1em;
+      height: image-height('octopress-2.png');
       @include replace-text('octopress-2.png');
-      @include background-size(100%);
-      position: absolute;
-      right: -.8em;
-      top: -.15em;
-      height: 1.6em;
-      width: 1.6em;
     }
   }
   h2 {
-    margin: .3em 0 .3em;
-    @extend .sans;
-    font-size: 1.2em;
-    color: $subtitle-color;
-    position: relative; left: .3em;
-    text-shadow: $header-bg 0 1px 1px;
+    font-size: 1.6em;
+    position: relative; top: .4em;
   }
-  @media only screen and (max-width: 480px) {
-    font-size: .85em;
-    h2 { margin-bottom: 0; }
-  }
-  @media only screen and (max-width: 400px) {
-    font-size: .7em;
+  @media only screen and (min-width: 400px) {
+    font-size: .82em;
     hgroup {
-      left: auto; width: 100%;
-      text-align: center;
+      left: -3.7em;
+      width: 22em;
     }
-    h1 {
-      padding-bottom: 1.75em;
+    h1 { padding-bottom: 0;
       &:after {
-        height: image-height('octopress-2.png');
-        @include background-size(auto);
-        width: 100%;
-        left: 0;
-        right: 0;
-        top: .1em;
+        position: absolute; top: -.15em; right: -.8em; left: auto;
+        width: 1.6em;
+        height: 1.6em;
+        @include background-size(100%);
       }
     }
-    h2 { font-size: 1.6em; position: relative; top: .4em; }
+    h2 {
+      margin: 0 0 .3em;
+      @extend .sans;
+      font-size: 1.2em;
+      color: $subtitle-color;
+      position: relative; left: -1.6em; top: 0;
+      text-shadow: $header-bg 0 1px 1px;
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    font-size: .98em;
+    h2 { top: .4em; }
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 2em 0 1.5;
+    font-size: 1.2em;
+    hgroup { padding: 0 0 1em; }
+  }
+  @media only screen and (min-width: 990px) {
+    font-size: 1.1em;
+    h1:after {
+      width: image-width('octopress-2.png');
+      height: image-height('octopress-2.png');
+      //right: -.75em;
+    }
   }
 }

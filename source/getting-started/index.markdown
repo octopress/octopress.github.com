@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 no_meta: true
 title: Getting Started
 ---

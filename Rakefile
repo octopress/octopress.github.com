@@ -39,10 +39,19 @@ end
 desc "Move sass to _old_sass and copy over new theme, then copy customizations over into new sass theme"
 task :update_style, :theme do |t, args|
   theme = args.theme || 'classic'
-  system "mv sass _old_sass"
-  puts "moved styles into _old_sass/"
+  system "mv sass sass.old"
+  puts "moved styles into sass.old/"
   system "mkdir -p sass; cp -R #{themes_dir}/"+theme+"/sass/ sass/"
-  system "cp -f _old_sass/custom/* sass/custom/"
+  cp_r "sass.old/custom/.", "sass/custom"
+end
+desc "Move sass to _old_sass and copy over new theme, then copy customizations over into new sass theme"
+task :update_source, :theme do |t, args|
+  theme = args.theme || 'classic'
+  system "mv source source.old"
+  #puts "moved styles into sass.old/"
+  system "mkdir -p source; cp -R #{themes_dir}/"+theme+"/source/. source"
+  system "cp -Rn source.old/. source"
+  system "cp -f source.old/_includes/navigation.html source/_includes/navigation.html"
 end
 
 #######################
