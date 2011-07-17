@@ -1,18 +1,18 @@
 # Required configuration
 source: source
-destination: public
+destination: public/octopress
 plugins: plugins
 code_dir: downloads/code
 port: 4000
 
-url: http://octopress.org
+url: http://imathis.github.com/octopress
 title: Octopress
 permalink: /blog/:year/:month/:day/:title
 subtitle: A blogging framework for hackers.
 author: Brandon Mathis
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
+subscribe_rss: /octopress/atom.xml
 subscribe_email:
 
 markdown: rdiscount
@@ -29,7 +29,7 @@ simple_search: http://google.com/search
 # If publishing to a subdirectory as in http://site.com/project set this:
 # root: /project
 # If left blank, urls will be mapped to '/'
-root:
+root: /octopress
 
 # RSS feeds can list your email address if you like
 email: brandon@imathis.com

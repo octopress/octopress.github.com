@@ -5,14 +5,14 @@ require "bundler/setup"
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "mathisweb@octopress.org"
 document_root  = "~/octopress.org/"
-deploy_default = "rsync"
+deploy_default = "push"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
 
 ## -- Misc Configs, you probably have no reason to changes these -- ##
 
-public_dir  = "public"    # compiled site directory
+public_dir  = "public/octopress"    # compiled site directory
 source_dir  = "source"    # source file directory
 deploy_dir  = "_deploy"    # deploy directory (for Github pages deployment)
 stash_dir   = "_stash"    # directory to stash posts for speedy generation
@@ -40,19 +40,36 @@ desc "Move sass to _old_sass and copy over new theme, then copy customizations o
 task :update_style, :theme do |t, args|
   theme = args.theme || 'classic'
   system "mv sass sass.old"
-  puts "moved styles into sass.old/"
+  puts "## Moved styles into sass.old/"
   system "mkdir -p sass; cp -R #{themes_dir}/"+theme+"/sass/ sass/"
   cp_r "sass.old/custom/.", "sass/custom"
+  puts "## Updated Sass ##"
 end
-desc "Move sass to _old_sass and copy over new theme, then copy customizations over into new sass theme"
+
+desc "Move source to source.old and copy over new layouts, then copy files in source.old back into source (without overwriting)"
 task :update_source, :theme do |t, args|
   theme = args.theme || 'classic'
   system "mv source source.old"
-  #puts "moved styles into sass.old/"
+  puts "moved source into source.old/"
   system "mkdir -p source; cp -R #{themes_dir}/"+theme+"/source/. source"
   system "cp -Rn source.old/. source"
   system "cp -f source.old/_includes/navigation.html source/_includes/navigation.html"
+  puts "## Updated Source ##"
 end
+
+desc "Move plugins to plugins.old and copy over new layouts, then copy files in plugins.old back into plugins (without overwriting)"
+task :update_plugins, :theme do |t, args|
+  theme = args.theme || 'classic'
+  system "mv plugins plugins.old"
+  puts "moved plugins into plugins.old/"
+  system "mkdir -p plugins; cp -R #{themes_dir}/"+theme+"/plugins/. plugins"
+  system "cp -Rn plugins.old/. plugins"
+  puts "## Updated Plugins ##"
+end
+
+desc "Updates sass, source, and plugins to the latest code"
+[:generate, :start_serve, :watch]
+task :update_theme => [:update_sass, :update_source, :update_plugins]
 
 #######################
 # Working with Jekyll #
@@ -137,7 +154,7 @@ task :push do
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m '#{message}'"
     puts "\n## Pushing generated #{deploy_dir} website"
-    system "git push origin #{deploy_branch}"
+    system "git push origin #{deploy_branch} --force"
     puts "\n## Github Pages deploy complete"
   end
 end
@@ -145,22 +162,25 @@ end
 desc "setup _deploy folder and deploy branch"
 task :config_deploy, :branch do |t, args|
   puts "!! Please provide a deploy branch, eg. rake init_deploy[gh-pages] !!" unless args.branch
-  puts "## Creating a clean #{args.branch} branch in ./#{deploy_dir} for Github pages deployment"
-  cd "#{deploy_dir}" do
-    system "git symbolic-ref HEAD refs/heads/#{args.branch}"
-    system "rm .git/index"
-    system "git clean -fdx"
-    system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
-    system "git add ."
-    system "git commit -m 'Octopress init'"
-    rakefile = IO.read(__FILE__)
-    rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3#{args.branch}\\3")
-    rakefile.sub!(/deploy_default(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_default\\1=\\2\\3push\\3")
-    File.open(__FILE__, 'w') do |f|
-      f.write rakefile
+  system "git clone git@github.com:imathis/octopress.git _deploy"
+  if args.branch
+    puts "## Creating a clean #{args.branch} branch in ./#{deploy_dir} for Github pages deployment"
+    cd "#{deploy_dir}" do
+      system "git symbolic-ref HEAD refs/heads/#{args.branch}"
+      system "rm .git/index"
+      system "git clean -fdx"
+      system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
+      system "git add ."
+      system "git commit -m 'Octopress init'"
+      rakefile = IO.read(__FILE__)
+      rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3#{args.branch}\\3")
+      rakefile.sub!(/deploy_default(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_default\\1=\\2\\3push\\3")
+      File.open(__FILE__, 'w') do |f|
+        f.write rakefile
+      end
     end
+    puts "## Deployment configured. Now you can deploy to the #{args.branch} branch with `rake deploy` ##"
   end
-  puts "## Deployment configured. Now you can deploy to the #{args.branch} branch with `rake deploy` ##"
 end
 
 def ok_failed(condition)
