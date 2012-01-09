@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Octopress]]></title>
+  <link href="http://octopress.github.com/atom.xml" rel="self"/>
+  <link href="http://octopress.github.com/"/>
+  <updated>2012-01-09T00:07:52-06:00</updated>
+  <id>http://octopress.github.com/</id>
+  <author>
+    <name><![CDATA[Brandon Mathis]]></name>
+    <email><![CDATA[brandon@imathis.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress 2.0 Surfaces]]></title>
+    <link href="http://octopress.github.com/blog/2011/07/23/octopress-20-surfaces/"/>
+    <updated>2011-07-23T18:05:00-05:00</updated>
+    <id>http://octopress.github.com/blog/2011/07/23/octopress-20-surfaces</id>
+    <content type="html"><![CDATA[<p>Octopress is a framework designed by <a href="http://brandonmathis.com">Brandon Mathis</a> for <a href="http://github.com/mojombo/jekyll">Jekyll</a>, the blog aware static site generator powering <a href="http://pages.github.com">Github Pages</a>.
+To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
+All of that is already taken care of. Simply <a href="https://github.com/imathis/octopress">clone or fork Octopress</a>, install dependencies and the theme, and you&#8217;re set.</p>
+
+<h2>What&#8217;s new in 2.0?</h2>
+
+<p>Short answer: Everything. Octopress is now based on <a href="http://github.com/mojombo/jekyll">mojombo/jekyll</a> has been completely rewritten from the ground up with a mountain of goodies.</p>
+
+<p>Octopress comes with:</p>
+
+<ul>
+<li>A semantic HTML5 template</li>
+<li>A Mobile first responsive layout (rotate, or resize your browser and see)</li>
+<li>Built in 3rd party support for Twitter, Google Plus One, Disqus Comments, Pinboard, Delicious, and Google Analytics</li>
+<li>An easy deployment strategy using Github pages or Rsync</li>
+<li>Built in support for POW and Rack servers</li>
+<li>Easy theming with Compass and Sass</li>
+<li>A Beautiful <a href="http://ethanschoonover.com/solarized">Solarized</a> syntax highlighting</li>
+</ul>
+
+
+<p>Be sure to check out the <a href="http://octopress.github.com/docs">documentation</a> to get the full scoop.</p>
+
+<h3>Plugins FTW</h3>
+
+<p>Most of these plugins have been created just for Octopress, but a few come from the Jekyll community along with improvements and updates.</p>
+
+<ul>
+<li><a href="http://octopress.github.com/docs/plugins/video-tag">HTML5 Video Tag</a> - <em>easily post mp4 HTML5 video with flash player fallback</em></li>
+<li><a href="http://octopress.github.com/docs/plugins/codeblock">Code Block</a> - <em>for easy inline code sharing</em></li>
+<li><a href="http://octopress.github.com/docs/plugins/include-code">Include Code</a> - <em>embed code from your filesystem</em></li>
+<li><a href="http://octopress.github.com/docs/plugins/gist-tag">Gist Tag</a> - <em>automatically downloads and embeds Github gists</em></li>
+<li><a href="http://octopress.github.com/docs/plugins/image-tag">Image Tag</a> - <em>easily post images with class names and titles</em></li>
+<li><a href="http://octopress.github.com/docs/plugins/render-partial">Render Partial</a> - <em>insert any file into another post or page</em></li>
+<li><a href="http://octopress.github.com/docs/plugins/blockquote">Blockquote</a> - <em>generate beautiful, semantic block quotes</em></li>
+<li><a href="http://octopress.github.com/docs/plugins/pullquote">Pullquote</a> - <em>generate CSS only pull quotes &mdash; no duplicate data, no javascript</em></li>
+<li><a href="http://octopress.github.com/docs/plugins/category-generator">Category Generator</a> - <em>generates archive pages for each blog category</em></li>
+</ul>
+
+
+<p>For more plugins check out the <a href="http://octopress.github.com/docs/plugins">plugin list</a></p>
+
+<h2>Ready to Get Started?</h2>
+
+<p>Octopress is really easy to set up and deploy, <a href="http://octopress.github.com/docs/setup">start here</a>.</p>
+
+<p>For now that&#8217;s it. Check out the <a href="http://octopress.github.com/docs">docs</a>, <a href="http://github.com/imathis/octopress">kick the tires</a>, post <a href="http://github.com/imathis/octopress/issues">issues</a> send me <a href="http://convore.com/octopress/support">support requests</a> and tell all your friends.</p>
+
+<p>Oh, and if you like, follow <a href="http://twitter.com/octopress">@octopress</a> and <a href="http://twitter.com/imathis">@imathis</a> on Twitter.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress Setup - Octopress</title>
+  <meta name="author" content="Brandon Mathis">
+
+  
+  <meta name="description" content="Octopress Setup Jul 18th, 2011 First, I want to stress that Octopress is a blogging framework for hackers.
+You should be comfortable running shell &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://octopress.github.com/docs/setup">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml">
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:octopress.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul role=main-navigation>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/docs">Documentation</a></li>
+  <li><a href="/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Octopress Setup</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-18T00:00:00-05:00" pubdate data-updated="true">Jul 18<span>th</span>, 2011</time></p>
+  </header>
+  
+  <p>First, I want to stress that <strong>Octopress is a blogging framework for hackers</strong>.
+You should be comfortable running shell commands and familiar with the basics of Git.
+If that sounds daunting, Octopress probably isn&#8217;t for you.</p>
+
+<h2>Before You Begin</h2>
+
+<p>You&#8217;ll need to <a href="http://git-scm.com/">install Git</a> and set up your Ruby environment.
+<strong>Octopress requires Ruby 1.9.2</strong> wich you can easily install with <a href="http://rvm.beginrescueend.com">RVM</a> or <a href="https://github.com/sstephenson/rbenv">rbenv</a>.
+You can&#8217;t use both rbenv and RVM on the same system, as they are competing Ruby environment managers, so choose one.</p>
+
+<h3>Using RVM</h3>
+
+<p>If you don&#8217;t have RVM yet, <a href="/docs/setup/rvm">Install RVM</a> and then install Ruby 1.9.2.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm install 1.9.2 <span class="o">&amp;&amp;</span> rvm use 1.9.2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Using rbenv</h3>
+
+<p>If you don&#8217;t have rbenv yet, <a href="https://github.com/sstephenson/rbenv#section_2">Install rbenv</a> and <a href="https://github.com/sstephenson/ruby-build">install ruby-build</a>, then install Ruby 1.9.2.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rbenv install 1.9.2-p290
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Setup Octopress</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'><span class="nb">cd </span>octopress    <span class="c"># If you use RVM, You&#39;ll be asked if you trust the .rvmrc file (say yes).</span>
+</span><span class='line'>ruby --version  <span class="c"># Should report Ruby 1.9.2</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If <code>ruby --version</code> doesn&#8217;t say you&#8217;re using Ruby 1.9.2, you may want to <a href="/docs/setup/rvm">revisit your RVM installation</a>.</p>
+
+<p>Next, install dependencies.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>gem install bundler
+</span><span class='line'>rbenv rehash    <span class="c"># If you use rbenv, rehash to be able to run the bundle command</span>
+</span><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Install the default Octopress theme.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Next Steps</h2>
+
+<ul>
+<li><a href="/docs/deploying">Set up deployment</a></li>
+<li><a href="/docs/configuring">Configure your blog</a></li>
+<li><a href="/docs/blogging">Start blogging with Octopress</a></li>
+</ul>
+
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'octopress';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Deploying to Github Pages - Octopress</title>
+  <meta name="author" content="Brandon Mathis">
+
+  
+  <meta name="description" content="Deploying to Github Pages Sep 10th, 2011 With Github User/Organization pages Use this if you want to host a blog from http://username.github.com ( &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://octopress.github.com/docs/deploying/github">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml">
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:octopress.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul role=main-navigation>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/docs">Documentation</a></li>
+  <li><a href="/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Deploying to Github Pages</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-10T17:52:00-05:00" pubdate data-updated="true">Sep 10<span>th</span>, 2011</time></p>
+  </header>
+  
+  <h2>With Github User/Organization pages</h2>
+
+<p>Use this if you want to host a blog from <code>http://username.github.com</code> (though you can also use <a href="#custom_domains">custom domains</a>).</p>
+
+<p>Create a <a href="https://github.com/repositories/new">new Github repository</a> and name the repository with your user name or organization name <code>username.github.com</code> or <code>organization.github.com</code>.</p>
+
+<p>Github Pages for users and organizations uses the master branch like the public directory on a web server, serving up the files at your Pages url <code>http://username.github.com</code>.
+As a result, you&#8217;ll want to work on the source for your blog in the source branch and commit <em>the generated content</em> to the master branch. Octopress has a configuration task that helps you set all this up.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake setup_github_pages
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will:</p>
+
+<ol>
+<li>Ask you for your Github Pages repository url.</li>
+<li>Rename the remote pointing to imathis/octopress from &#8216;origin&#8217; to &#8216;octopress&#8217;</li>
+<li>Add your Github Pages repository as the default origin remote.</li>
+<li>Switch the active branch from master to source.</li>
+<li>Configure your blog&#8217;s url according to your repository.</li>
+<li>Setup a master branch in the _deploy directory for deployment.</li>
+</ol>
+
+
+<p>Next run:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate
+</span><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will generate your blog, copy the generated files into <code>_deploy/</code>, add them to git, commit and push them up to the master branch. In a few seconds you should get an email
+from Github telling you that your commit has been received and will be published on your site.</p>
+
+<p><strong>Don&#8217;t forget</strong> to commit the source for your blog.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s1">&#39;your message&#39;</span>
+</span><span class='line'>git push origin <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Note:</strong> With new repositories, Github sets the default branch based on the branch you push first, and it looks there for the generated site content.
+If you&#8217;re having trouble getting Github to publish your site, go to the admin panel for your repository and make sure that the master branch is the default branch.</p>
+
+<h2>With Github Project pages (gh-pages)</h2>
+
+<p>Github&#8217;s Project Pages service allows you to host a site for your existing open source project.
+Github will look for a <code>gh-pages</code> branch in your project&#8217;s repository and make the contents available at url like <code>http://username.github.com/project</code>.</p>
+
+<p>Here&#8217;s now you can set up Octopress site to publish to your projects gh-pages repository:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake setup_github_pages
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will:</p>
+
+<ol>
+<li>Ask you for the repository url for your project.</li>
+<li>Rename the remote pointing to imathis/octopress from &#8216;origin&#8217; to &#8216;octopress&#8217;</li>
+<li>Configure your blog for deploying to a subdirectory.</li>
+<li>Set up a gh-pages branch for your project in the _deploy directory, ready for deployment.</li>
+</ol>
+
+
+<p>Next run:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate
+</span><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will generate your blog, copy the generated files into <code>_deploy/</code>, add them to git, commit and push them up to the master branch. In a few seconds you should get an email
+from Github telling you that your commit has been received and will be published on your site.</p>
+
+<p>Now you have a place to commit the generated content for your site, but you should also set up repository to store the source for your blog.
+After you set up a repository for your blog source, add it as the origin remote.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git remote add origin <span class="o">(</span>your repo url<span class="o">)</span>
+</span><span class='line'><span class="c"># set your new origin as the default branch</span>
+</span><span class='line'>git config branch.master.remote origin
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now push your changes and you&#8217;ll be all set.</p>
+
+<h2 id="custom_domains">Custom Domains</h2>
+
+
+<p>First you&#8217;ll need to create a file named <code>CNAME</code> in the source containing your domain name.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;your-domain.com&#39;</span> &gt;&gt; <span class="nb">source</span>/CNAME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>From <a href="http://pages.github.com">Github&#8217;s Pages guide</a>:<br>
+Next, you’ll need to visit your domain registrar or DNS host and add a record for your domain name.
+For a sub-domain like <code>www.example.com</code> you would simply create a CNAME record pointing at <code>charlie.github.com</code>.
+If you are using a top-level domain like <code>example.com</code>, you must use an A record pointing to <code>207.97.227.245</code>.
+<em>Do not use a CNAME record with a top-level domain</em> it can have adverse side effects on other services like email.
+Many DNS services will let you set a CNAME on a TLD, even though you shouldn’t. Remember that it may take up to a full day for DNS changes to propagate, so be patient.</p>
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'octopress';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
