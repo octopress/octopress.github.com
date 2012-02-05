@@ -2,154 +2,154 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://octopress.github.com/blog/2011/07/23/octopress-20-surfaces/</loc>
-        <lastmod>2011-12-30T10:52:39-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/blog/archives/</loc>
-        <lastmod>2011-12-30T10:52:39-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/blogging/code/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/blogging/code/test/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/blogging/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/blogging/plugins/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/configuring/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/deploying/github/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/deploying/heroku/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/deploying/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/deploying/rsync/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/deploying/subdir/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/backtick-codeblock/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/blockquote/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/category-generator/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/codeblock/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/gist-tag/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/image-tag/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/include-array/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/include-code/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/jsfiddle-tag/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/pullquote/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/render-partial/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/plugins/video-tag/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/setup/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/setup/rvm/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-05T17:03:16-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/theme/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/theme/styles/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/theme/template/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/docs/updating/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/help/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/</loc>
-        <lastmod>2011-12-30T10:52:39-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/test/code/markdown/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/test/code/textile/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/test/haml/</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.github.com/test/video.html</loc>
-        <lastmod>2011-12-30T10:02:44-06:00</lastmod>
+        <lastmod>2012-02-01T17:16:56-06:00</lastmod>
     </url>
 </urlset>
