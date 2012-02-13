@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: release | Octopress]]></title>
-  <link href="http://octopress.github.com/blog/categories/release/atom.xml" rel="self"/>
-  <link href="http://octopress.github.com/"/>
-  <updated>2012-02-05T17:12:33-06:00</updated>
-  <id>http://octopress.github.com/</id>
+  <link href="http://octopress.org/blog/categories/release/atom.xml" rel="self"/>
+  <link href="http://octopress.org/"/>
+  <updated>2012-02-12T18:11:55-06:00</updated>
+  <id>http://octopress.org/</id>
   <author>
     <name><![CDATA[Brandon Mathis]]></name>
     <email><![CDATA[brandon@imathis.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Octopress 2.0 Surfaces]]></title>
-    <link href="http://octopress.github.com/blog/2011/07/23/octopress-20-surfaces/"/>
+    <link href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/"/>
     <updated>2011-07-23T18:05:00-05:00</updated>
-    <id>http://octopress.github.com/blog/2011/07/23/octopress-20-surfaces</id>
+    <id>http://octopress.org/blog/2011/07/23/octopress-20-surfaces</id>
     <content type="html"><![CDATA[<p>Octopress is a framework designed by <a href="http://brandonmathis.com">Brandon Mathis</a> for <a href="http://github.com/mojombo/jekyll">Jekyll</a>, the blog aware static site generator powering <a href="http://pages.github.com">Github Pages</a>.
 To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
 All of that is already taken care of. Simply <a href="https://github.com/imathis/octopress">clone or fork Octopress</a>, install dependencies and the theme, and you're set.</p>
