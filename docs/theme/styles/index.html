@@ -119,11 +119,35 @@ To customize your color scheme edit <code>sass/custom/_colors.scss</code> and ov
 
 <p>The official Octopress site is using the default &#8216;classic&#8217; theme with a few minor color changes to the custom colors file. Take a look at this file and you&#8217;ll see some lines of sass code that have been commented out.</p>
 
-<p>Liquid error: undefined method `join&#8217; for #&lt;String:0x007fcd392d00b0></p>
+<figure class='code'><figcaption><span>Custom Colors (sass/custom/_colors.scss)</span><a href='https://github.com/imathis/octopress/tree/master/.themes/classic/sass/custom/_colors.scss'>View on Github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="na">$header-bg</span><span class="o">:</span> <span class="mh">#263347</span><span class="p">;</span>
+</span><span class='line'><span class="na">$subtitle-color</span><span class="o">:</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$header-bg</span><span class="o">,</span> <span class="mi">58</span><span class="p">);</span>
+</span><span class='line'><span class="na">$nav-bg</span><span class="o">:</span> <span class="nf">desaturate</span><span class="p">(</span><span class="nf">lighten</span><span class="p">(</span><span class="mh">#8fc17a</span><span class="o">,</span> <span class="mi">18</span><span class="p">)</span><span class="o">,</span> <span class="mi">5</span><span class="p">);</span>
+</span><span class='line'><span class="na">$sidebar-bg</span><span class="o">:</span> <span class="nf">desaturate</span><span class="p">(</span><span class="mh">#eceff5</span><span class="o">,</span> <span class="mi">8</span><span class="p">);</span>
+</span><span class='line'><span class="na">$sidebar-link-color</span><span class="o">:</span> <span class="nf">saturate</span><span class="p">(</span><span class="mh">#526f9a</span><span class="o">,</span> <span class="mi">10</span><span class="p">);</span>
+</span><span class='line'><span class="na">$sidebar-link-color-hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="mh">#7ab662</span><span class="o">,</span> <span class="mi">9</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>The custom colors file has some commented out colors you can use. The theme file is broken up into sections to make it easier to read through. Here&#8217;s a look at the navigation section of <code>sass/base/_theme.scss</code>.</p>
 
-<p>Liquid error: undefined method `join&#8217; for #&lt;String:0x007fcd392ccca8></p>
+<figure class='code'><figcaption><span>Navigation (sass/base/_theme.scss)</span><a href='https://github.com/imathis/octopress/tree/master/.themes/classic/sass/base/_theme.scss'>View on Github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="cm">/* Navigation */</span>
+</span><span class='line'><span class="na">$nav-bg</span><span class="o">:</span> <span class="mh">#ccc</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'><span class="na">$nav-color</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$nav-bg</span><span class="o">,</span> <span class="mi">38</span><span class="p">)</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'><span class="na">$nav-color-hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$nav-color</span><span class="o">,</span> <span class="mi">25</span><span class="p">)</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'><span class="nc">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>The <code>!default</code> rule lets the variable be overridden if it is defined beforehand.
 is imported before the <code>_theme.scss</code> it can predefine these colors easily. There are comments to help out with this in the
@@ -146,7 +170,38 @@ _layout.scss     # Override settings for base/_layout.scss to change the layout
 <p>Just like with colors, widths in <code>/sass/base/_layout.scss</code> are defined like <code>$max-width: 1200px !default;</code> and can be easily customized
 by defining them in <code>sass/custom/_layout.scss</code>. Here&#8217;s a look at the layout defaults.</p>
 
-<p>Liquid error: undefined method `join&#8217; for #&lt;String:0x007fcd392b13e0></p>
+<figure class='code'><figcaption><span>Layout Defaults (_layout.scss)</span><a href='https://github.com/imathis/octopress/tree/master/.themes/classic/sass/base/_layout.scss'>view on Github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="na">$max-width</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Padding used for layout margins</span>
+</span><span class='line'><span class="na">$pad-min</span><span class="o">:</span> <span class="mi">18</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'><span class="na">$pad-narrow</span><span class="o">:</span> <span class="mi">25</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'><span class="na">$pad-medium</span><span class="o">:</span> <span class="mi">35</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'><span class="na">$pad-wide</span><span class="o">:</span> <span class="mi">55</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Sidebar widths used in media queries</span>
+</span><span class='line'><span class="na">$sidebar-width-medium</span><span class="o">:</span> <span class="mi">240</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'><span class="na">$sidebar-pad-medium</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'><span class="na">$sidebar-pad-wide</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'><span class="na">$sidebar-width-wide</span><span class="o">:</span> <span class="mi">300</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="na">$indented-lists</span><span class="o">:</span> <span class="n-Pseudo">false</span> <span class="nv">!default</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>These variables are used to calculate the width and padding for the responsive layouts. The <code>$indented-lists</code> variable allows you to
 choose if you prefer indented or normal lists.</p>
