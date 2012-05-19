@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
   <title><![CDATA[Octopress]]></title>
   <link href="http://octopress.org/atom.xml" rel="self"/>
   <link href="http://octopress.org/"/>
-  <updated>2012-02-19T15:53:19-06:00</updated>
+  <updated>2012-05-19T17:58:04-05:00</updated>
   <id>http://octopress.org/</id>
   <author>
     <name><![CDATA[Brandon Mathis]]></name>
@@ -13,12 +12,18 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <entry>
-    <title type="html"><![CDATA[Octopress 2.0 Surfaces]]></title>
-    <link href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/"/>
-    <updated>2011-07-23T18:05:00-05:00</updated>
-    <id>http://octopress.org/blog/2011/07/23/octopress-20-surfaces</id>
-    <content type="html"><![CDATA[<p>Octopress is a framework designed by <a href="http://brandonmathis.com">Brandon Mathis</a> for <a href="http://github.com/mojombo/jekyll">Jekyll</a>, the blog aware static site generator powering <a href="http://pages.github.com">Github Pages</a>.
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Octopress 2.0 Surfaces]]></title>
+<link href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/"/>
+<updated>2011-07-23T18:05:00-05:00</updated>
+<id>http://octopress.org/blog/2011/07/23/octopress-20-surfaces</id>
+
+      <content type="html"><![CDATA[<p>Octopress is a framework designed by <a href="http://brandonmathis.com">Brandon Mathis</a> for <a href="http://github.com/mojombo/jekyll">Jekyll</a>, the blog aware static site generator powering <a href="http://pages.github.com">Github Pages</a>.
 To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
 All of that is already taken care of. Simply <a href="https://github.com/imathis/octopress">clone or fork Octopress</a>, install dependencies and the theme, and you&#8217;re set.</p>
 
@@ -67,7 +72,7 @@ All of that is already taken care of. Simply <a href="https://github.com/imathis
 <p>For now that&#8217;s it. Check out the <a href="http://octopress.org/docs">docs</a>, <a href="http://github.com/imathis/octopress">kick the tires</a>, post <a href="http://github.com/imathis/octopress/issues">issues</a> send me <a href="http://convore.com/octopress/support">support requests</a> and tell all your friends.</p>
 
 <p>Oh, and if you like, follow <a href="http://twitter.com/octopress">@octopress</a> and <a href="http://twitter.com/imathis">@imathis</a> on Twitter.</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
 </feed>
