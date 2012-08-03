@@ -137,18 +137,20 @@ which tells Jekyll how to processes posts and pages.</p>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
+<span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
 </span><span class='line'><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">post</span>
 </span><span class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Zombie</span><span class="nv"> </span><span class="s">Ninjas</span><span class="nv"> </span><span class="s">Attack:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">survivor&#39;s</span><span class="nv"> </span><span class="s">retrospective&quot;</span>
 </span><span class='line'><span class="l-Scalar-Plain">date</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2011-07-03 5:59</span>
 </span><span class='line'><span class="l-Scalar-Plain">comments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class='line'><span class="l-Scalar-Plain">external-url</span><span class="p-Indicator">:</span>
 </span><span class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span>
 </span><span class='line'><span class="nn">---</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>Here you can turn comments off and or categories to your post. If you are working on a multi-author blog, you can add <code>author: Your Name</code> to the
-metadata for proper attribution on a post. If you are working on a draft, you can add <code>published: false</code> to prevent it from being posted when you generate your blog.</p>
+metadata for proper attribution on a post. If you are working on a draft, you can add <code>published: false</code> to prevent it from being posted when you generate your blog. If you want to publish a <a href="/docs/blogging/linklog">linklog</a> style post (blog entries point to external urls), simply add an external-url to your post.</p>
 
 <p>You can add a single category or multiple categories like this.</p>
 

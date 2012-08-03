@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Installing Ruby with RVM - Octopress</title>
+  <title>Installing Ruby with Rbenv - Octopress</title>
   <meta name="author" content="Brandon Mathis">
 
   
-  <meta name="description" content="Installing Ruby With RVM Jul 31st, 2012 RVM (Ruby Version Manager) handles the installation and management of multiple Ruby environments. Ruby 1.9.3 &hellip;">
+  <meta name="description" content="Installing Ruby With Rbenv Jul 31st, 2012 Rbenv handles the installation and management of multiple Ruby environments. Ruby 1.9.3 is required for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://octopress.org/docs/setup/rvm">
+  <link rel="canonical" href="http://octopress.org/docs/setup/rbenv">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +80,7 @@
 <article role="article">
   
   <header>
-    <h1 class="entry-title">Installing Ruby With RVM</h1>
+    <h1 class="entry-title">Installing Ruby With Rbenv</h1>
     <p class="meta">
 
 
@@ -96,18 +96,41 @@
 <time datetime="2012-07-31T00:00:00-05:00" pubdate data-updated="true">Jul 31<span>st</span>, 2012</time></p>
   </header>
   
-  <p>RVM (Ruby Version Manager) handles the installation and management of multiple Ruby environments. Ruby 1.9.3 is required for Octopress and using RVM you can install it with ease.</p>
+  <p>Rbenv handles the installation and management of multiple Ruby environments. Ruby 1.9.3 is required for Octopress and using rbenv you can install it with ease.</p>
 
-<h2>Install RVM</h2>
+<h2>Standard Rbenv Installation</h2>
 
-<p>Run the following command from your terminal.</p>
+<p>The standard method for installing rbenv uses Git. From your terminal, run the following commands:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>curl -L https://get.rvm.io | bash -s stable --ruby
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">cd</span>
+</span><span class='line'>git clone git://github.com/sstephenson/rbenv.git .rbenv
+</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+</span><span class='line'>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plgs/ruby-build
+</span><span class='line'><span class="nb">source</span> ~/.bash_profile
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Be sure to follow any subsequent instructions as guided by the installation process.</p>
+<p><strong>Zsh users:</strong> In the instructions above substitute <code>~/.bash_profile</code> with <code>~/.zshenv</code>.</p>
+
+<h2>Alternate Installation Using Homebrew</h2>
+
+<p>If you use Homebrew on Mac OS X you may prefer to install rbenv like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>brew update
+</span><span class='line'>brew install rbenv
+</span><span class='line'>brew install ruby-build
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>Install Ruby 1.9.3</h2>
 
@@ -115,14 +138,12 @@
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm install 1.9.3
-</span><span class='line'>rvm use 1.9.3
-</span><span class='line'>rvm rubygems latest
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rbenv install 1.9.3-p0
+</span><span class='line'>rbenv rehash
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Run <code>ruby --version</code> to be sure you&#8217;re using Ruby 1.9.3. If you&#8217;re having trouble, <a href="https://rvm.io/support">seek help here</a>.</p>
+<p>Run <code>ruby --version</code> to be sure you&#8217;re using Ruby 1.9.3. If you&#8217;re having trouble, <a href="https://github.com/sstephenson/rbenv/issues">seek help here</a></p>
 
 <p><a href="/docs/setup">&larr; Return to setup</a></p>
 

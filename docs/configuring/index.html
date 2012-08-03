@@ -130,14 +130,18 @@ Here&#8217;s a list of files for configuring Octopress.</p>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
 </pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span>                <span class="c1"># For rewriting urls for RSS, etc</span>
 </span><span class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span>              <span class="c1"># Used in the header and title tags</span>
 </span><span class='line'><span class="l-Scalar-Plain">subtitle</span><span class="p-Indicator">:</span>           <span class="c1"># A description used in the header</span>
 </span><span class='line'><span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>             <span class="c1"># Your name, for RSS, Copyright, Metadata</span>
 </span><span class='line'><span class="l-Scalar-Plain">simple_search</span><span class="p-Indicator">:</span>      <span class="c1"># Search engine for simple site search</span>
 </span><span class='line'><span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span>        <span class="c1"># A default meta description for your site</span>
+</span><span class='line'><span class="l-Scalar-Plain">date_format</span><span class="p-Indicator">:</span>        <span class="c1"># Format dates using Ruby&#39;s date strftime syntax</span>
 </span><span class='line'><span class="l-Scalar-Plain">subscribe_rss</span><span class="p-Indicator">:</span>      <span class="c1"># Url for your blog&#39;s feed, defauts to /atom.xml</span>
 </span><span class='line'><span class="l-Scalar-Plain">subscribe_email</span><span class="p-Indicator">:</span>    <span class="c1"># Url to subscribe by email (service required)</span>
+</span><span class='line'><span class="l-Scalar-Plain">category_feeds</span><span class="p-Indicator">:</span>     <span class="c1"># Enable per category RSS feeds (defaults to false in 2.1)</span>
 </span><span class='line'><span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span>              <span class="c1"># Email address for the RSS feed if you want it.</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -197,12 +201,14 @@ If you want to publish your site to a subdirectory, <a href="/docs/deploying/sub
 <p>These third party integrations are already set up for you. Simply fill in the configurations and they&#8217;ll be added to your site.</p>
 
 <ul>
+<li><strong>Github</strong> - <em>List your github repositories in the sidebar</em></li>
 <li><strong>Twitter</strong> - <em>Setup a sidebar twitter feed, follow button, and tweet button (for sharing posts and pages).</em></li>
 <li><strong>Google Plus One</strong> - <em>Setup sharing for posts and pages on Google&#8217;s plus one network.</em></li>
 <li><strong>Pinboard</strong> - <em>Share your recent Pinboard bookmarks in the sidebar.</em></li>
 <li><strong>Delicious</strong> - <em>Share your recent Delicious bookmarks in the sidebar.</em></li>
 <li><strong>Disqus Comments</strong> - <em>Add your disqus short name to enable disqus comments on your site.</em></li>
 <li><strong>Google Analytics</strong> - <em>Add your tracking id to enable Google Analytics tracking for your site.</em></li>
+<li><strong>Facebook</strong> - <em>Add a Facebook like button</em></li>
 </ul>
 
 

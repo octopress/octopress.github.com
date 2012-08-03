@@ -245,13 +245,13 @@
 </span><span class='line'>
 </span><span class='line'><span class="k">@synthesize</span> <span class="n">window</span><span class="p">,</span><span class="n">siteUrl</span><span class="p">,</span><span class="n">pageContents</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">applicationDidFinishLaunching:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="n">aNotification</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationDidFinishLaunching:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="c1">// Insert code here to initialize your application</span>
 </span><span class='line'>    <span class="n">model</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Cocoa1Model</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">getSiteContents:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">getSiteContents:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
 </span><span class='line'>    <span class="p">[</span><span class="n">model</span> <span class="nl">setPageUrl:</span><span class="p">[</span><span class="n">siteUrl</span> <span class="n">stringValue</span><span class="p">]];</span>
 </span><span class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">reply</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span> <span class="n">getUrlAsString</span><span class="p">];</span>
 </span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;pageSrc: %@&quot;</span><span class="p">,</span> <span class="n">reply</span><span class="p">);</span>

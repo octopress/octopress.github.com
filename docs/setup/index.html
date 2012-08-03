@@ -103,27 +103,13 @@ If that sounds daunting, Octopress probably isn&#8217;t for you.</p>
 
 <h2>Before You Begin</h2>
 
-<p>You&#8217;ll need to <a href="http://git-scm.com/">install Git</a> and set up your Ruby environment.
-<strong>Octopress requires Ruby 1.9.2</strong> wich you can easily install with <a href="http://rvm.beginrescueend.com">RVM</a> or <a href="https://github.com/sstephenson/rbenv">rbenv</a>.
-You can&#8217;t use both rbenv and RVM on the same system, as they are competing Ruby environment managers, so choose one.</p>
-
-<h3>Using RVM</h3>
-
-<p>If you don&#8217;t have RVM yet, <a href="/docs/setup/rvm">Install RVM</a> and then install Ruby 1.9.2.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm install 1.9.2 <span class="o">&amp;&amp;</span> rvm use 1.9.2
-</span></code></pre></td></tr></table></div></figure>
+<ol>
+<li><a href="http://git-scm.com/">Install Git</a>.</li>
+<li>Install Ruby 1.9.3 using either <a href="/docs/setup/rbenv">rbenv</a> or <a href="/docs/setup/rvm">RVM</a>.</li>
+</ol>
 
 
-<h3>Using rbenv</h3>
-
-<p>If you don&#8217;t have rbenv yet, <a href="https://github.com/sstephenson/rbenv#section_2">Install rbenv</a> and <a href="https://github.com/sstephenson/ruby-build">install ruby-build</a>, then install Ruby 1.9.2.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rbenv install 1.9.2-p290
-</span></code></pre></td></tr></table></div></figure>
-
+<p>If <code>ruby --version</code> doesn&#8217;t say you&#8217;re using Ruby 1.9.3, revisit your <a href="/docs/setup/rbenv">rbenv</a> or <a href="/docs/setup/rvm">RVM</a> installation.</p>
 
 <h2>Setup Octopress</h2>
 
@@ -132,11 +118,9 @@ You can&#8217;t use both rbenv and RVM on the same system, as they are competing
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'>git clone git://github.com/imathis/octopress.git octopress
 </span><span class='line'><span class="nb">cd </span>octopress    <span class="c"># If you use RVM, You&#39;ll be asked if you trust the .rvmrc file (say yes).</span>
-</span><span class='line'>ruby --version  <span class="c"># Should report Ruby 1.9.2</span>
+</span><span class='line'>ruby --version  <span class="c"># Should report Ruby 1.9.3</span>
 </span></code></pre></td></tr></table></div></figure>
 
-
-<p>If <code>ruby --version</code> doesn&#8217;t say you&#8217;re using Ruby 1.9.2, you may want to <a href="/docs/setup/rvm">revisit your RVM installation</a>.</p>
 
 <p>Next, install dependencies.</p>
 
