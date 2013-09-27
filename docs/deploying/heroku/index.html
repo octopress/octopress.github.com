@@ -7,9 +7,9 @@
   <meta charset="utf-8">
   <title>Using Octopress with Heroku - Octopress</title>
   <meta name="author" content="Brandon Mathis">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
   
-  <meta name="description" content="Using Octopress With Heroku Sep 10th, 2011 If you don&#8217;t already have a Heroku account, create one, it&#8217;s free. Then install the Heroku &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,14 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://octopress.org/docs/deploying/heroku">
-  <link href="/favicon.png" rel="icon">
+  <link rel="canonical" href="http://octopress.org/docs/deploying/heroku/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml">
-  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+  
+
+<!--Fonts from Google's Web font directory at http://google.com/webfonts -->
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 
@@ -43,6 +42,8 @@
   </script>
 
 
+   
+  <link href="/octopress-favicon.png" rel="icon">
 </head>
 
 <body   class="no-sidebar"  >
@@ -93,40 +94,33 @@
   
 
 
-<time datetime="2011-09-10T17:58:00-05:00" pubdate data-updated="true">Sep 10<span>th</span>, 2011</time></p>
+<time datetime="2011-09-10T17:58:00-04:00" pubdate data-updated="true">Sep 10<span>th</span>, 2011</time></p>
   </header>
   
-  <p>If you don&#8217;t already have a Heroku account, <a href="https://api.heroku.com/signup">create one</a>, it&#8217;s free. Then install the Heroku gem.</p>
+  <p>If you don&#39;t already have a Heroku account, <a href="https://api.heroku.com/signup">create one</a>, it&#39;s free. Then install the Heroku gem.</p>
 
 <h2>Basic Octopress setup</h2>
 
-<p>First make sure you&#8217;ve installed the Heroku gem</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>gem install heroku
-</span></code></pre></td></tr></table></div></figure>
-
+<p>First make sure you&#39;ve installed the <a href="https://toolbelt.heroku.com/">Heroku toolbelt</a>. (Note: the <code>heroku</code> gem is deprecated.)</p>
 
 <p>Next create a heroku app for deployment. If this is your first time using Heroku, this command will ask for your account credentials,
-and automatically upload your public SSH key. If you don&#8217;t already have a public key follow <a href="http://help.github.com/set-up-git-redirect/">Github&#8217;s guide and create one</a>.</p>
+and automatically upload your public SSH key. If you don&#39;t already have a public key follow <a href="http://help.github.com/set-up-git-redirect/">Github&#39;s guide and create one</a>.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'>heroku create
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
 
+<p>This will create a new Heroku app for you to deploy to and add a git remote named &#39;heroku&#39;.</p>
 
-<p>This will create a new Heroku app for you to deploy to and add a git remote named &#8216;heroku&#8217;.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># Set heroku to be the default remote for push/fetch</span>
 </span><span class='line'>git config branch.master.remote heroku
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
 
 <p>Edit the <code>.gitignore</code> in the root of your repository and remove <code>public</code>. This will let you add generated content for deploying it to Heroku.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -134,13 +128,14 @@ and automatically upload your public SSH key. If you don&#8217;t already have a 
 </span><span class='line'>git add .
 </span><span class='line'>git commit -m <span class="s1">&#39;site updated&#39;</span>
 </span><span class='line'>git push heroku master
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
 
-
-<p>That&#8217;s it, you just deployed to Heroku. If you want to set up a custom domain check out the <a href="http://devcenter.heroku.com/articles/custom-domains">docs at Heroku</a>.</p>
+<p>That&#39;s it, you just deployed to Heroku. If you want to set up a custom domain check out the <a href="http://devcenter.heroku.com/articles/custom-domains">docs at Heroku</a>.</p>
 
   
 </article>
+
+
 
 </div>
 
@@ -148,28 +143,13 @@ and automatically upload your public SSH key. If you don&#8217;t already have a 
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Brandon Mathis -
+  Copyright &copy; 2013 - Brandon Mathis -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
 </footer>
   
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 

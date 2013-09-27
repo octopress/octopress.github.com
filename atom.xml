@@ -3,7 +3,7 @@
   <title><![CDATA[Octopress]]></title>
   <link href="http://octopress.org/atom.xml" rel="self"/>
   <link href="http://octopress.org/"/>
-  <updated>2012-09-06T11:51:24-05:00</updated>
+  <updated>2013-09-26T22:58:58-04:00</updated>
   <id>http://octopress.org/</id>
   <author>
     <name><![CDATA[Brandon Mathis]]></name>
@@ -19,15 +19,15 @@
 
 
 <title type="html"><![CDATA[Octopress 2.0 Surfaces]]></title>
-<link href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/"/>
-<updated>2011-07-23T18:05:00-05:00</updated>
-<id>http://octopress.org/blog/2011/07/23/octopress-20-surfaces</id>
+<link href="http://octopress.org/2011/07/23/octopress-20-surfaces/"/>
+<updated>2011-07-23T18:05:00-04:00</updated>
+<id>http://octopress.org/2011/07/23/octopress-20-surfaces</id>
 
       <content type="html"><![CDATA[<p>Octopress is a framework designed by <a href="http://brandonmathis.com">Brandon Mathis</a> for <a href="http://github.com/mojombo/jekyll">Jekyll</a>, the blog aware static site generator powering <a href="http://pages.github.com">Github Pages</a>.
 To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
-All of that is already taken care of. Simply <a href="https://github.com/imathis/octopress">clone or fork Octopress</a>, install dependencies and the theme, and you&#8217;re set.</p>
+All of that is already taken care of. Simply <a href="https://github.com/imathis/octopress">clone or fork Octopress</a>, install dependencies and the theme, and you&#39;re set.</p>
 
-<h2>What&#8217;s new in 2.0?</h2>
+<h2>What&#39;s new in 2.0?</h2>
 
 <p>Short answer: Everything. Octopress is now based on <a href="http://github.com/mojombo/jekyll">mojombo/jekyll</a> has been completely rewritten from the ground up with a mountain of goodies.</p>
 
@@ -42,7 +42,6 @@ All of that is already taken care of. Simply <a href="https://github.com/imathis
 <li>Easy theming with Compass and Sass</li>
 <li>A Beautiful <a href="http://ethanschoonover.com/solarized">Solarized</a> syntax highlighting</li>
 </ul>
-
 
 <p>Be sure to check out the <a href="http://octopress.org/docs">documentation</a> to get the full scoop.</p>
 
@@ -62,17 +61,16 @@ All of that is already taken care of. Simply <a href="https://github.com/imathis
 <li><a href="http://octopress.org/docs/plugins/category-generator">Category Generator</a> - <em>generates archive pages for each blog category</em></li>
 </ul>
 
-
 <p>For more plugins check out the <a href="http://octopress.org/docs/plugins">plugin list</a></p>
 
 <h2>Ready to Get Started?</h2>
 
 <p>Octopress is really easy to set up and deploy, <a href="http://octopress.org/docs/setup">start here</a>.</p>
 
-<p>For now that&#8217;s it. Check out the <a href="http://octopress.org/docs">docs</a>, <a href="http://github.com/imathis/octopress">kick the tires</a>, post <a href="http://github.com/imathis/octopress/issues">issues</a> send me <a href="http://convore.com/octopress/support">support requests</a> and tell all your friends.</p>
+<p>For now that&#39;s it. Check out the <a href="http://octopress.org/docs">docs</a>, <a href="http://github.com/imathis/octopress">kick the tires</a>, post <a href="http://github.com/imathis/octopress/issues">issues</a> send me <a href="http://convore.com/octopress/support">support requests</a> and tell all your friends.</p>
 
 <p>Oh, and if you like, follow <a href="http://twitter.com/octopress">@octopress</a> and <a href="http://twitter.com/imathis">@imathis</a> on Twitter.</p>
-<p><a rel="bookmark" href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://octopress.org/2011/07/23/octopress-20-surfaces/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

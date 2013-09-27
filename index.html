@@ -7,10 +7,9 @@
   <meta charset="utf-8">
   <title>Octopress</title>
   <meta name="author" content="Brandon Mathis">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
   
-  <meta name="description" content="Octopress is a framework designed by Brandon Mathis for Jekyll, the blog aware static site generator powering Github Pages.
-To start blogging with &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,14 +18,13 @@ To start blogging with &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://octopress.org">
-  <link href="/favicon.png" rel="icon">
+  <link rel="canonical" href="http://octopress.org/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml">
-  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+  
+
+<!--Fonts from Google's Web font directory at http://google.com/webfonts -->
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 
@@ -44,6 +42,8 @@ To start blogging with &hellip;">
   </script>
 
 
+   
+  <link href="/octopress-favicon.png" rel="icon">
 </head>
 
 <body   >
@@ -95,7 +95,7 @@ To start blogging with &hellip;">
   <header>
     <h1 class="entry-title">
 
-<a href="/blog/2011/07/23/octopress-20-surfaces/">Octopress 2.0 Surfaces</a>
+<a href="/2011/07/23/octopress-20-surfaces/">Octopress 2.0 Surfaces</a>
 
 </h1>
 
@@ -115,17 +115,17 @@ To start blogging with &hellip;">
 
 
   
-<time datetime="2011-07-23T18:05:00-05:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2011</time>
-         &bull; <a rel="bookmark" href="/blog/2011/07/23/octopress-20-surfaces/">&infin;</a>
+<time datetime="2011-07-23T18:05:00-04:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2011</time>
+         &bull; <a rel="bookmark" href="/2011/07/23/octopress-20-surfaces/">Permalink</a>
       </p>
     
   </header>
 
 <div class="entry-content"><p>Octopress is a framework designed by <a href="http://brandonmathis.com">Brandon Mathis</a> for <a href="http://github.com/mojombo/jekyll">Jekyll</a>, the blog aware static site generator powering <a href="http://pages.github.com">Github Pages</a>.
 To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
-All of that is already taken care of. Simply <a href="https://github.com/imathis/octopress">clone or fork Octopress</a>, install dependencies and the theme, and you&#8217;re set.</p>
+All of that is already taken care of. Simply <a href="https://github.com/imathis/octopress">clone or fork Octopress</a>, install dependencies and the theme, and you&#39;re set.</p>
 
-<h2>What&#8217;s new in 2.0?</h2>
+<h2>What&#39;s new in 2.0?</h2>
 
 <p>Short answer: Everything. Octopress is now based on <a href="http://github.com/mojombo/jekyll">mojombo/jekyll</a> has been completely rewritten from the ground up with a mountain of goodies.</p>
 
@@ -140,7 +140,6 @@ All of that is already taken care of. Simply <a href="https://github.com/imathis
 <li>Easy theming with Compass and Sass</li>
 <li>A Beautiful <a href="http://ethanschoonover.com/solarized">Solarized</a> syntax highlighting</li>
 </ul>
-
 
 <p>Be sure to check out the <a href="/docs">documentation</a> to get the full scoop.</p>
 
@@ -160,14 +159,13 @@ All of that is already taken care of. Simply <a href="https://github.com/imathis
 <li><a href="/docs/plugins/category-generator">Category Generator</a> - <em>generates archive pages for each blog category</em></li>
 </ul>
 
-
 <p>For more plugins check out the <a href="/docs/plugins">plugin list</a></p>
 
 <h2>Ready to Get Started?</h2>
 
 <p>Octopress is really easy to set up and deploy, <a href="/docs/setup">start here</a>.</p>
 
-<p>For now that&#8217;s it. Check out the <a href="/docs">docs</a>, <a href="http://github.com/imathis/octopress">kick the tires</a>, post <a href="http://github.com/imathis/octopress/issues">issues</a> send me <a href="http://convore.com/octopress/support">support requests</a> and tell all your friends.</p>
+<p>For now that&#39;s it. Check out the <a href="/docs">docs</a>, <a href="http://github.com/imathis/octopress">kick the tires</a>, post <a href="http://github.com/imathis/octopress/issues">issues</a> send me <a href="http://convore.com/octopress/support">support requests</a> and tell all your friends.</p>
 
 <p>Oh, and if you like, follow <a href="http://twitter.com/octopress">@octopress</a> and <a href="http://twitter.com/imathis">@imathis</a> on Twitter.</p>
 </div>
@@ -186,55 +184,43 @@ All of that is already taken care of. Simply <a href="https://github.com/imathis
     
   </div>
 </div>
+
 <aside class="sidebar">
-  
-    
+  
+    
 <section>
   <h1>Latest Tweets</h1>
-  <ul id="tweets">
+  <ul id="tweets" data-user="octopress" data-count="4" data-replies="false">
     <li class="loading">Status updating&#8230;</li>
   </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("octopress", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
   
-    <a href="http://twitter.com/octopress" class="twitter-follow-button" data-show-count="false">Follow @octopress</a>
+    <a href="//twitter.com/octopress" class="twitter-follow-button" data-show-count="false">Follow @octopress</a>
   
 </section>
 
 
 
-  
+
+
+
+
+
+
+
+  
 </aside>
+
 
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Brandon Mathis -
+  Copyright &copy; 2013 - Brandon Mathis -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
 </footer>
   
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 

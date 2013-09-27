@@ -7,9 +7,9 @@
   <meta charset="utf-8">
   <title>Pullquote - Octopress</title>
   <meta name="author" content="Brandon Mathis">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
   
-  <meta name="description" content="Pullquote Jul 22nd, 2011 Octopress offers a CSS only technique for pull quotes, based on the technique by Maykel Loomans. Syntax {% pullquote %} &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,14 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://octopress.org/docs/plugins/pullquote">
-  <link href="/favicon.png" rel="icon">
+  <link rel="canonical" href="http://octopress.org/docs/plugins/pullquote/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml">
-  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+  
+
+<!--Fonts from Google's Web font directory at http://google.com/webfonts -->
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 
@@ -43,6 +42,8 @@
   </script>
 
 
+   
+  <link href="/octopress-favicon.png" rel="icon">
 </head>
 
 <body   class="no-sidebar"  >
@@ -93,26 +94,30 @@
   
 
 
-<time datetime="2011-07-22T09:15:00-05:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2011</time></p>
+<time datetime="2011-07-22T09:15:00-04:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2011</time></p>
   </header>
   
   <p>Octopress offers a CSS only technique for pull quotes, based on the technique by <a href="http://miekd.com/articles/pull-quotes-with-html5-and-css/">Maykel Loomans</a>.</p>
 
 <h4>Syntax</h4>
-
-<pre><code>{% pullquote %}
+<div class="highlight"><pre><code class="text">{% pullquote %}
 Surround your paragraph with the pull quote tags. Then when you come to
-the text you want to pull, {" surround it like this "} and that's all there is to it.
+the text you want to pull, {&quot; surround it like this &quot;} and that&#39;s all there is to it.
 {% endpullquote %}
-</code></pre>
-
-<p>Here&#8217;s a more realistic example of how you might use a pull quote.
+</code></pre></div>
+<p>Here&#39;s a more realistic example of how you might use a pull quote.
 <span class='pullquote-right' data-pullquote='pull quotes are merely visual in presentation and should not appear twice in the text.'>
-When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn&#8217;t work so well for long form prose.
+When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn&#39;t work so well for long form prose.
 It is important to note that pull quotes are merely visual in presentation and should not appear twice in the text. That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
 </span></p>
 
-<p><strong>Inspect the source</strong> and you&#8217;ll see the pulled content appears in the data-pullquote attribute of the paragraph. The pull quote effect is created
+<p>Alternately, you can use &quot;pullquote left&quot; to create left-aligning pullquotes. They look like this in Markdown:</p>
+<div class="highlight"><pre><code class="text">{% pullquote left %}
+Left-aligning pullquotes are good to alternate breaks in the text. They&#39;re
+{&quot; almost exactly like the default, &quot;} right pullquotes, but a little different.
+{% endpullquote %}
+</code></pre></div>
+<p><strong>Inspect the source</strong> and you&#39;ll see the pulled content appears in the data-pullquote attribute of the paragraph. The pull quote effect is created
 entirely with CSS, and is supported by all modern browsers as well as IE8 and up.</p>
 
 <p><a href="/docs/plugins">&laquo; Plugins page</a></p>
@@ -120,34 +125,21 @@ entirely with CSS, and is supported by all modern browsers as well as IE8 and up
   
 </article>
 
+
+
 </div>
 
 
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Brandon Mathis -
+  Copyright &copy; 2013 - Brandon Mathis -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
 </footer>
   
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 

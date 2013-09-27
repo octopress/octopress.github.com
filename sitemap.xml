@@ -1,167 +1,183 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://octopress.org/blog/2011/07/23/octopress-20-surfaces/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
-    </url>
-    <url>
-        <loc>http://octopress.org/404.html</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <loc>http://octopress.org/2011/07/23/octopress-20-surfaces/</loc>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/archives/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/blogging/code/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/blogging/code/test/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/blogging/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/blogging/linklog/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/blogging/plugins/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/configuring/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/deploying/github/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:46:28-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/deploying/heroku/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/deploying/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/deploying/rsync/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/deploying/subdir/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T22:58:39-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/backtick-codeblock/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T20:39:40-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/blockquote/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/category-generator/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/codeblock/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/gist-tag/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/image-tag/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/include-array/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/include-code/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
-    </url>
-    <url>
-        <loc>http://octopress.org/docs/plugins/jsfiddle-tag/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/pullquote/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://octopress.org/docs/plugins/puts/</loc>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/render-partial/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/plugins/video-tag/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/setup/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T22:58:39-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/setup/rbenv/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/setup/rvm/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/theme/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/theme/styles/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/theme/template/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/docs/updating/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/help/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T22:58:39-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://octopress.org/test/blockquote/</loc>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://octopress.org/test/code/</loc>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/test/code/markdown/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://octopress.org/test/code/tabs.html</loc>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/test/code/textile/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/test/haml/</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://octopress.org/test/image/</loc>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://octopress.org/test/partial/</loc>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://octopress.org/test/video.html</loc>
-        <lastmod>2012-09-06T11:36:39-05:00</lastmod>
+        <lastmod>2013-09-26T17:26:15-04:00</lastmod>
     </url>
 </urlset>

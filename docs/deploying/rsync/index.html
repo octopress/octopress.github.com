@@ -7,9 +7,9 @@
   <meta charset="utf-8">
   <title>Deploying with rsync - Octopress</title>
   <meta name="author" content="Brandon Mathis">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
   
-  <meta name="description" content="Deploying With Rsync Sep 10th, 2011 Deploying with rsync via SSH Add your server configurations to the Rakefile under Rsync deploy config. To deploy &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,14 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://octopress.org/docs/deploying/rsync">
-  <link href="/favicon.png" rel="icon">
+  <link rel="canonical" href="http://octopress.org/docs/deploying/rsync/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml">
-  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+  
+
+<!--Fonts from Google's Web font directory at http://google.com/webfonts -->
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 
@@ -43,6 +42,8 @@
   </script>
 
 
+   
+  <link href="/octopress-favicon.png" rel="icon">
 </head>
 
 <body   class="no-sidebar"  >
@@ -93,73 +94,66 @@
   
 
 
-<time datetime="2011-09-10T17:53:00-05:00" pubdate data-updated="true">Sep 10<span>th</span>, 2011</time></p>
+<time datetime="2011-09-10T17:53:00-04:00" pubdate data-updated="true">Sep 10<span>th</span>, 2011</time></p>
   </header>
   
   <h2 id="rsync">Deploying with rsync via SSH</h2>
 
+<p>Add your server configurations to the <code>Rakefile</code> under Rsync deploy config. To deploy with rsync, be sure your public key is listed in your server&#39;s <code>~/.ssh/authorized_keys</code> file.</p>
 
-<p>Add your server configurations to the <code>Rakefile</code> under Rsync deploy config. To deploy with rsync, be sure your public key is listed in your server&#8217;s <code>~/.ssh/authorized_keys</code> file.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ssh_user</span>       <span class="o">=</span> <span class="s2">&quot;user@domain.com&quot;</span>
-</span><span class='line'><span class="n">document_root</span>  <span class="o">=</span> <span class="s2">&quot;~/website.com/&quot;</span>
-</span><span class='line'><span class="n">rsync_delete</span>   <span class="o">=</span> <span class="kp">true</span>
-</span><span class='line'><span class="n">deploy_default</span> <span class="o">=</span> <span class="s2">&quot;rsync&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ssh<em>user</span>       <span class="o">=</span> <span class="s2">&quot;user@domain.com&quot;</span>
+</span><span class='line'><span class="n">document</em>root</span>  <span class="o">=</span> <span class="s2">&quot;~/website.com/&quot;</span>
+</span><span class='line'><span class="n">rsync<em>delete</span>   <span class="o">=</span> <span class="kp">true</span>
+</span><span class='line'><span class="n">deploy</em>default</span> <span class="o">=</span> <span class="s2">&quot;rsync&quot;</span>
+</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
 
 <p>Now if you run</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate   <span class="c"># If you haven&#39;t generated your blog yet</span>
 </span><span class='line'>rake deploy     <span class="c"># Syncs your blog via ssh</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
 
-
-<p>in your terminal, your <code>public</code> directory will be synced to your server&#8217;s document root.</p>
+<p>in your terminal, your <code>public</code> directory will be synced to your server&#39;s document root.</p>
 
 <h2 id="delete">Regarding rsync delete</h2>
-
 
 <p>If you choose to delete on sync, rsync will create a 1:1 match. Files will be added, updated <em>and deleted</em> from your deploy directory to mirror your local copy.</p>
 
 <p>If you do not choose to delete:</p>
 
 <ul>
-<li>You can store files beneath your site&#8217;s deploy directory which aren&#8217;t found in your local version.</li>
+<li>You can store files beneath your site&#39;s deploy directory which aren&#39;t found in your local version.</li>
 <li>Files you have removed from your local site must be removed manually from the server.</li>
 </ul>
 
-
 <h3 id="exclude">Excluding files from sync</h3>
-
 
 <p>If you would like to keep your Octopress files synced but also want the convenience of keeping some files or directories on the server without having to mirror them locally, you can exclude them from rsync.</p>
 
 <p>When syncing, rsync can exclude files or directories locally or on the server. Simply add an <code>rsync-exclude</code> file to the root directory of your project like this:</p>
 
-<figure class='code'><figcaption><span>rsync-exclude</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>rsync-exclude</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'>some-file.txt
 </span><span class='line'>some-directory/
 </span><span class='line'>*.mp4
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
 
 <p>Note: using excludes will prevent rsync from uploading local files, or if the delete option is specified, it will prevent rsync from deleting excluded items on the server.</p>
 
 <h2>Version control</h2>
 
-<p>You&#8217;ll want to keep your blog source in a remote git repository,
+<p>You&#39;ll want to keep your blog source in a remote git repository,
 so either <a href="https://github.com/repositories/new">set up a Github repository</a> or <a href="#self_hosted_git">host your own</a> and then do this.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -169,17 +163,13 @@ so either <a href="https://github.com/repositories/new">set up a Github reposito
 </span><span class='line'>git remote add origin <span class="o">(</span>your repository url<span class="o">)</span>
 </span><span class='line'><span class="c"># set your new origin as the default branch</span>
 </span><span class='line'>git config branch.master.remote origin
-</span></code></pre></td></tr></table></div></figure>
-
-
-
+</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
 
 <h2 id="self_hosted_git">Host Your Own Remote Repository</h2>
 
+<p>If you want to set up a private git repository on your own server, here&#39;s how you&#39;d do it. You&#39;ll need SSH access to follow along.</p>
 
-<p>If you want to set up a private git repository on your own server, here&#8217;s how you&#8217;d do it. You&#8217;ll need SSH access to follow along.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -191,17 +181,18 @@ so either <a href="https://github.com/repositories/new">set up a Github reposito
 </span><span class='line'>git init --bare
 </span><span class='line'><span class="nb">pwd</span>  <span class="c"># print the working directory, you&#39;ll need it below.</span>
 </span><span class='line'><span class="nb">logout</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
 
 <p>The url for your remote repository is <code>ssh://user@host.com/(output of pwd above)</code></p>
 
 <h2>Deploying to a subdirectory</h2>
 
-<p>If for you wanted to host an Octopress blog at <code>http://yoursite.com/blog/</code> you would need to configure Octopress for <a href="/docs/deploying/subdir">deploying to a subdirectory</a>.</p>
+<p>If, for example, you wanted to host an Octopress blog at <code>http://yoursite.com/blog/</code> you would need to configure Octopress for <a href="/docs/deploying/subdir">deploying to a subdirectory</a>.</p>
 
   
 </article>
+
+
 
 </div>
 
@@ -209,28 +200,13 @@ so either <a href="https://github.com/repositories/new">set up a Github reposito
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Brandon Mathis -
+  Copyright &copy; 2013 - Brandon Mathis -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
 </footer>
   
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
