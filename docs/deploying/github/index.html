@@ -109,17 +109,17 @@ As a result, you&#39;ll want to work on the source for your blog in the source b
 <figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake setup_github_pages
 </div></pre></td></tr></table></div></figure>
 
-<p>The rake task will ask you for a URL of the Github repo. Copy the SSH URL from your newly created repository like: <code>git@github.com:username/username.github.io.git</code> and paste it in as a response.</p>
+<p>The rake task will ask you for a URL of the Github repo. Copy the SSH or HTTPS URL from your newly created repository (e.g. <code>git@github.com:username/username.github.io.git</code>) and paste it in as a response.</p>
 
 <p>This will:</p>
 
 <ol>
-<li>Store your Github Pages repository url.</li>
+<li>Ask for and store your Github Pages repository url.</li>
 <li>Rename the remote pointing to imathis/octopress from &#39;origin&#39; to &#39;octopress&#39;</li>
 <li>Add your Github Pages repository as the default origin remote.</li>
 <li>Switch the active branch from master to source.</li>
 <li>Configure your blog&#39;s url according to your repository.</li>
-<li>Setup a master branch in the _deploy directory for deployment.</li>
+<li>Setup a master branch in the <code>_deploy</code> directory for deployment.</li>
 </ol>
 
 <p>Next run:</p>
@@ -141,7 +141,7 @@ from Github telling you that your commit has been received and will be published
 <p><strong>Note:</strong> With new repositories, Github sets the default branch based on the branch you push first, and it looks there for the generated site content.
 If you&#39;re having trouble getting Github to publish your site, go to the admin panel for your repository and make sure that the master branch is the default branch.</p>
 
-<p>To read more on creating your first blog post, read <a href="http://octopress.org/docs/blogging/">Blogging Basics</a></p>
+<p>To read more on creating your first blog post, read <a href="/docs/blogging/">Blogging Basics</a></p>
 
 <h2>With Github Project pages (gh-pages)</h2>
 
