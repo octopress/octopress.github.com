@@ -97,52 +97,23 @@
 <time datetime="2011-08-01T08:13:00-04:00" pubdate data-updated="true">Aug 1<span>st</span>, 2011</time></p>
   </header>
   
-  <p><figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nv">_Tweets_ = </span><span class="mi">1</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">module.exports = </span><span class="nx">Tweets</span>
-</span></code></pre></td></tr></table></div></figure></p>
-<p><figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span> <span class="o">=&gt;</span>
-</span><span class='line'>  <span class="nx">bar</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;hereh&quot;</span>
-</span><span class='line'>  <span class="nx">val</span><span class="o">=</span><span class="mi">0</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nv">rott= </span><span class="o">=&gt;</span>
-</span><span class='line'>    <span class="nx">val</span><span class="o">=</span><span class="nx">val</span><span class="o">+</span><span class="mi">1</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s">&quot;img.logo&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">webkitTransform</span><span class="o">=</span><span class="s">&quot;rotate(&quot;</span><span class="o">+</span><span class="nx">val</span><span class="o">+</span><span class="s">&quot;deg)&quot;</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s">&quot;img.logo&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">mozTransform</span><span class="o">=</span><span class="s">&quot;rotate(&quot;</span><span class="o">+</span><span class="nx">val</span><span class="o">+</span><span class="s">&quot;deg)&quot;</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>  <span class="nv">settimeout = </span><span class="o">=&gt;</span>
-</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span> <span class="mi">100</span><span class="p">,</span> <span class="o">=&gt;</span>
-</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;rotating&quot;</span>
-</span><span class='line'>      <span class="nx">rott</span><span class="p">()</span>
-</span><span class='line'>      <span class="nx">settimeout</span><span class="p">()</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">settimeout</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure></p>
+  <figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div></pre></td><td class='main  coffeescript'><pre><div class='line'><span class="nv">_Tweets_ = </span><span class="mi">1</span>
+</div><div class='line'> </div><div class='line'><span class="nv">module.exports = </span><span class="nx">Tweets</span>
+</div></pre></td></tr></table></div></figure><figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div></pre></td><td class='main  coffeescript'><pre><div class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span> <span class="o">=&gt;</span>
+</div><div class='line'>  <span class="nx">bar</span>
+</div><div class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;hereh&quot;</span>
+</div><div class='line'>  <span class="nx">val</span><span class="o">=</span><span class="mi">0</span>
+</div><div class='line'> </div><div class='line'>  <span class="nv">rott= </span><span class="o">=&gt;</span>
+</div><div class='line'>    <span class="nx">val</span><span class="o">=</span><span class="nx">val</span><span class="o">+</span><span class="mi">1</span>
+</div><div class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s">&quot;img.logo&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">webkitTransform</span><span class="o">=</span><span class="s">&quot;rotate(&quot;</span><span class="o">+</span><span class="nx">val</span><span class="o">+</span><span class="s">&quot;deg)&quot;</span>
+</div><div class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s">&quot;img.logo&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">mozTransform</span><span class="o">=</span><span class="s">&quot;rotate(&quot;</span><span class="o">+</span><span class="nx">val</span><span class="o">+</span><span class="s">&quot;deg)&quot;</span>
+</div><div class='line'> </div><div class='line'> </div><div class='line'> </div><div class='line'>  <span class="nv">settimeout = </span><span class="o">=&gt;</span>
+</div><div class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span> <span class="mi">100</span><span class="p">,</span> <span class="o">=&gt;</span>
+</div><div class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;rotating&quot;</span>
+</div><div class='line'>      <span class="nx">rott</span><span class="p">()</span>
+</div><div class='line'>      <span class="nx">settimeout</span><span class="p">()</span>
+</div><div class='line'> </div><div class='line'>  <span class="nx">settimeout</span><span class="p">()</span>
+</div></pre></td></tr></table></div></figure>
   
     <footer>
       <p class="meta">

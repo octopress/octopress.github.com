@@ -127,8 +127,7 @@ code snippet
 
 <p><strong>1.</strong> Here&#39;s an example without setting the language.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>Awesome code snippet</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  plain'><pre><div class='line'>Awesome code snippet</div></pre></td></tr></table></div></figure>
 
 <p><em>The source:</em></p>
 <div class="highlight"><pre><code class="text">{% codeblock %}
@@ -137,9 +136,8 @@ Awesome code snippet
 </code></pre></div>
 <p><strong>2.</strong> This example uses syntax highlighting.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">rectangle</span> <span class="nl">setX:</span> <span class="mi">10</span> <span class="nl">y:</span> <span class="mi">10</span> <span class="nl">width:</span> <span class="mi">20</span> <span class="nl">height:</span> <span class="mi">20</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  objc'><pre><div class='line'><span class="p">[</span><span class="n">rectangle</span> <span class="nl">setX:</span> <span class="mi">10</span> <span class="nl">y:</span> <span class="mi">10</span> <span class="nl">width:</span> <span class="mi">20</span> <span class="nl">height:</span> <span class="mi">20</span><span class="p">];</span>
+</div></pre></td></tr></table></div></figure>
 
 <p><em>The source:</em></p>
 <div class="highlight"><pre><code class="text">{% codeblock lang:objc %}
@@ -148,9 +146,8 @@ Awesome code snippet
 </code></pre></div>
 <p><strong>3.</strong> Including a file extension in the title can also trigger highlighting.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Time to be Awesome - awesome.rb </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Awesome!&quot;</span> <span class="k">unless</span> <span class="n">lame</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Time to be Awesome - awesome.rb </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  rb'><pre><div class='line'><span class="nb">puts</span> <span class="s2">&quot;Awesome!&quot;</span> <span class="k">unless</span> <span class="n">lame</span>
+</div></pre></td></tr></table></div></figure>
 
 <p><em>The source:</em></p>
 <div class="highlight"><pre><code class="text">{% codeblock Time to be Awesome - awesome.rb %}
@@ -159,11 +156,9 @@ puts &quot;Awesome!&quot; unless lame
 </code></pre></div>
 <p><strong>4.</strong> Add an optional URL for downloading or linking to a source.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Javascript Array Syntax</span><a href='http://j.mp/pPUUmW' title='Download code'> MDN Documentation </a></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arrayLength</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementN</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Javascript Array Syntax<a href='http://j.mp/pPUUmW'>link</a></figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div></pre></td><td class='main  js'><pre><div class='line'><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arrayLength</span><span class="p">);</span>
+</div><div class='line'><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementN</span><span class="p">);</span>
+</div></pre></td></tr></table></div></figure>
 
 <p><em>The source:</em></p>
 <div class="highlight"><pre><code class="text">{% codeblock Javascript Array Syntax lang:js http://j.mp/pPUUmW MDN Documentation %}
@@ -173,17 +168,11 @@ var arr2 = new Array(element0, element1, ..., elementN);
 </code></pre></div>
 <p><strong>5.</strong> This example uses a custom starting line number and marks lines 52 and 54 through 55.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Coffeescript Tricks </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number marked'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number marked'>54</span>
-<span class='line-number marked'>55</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line marked start end'><span class="c1"># Given an alphabet:</span>
-</span><span class='line'><span class="nv">alphabet = </span><span class="s">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
-</span><span class='line'>
-</span><span class='line marked start'><span class="c1"># Iterate over part of the alphabet:</span>
-</span><span class='line marked end'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">letter</span> <span class="k">for</span> <span class="nx">letter</span> <span class="k">in</span> <span class="nx">alphabet</span><span class="p">[</span><span class="mi">4</span><span class="p">..</span><span class="mi">8</span><span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Coffeescript Tricks </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='51' class='line-number marked start end'></div><div data-line='52' class='line-number'></div><div data-line='53' class='line-number'></div><div data-line='54' class='line-number marked start'></div><div data-line='55' class='line-number marked end'></div></pre></td><td class='main  coffeescript'><pre><div class='line marked start end'><span class="c1"># Given an alphabet:</span>
+</div><div class='line'><span class="nv">alphabet = </span><span class="s">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+</div><div class='line'> </div><div class='line marked start'><span class="c1"># Iterate over part of the alphabet:</span>
+</div><div class='line marked end'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">letter</span> <span class="k">for</span> <span class="nx">letter</span> <span class="k">in</span> <span class="nx">alphabet</span><span class="p">[</span><span class="mi">4</span><span class="p">..</span><span class="mi">8</span><span class="p">]</span>
+</div></pre></td></tr></table></div></figure>
 
 <p><em>The source:</em></p>
 <div class="highlight"><pre><code class="text">{% codeblock Coffeescript Tricks lang:coffeescript start:51 mark:51,54-55 %}

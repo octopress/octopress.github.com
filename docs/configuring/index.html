@@ -102,15 +102,11 @@
 <p>I&#39;ve tried to keep configuring Octopress fairly simple and you&#39;ll probably only ever change the <code>Rakefile</code> and the <code>_config.yml</code>.
 Here&#39;s a list of files for configuring Octopress.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>    _config.yml       <span class="c"># Main config (Jekyll&#39;s settings)</span>
-</span><span class='line'>    Rakefile          <span class="c"># Configs for deployment</span>
-</span><span class='line'>    config.rb         <span class="c"># Compass config</span>
-</span><span class='line'>    config.ru         <span class="c"># Rack config</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>    _config.yml       <span class="c"># Main config (Jekyll&#39;s settings)</span>
+</div><div class='line'>    Rakefile          <span class="c"># Configs for deployment</span>
+</div><div class='line'>    config.rb         <span class="c"># Compass config</span>
+</div><div class='line'>    config.ru         <span class="c"># Rack config</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Configurations in the <code>Rakefile</code> are mostly related to deployment and you probably won&#39;t have to touch them unless you&#39;re using rsync.</p>
 
@@ -121,29 +117,18 @@ Here&#39;s a list of files for configuring Octopress.</p>
 
 <h3>Main Configs</h3>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'>    <span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span>                <span class="c1"># For rewriting urls for RSS, etc</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span>              <span class="c1"># Used in the header and title tags</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">subtitle</span><span class="p-Indicator">:</span>           <span class="c1"># A description used in the header</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>             <span class="c1"># Your name, for RSS, Copyright, Metadata</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">simple<em>search</span><span class="p-Indicator">:</span>      <span class="c1"># Search engine for simple site search</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span>        <span class="c1"># A default meta description for your site</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">date</em>format</span><span class="p-Indicator">:</span>        <span class="c1"># Format dates using Ruby&#39;s date strftime syntax</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">subscribe<em>rss</span><span class="p-Indicator">:</span>      <span class="c1"># Url for your blog&#39;s feed, defauts to /atom.xml</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">subscribe</em>email</span><span class="p-Indicator">:</span>    <span class="c1"># Url to subscribe by email (service required)</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">category_feeds</span><span class="p-Indicator">:</span>     <span class="c1"># Enable per category RSS feeds (defaults to false in 2.1)</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span>              <span class="c1"># Email address for the RSS feed if you want it.</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'>    <span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span>                <span class="c1"># For rewriting urls for RSS, etc</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span>              <span class="c1"># Used in the header and title tags</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">subtitle</span><span class="p-Indicator">:</span>           <span class="c1"># A description used in the header</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>             <span class="c1"># Your name, for RSS, Copyright, Metadata</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">simple_search</span><span class="p-Indicator">:</span>      <span class="c1"># Search engine for simple site search</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span>        <span class="c1"># A default meta description for your site</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">date_format</span><span class="p-Indicator">:</span>        <span class="c1"># Format dates using Ruby&#39;s date strftime syntax</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">subscribe_rss</span><span class="p-Indicator">:</span>      <span class="c1"># Url for your blog&#39;s feed, defauts to /atom.xml</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">subscribe_email</span><span class="p-Indicator">:</span>    <span class="c1"># Url to subscribe by email (service required)</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">category_feeds</span><span class="p-Indicator">:</span>     <span class="c1"># Enable per category RSS feeds (defaults to false in 2.1)</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span>              <span class="c1"># Email address for the RSS feed if you want it.</span>
+</div></pre></td></tr></table></div></figure>
 
 <p><strong>Note:</strong> If your site is a multi-author blog, you may want to set this config&#39;s <code>author</code> to the name of your
 company or project, and add author metadata to posts and pages to give proper attribution for those works.</p>
@@ -152,41 +137,22 @@ company or project, and add author metadata to posts and pages to give proper at
 
 <p>These configurations are used by Jekyll and Plugins. If you&#39;re not familiar with Jekyll, you should probably have a look at the <a href="https://github.com/mojombo/jekyll/wiki/Configuration">configuration docs</a> which lists more options that aren&#39;t covered here.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'>    <span class="l-Scalar-Plain">root</span><span class="p-Indicator">:</span>               <span class="c1"># Mapping for relative urls (default: /)</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span>          <span class="c1"># Permalink structure for blog posts</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span>             <span class="c1"># Directory for site source files</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">destination</span><span class="p-Indicator">:</span>        <span class="c1"># Directory for generated site files</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">plugins</span><span class="p-Indicator">:</span>            <span class="c1"># Directory for Jekyll plugins</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">code<em>dir</span><span class="p-Indicator">:</span>           <span class="c1"># Directory for code snippets (for include</em>code plugin)</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">category<em>dir</span><span class="p-Indicator">:</span>       <span class="c1"># Directory for generated blog category pages</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="l-Scalar-Plain">pygments</span><span class="p-Indicator">:</span>           <span class="c1"># Toggle python pygments syntax highlighting</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">paginate</span><span class="p-Indicator">:</span>           <span class="c1"># Posts per page on the blog index</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">pagination</em>dir</span><span class="p-Indicator">:</span>     <span class="c1"># Directory base for pagination URLs eg. /blog/page/2/</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">recent<em>posts</span><span class="p-Indicator">:</span>       <span class="c1"># Number of recent posts to appear in the sidebar</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="l-Scalar-Plain">default</em>asides</span><span class="p-Indicator">:</span>     <span class="c1"># Configure what shows up in the sidebar and in what order</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">blog<em>index</em>asides</span><span class="p-Indicator">:</span>  <span class="c1"># Optional sidebar config for blog index page</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">post<em>asides</span><span class="p-Indicator">:</span>        <span class="c1"># Optional sidebar config for post layout</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">page</em>asides</span><span class="p-Indicator">:</span>        <span class="c1"># Optional sidebar config for page layout</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'>    <span class="l-Scalar-Plain">root</span><span class="p-Indicator">:</span>               <span class="c1"># Mapping for relative urls (default: /)</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span>          <span class="c1"># Permalink structure for blog posts</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span>             <span class="c1"># Directory for site source files</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">destination</span><span class="p-Indicator">:</span>        <span class="c1"># Directory for generated site files</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">plugins</span><span class="p-Indicator">:</span>            <span class="c1"># Directory for Jekyll plugins</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">code_dir</span><span class="p-Indicator">:</span>           <span class="c1"># Directory for code snippets (for include_code plugin)</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">category_dir</span><span class="p-Indicator">:</span>       <span class="c1"># Directory for generated blog category pages</span>
+</div><div class='line'> </div><div class='line'>    <span class="l-Scalar-Plain">pygments</span><span class="p-Indicator">:</span>           <span class="c1"># Toggle python pygments syntax highlighting</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">paginate</span><span class="p-Indicator">:</span>           <span class="c1"># Posts per page on the blog index</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">pagination_dir</span><span class="p-Indicator">:</span>     <span class="c1"># Directory base for pagination URLs eg. /blog/page/2/</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">recent_posts</span><span class="p-Indicator">:</span>       <span class="c1"># Number of recent posts to appear in the sidebar</span>
+</div><div class='line'> </div><div class='line'>    <span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span>     <span class="c1"># Configure what shows up in the sidebar and in what order</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">blog_index_asides</span><span class="p-Indicator">:</span>  <span class="c1"># Optional sidebar config for blog index page</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">post_asides</span><span class="p-Indicator">:</span>        <span class="c1"># Optional sidebar config for post layout</span>
+</div><div class='line'>    <span class="l-Scalar-Plain">page_asides</span><span class="p-Indicator">:</span>        <span class="c1"># Optional sidebar config for page layout</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>If you want to change the way permalinks are written for your blog posts, see <a href="https://github.com/mojombo/jekyll/wiki/Permalinks">Jekyll&#39;s permalink docs</a>.</p>
 
@@ -199,7 +165,7 @@ If you want to publish your site to a subdirectory, <a href="/docs/deploying/sub
 
 <ul>
 <li><strong>Github</strong> - <em>List your github repositories in the sidebar</em></li>
-<li><strong>Twitter</strong> - <em>Add a button for sharing of posts and pages on Twitter</em></li>
+<li><strong>Twitter</strong> - <em>Setup a sidebar twitter feed, follow button, and tweet button (for sharing posts and pages).</em></li>
 <li><strong>Google Plus One</strong> - <em>Setup sharing for posts and pages on Google&#39;s plus one network.</em></li>
 <li><strong>Pinboard</strong> - <em>Share your recent Pinboard bookmarks in the sidebar.</em></li>
 <li><strong>Delicious</strong> - <em>Share your recent Delicious bookmarks in the sidebar.</em></li>

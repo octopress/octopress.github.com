@@ -108,20 +108,17 @@ as the url slug, and the date helps with file distinction and determines the sor
 
 <h4>Syntax</h4>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span>
+</div></pre></td></tr></table></div></figure>
 
 <p><code>new_post</code> expects a naturally written title and strips out undesirable url characters when creating the filename.
 The default file extension for new posts is <code>markdown</code> but you can configure that in the <code>Rakefile</code>.</p>
 
 <h4>Example</h4>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake new<em>post<span class="o">[</span><span class="s2">&quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span><span class="o">]</span>
-</span><span class='line'><span class="c"># Creates source/</em>posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span><span class="o">]</span>
+</div><div class='line'><span class="c"># Creates source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>The filename will determine your url. With the default <a href="https://github.com/mojombo/jekyll/wiki/Permalinks">permalink settings</a> the url would be something like
 <code>http://site.com/blog/2011/07/03/zombie-ninjas-attack-a-survivors-retrospective/index.html</code>.</p>
@@ -129,89 +126,54 @@ The default file extension for new posts is <code>markdown</code> but you can co
 <p>Open a post in a text editor and you&#39;ll see a block of <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter">yaml front matter</a>
 which tells Jekyll how to processes posts and pages.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
-</span><span class='line'><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">post</span>
-</span><span class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Zombie</span><span class="nv"> </span><span class="s">Ninjas</span><span class="nv"> </span><span class="s">Attack:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">survivor&#39;s</span><span class="nv"> </span><span class="s">retrospective&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">date</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2011-07-03 5:59</span>
-</span><span class='line'><span class="l-Scalar-Plain">comments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
-</span><span class='line'><span class="l-Scalar-Plain">external-url</span><span class="p-Indicator">:</span>
-</span><span class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span>
-</span><span class='line'><span class="nn">---</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'><span class="nn">---</span>
+</div><div class='line'><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">post</span>
+</div><div class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Zombie</span><span class="nv"> </span><span class="s">Ninjas</span><span class="nv"> </span><span class="s">Attack:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">survivor&#39;s</span><span class="nv"> </span><span class="s">retrospective&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">date</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2011-07-03 5:59</span>
+</div><div class='line'><span class="l-Scalar-Plain">comments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</div><div class='line'><span class="l-Scalar-Plain">external-url</span><span class="p-Indicator">:</span>
+</div><div class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span>
+</div><div class='line'><span class="nn">---</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Here you can turn comments off and or categories to your post. If you are working on a multi-author blog, you can add <code>author: Your Name</code> to the
 metadata for proper attribution on a post. If you are working on a draft, you can add <code>published: false</code> to prevent it from being posted when you generate your blog. If you want to publish a <a href="/docs/blogging/linklog">linklog</a> style post (blog entries point to external urls), simply add an external-url to your post.</p>
 
 <p>You can add a single category or multiple categories like this.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="c1"># One category</span>
-</span><span class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Sass</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># Multiple categories example 1</span>
-</span><span class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">CSS3</span><span class="p-Indicator">,</span> <span class="nv">Sass</span><span class="p-Indicator">,</span> <span class="nv">Media Queries</span><span class="p-Indicator">]</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># Multiple categories example 2</span>
-</span><span class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span>
-</span><span class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">CSS3</span>
-</span><span class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Sass</span>
-</span><span class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Media Queries</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'><span class="c1"># One category</span>
+</div><div class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Sass</span>
+</div><div class='line'> </div><div class='line'><span class="c1"># Multiple categories example 1</span>
+</div><div class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">CSS3</span><span class="p-Indicator">,</span> <span class="nv">Sass</span><span class="p-Indicator">,</span> <span class="nv">Media Queries</span><span class="p-Indicator">]</span>
+</div><div class='line'> </div><div class='line'><span class="c1"># Multiple categories example 2</span>
+</div><div class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span>
+</div><div class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">CSS3</span>
+</div><div class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Sass</span>
+</div><div class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Media Queries</span>
+</div></pre></td></tr></table></div></figure>
 
 <h2>New Pages</h2>
 
 <p>You can add pages anywhere in your blog source directory and they&#39;ll be parsed by Jekyll. The URL will correspond directly to the filepath, so <code>about.markdown</code> will become <code>site.com/about.html</code>. If you prefer the URL <code>site.com/about/</code> you&#39;ll want to create the page as <code>about/index.markdown</code>.
 Octopress has a rake task for creating new pages easily.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake new<em>page<span class="o">[</span>super-awesome<span class="o">]</span>
-</span><span class='line'><span class="c"># creates /source/super-awesome/index.markdown</span>
-</span><span class='line'>
-</span><span class='line'>rake new</em>page<span class="o">[</span>super-awesome/page.html<span class="o">]</span>
-</span><span class='line'><span class="c"># creates /source/super-awesome/page.html</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake new_page<span class="o">[</span>super-awesome<span class="o">]</span>
+</div><div class='line'><span class="c"># creates /source/super-awesome/index.markdown</span>
+</div><div class='line'> </div><div class='line'>rake new_page<span class="o">[</span>super-awesome/page.html<span class="o">]</span>
+</div><div class='line'><span class="c"># creates /source/super-awesome/page.html</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Like with the new post task, the default file extension is <code>markdown</code> but you can configure that in the <code>Rakefile</code>. A freshly generated page might look like this.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
-</span><span class='line'><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">page</span>
-</span><span class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Super</span><span class="nv"> </span><span class="s">Awesome&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">date</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2011-07-03 5:59</span>
-</span><span class='line'><span class="l-Scalar-Plain">comments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
-</span><span class='line'><span class="l-Scalar-Plain">sharing</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
-</span><span class='line'><span class="l-Scalar-Plain">footer</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
-</span><span class='line'><span class="nn">---</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'><span class="nn">---</span>
+</div><div class='line'><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">page</span>
+</div><div class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Super</span><span class="nv"> </span><span class="s">Awesome&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">date</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2011-07-03 5:59</span>
+</div><div class='line'><span class="l-Scalar-Plain">comments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</div><div class='line'><span class="l-Scalar-Plain">sharing</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</div><div class='line'><span class="l-Scalar-Plain">footer</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</div><div class='line'><span class="nn">---</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>The title is derived from the filename so you&#39;ll likely want to change that. This is very similar to the post yaml except it doesn&#39;t include categories, and you can toggle sharing and comments or remove the footer altogether. If you don&#39;t want to show a date on your page, just remove it from the yaml.</p>
 
@@ -223,25 +185,19 @@ Octopress has a rake task for creating new pages easily.</p>
 
 <h2>Generate &amp; Preview</h2>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate   <span class="c"># Generates posts and pages into the public directory</span>
-</span><span class='line'>rake watch      <span class="c"># Watches source/ and sass/ for changes and regenerates</span>
-</span><span class='line'>rake preview    <span class="c"># Watches, and mounts a webserver at http://localhost:4000</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake generate   <span class="c"># Generates posts and pages into the public directory</span>
+</div><div class='line'>rake watch      <span class="c"># Watches source/ and sass/ for changes and regenerates</span>
+</div><div class='line'>rake preview    <span class="c"># Watches, and mounts a webserver at http://localhost:4000</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>If you want to work on posts without publishing them, you can add a <code>published: false</code> to your post&#39;s YAML header. You can preview these posts with <code>rake preview</code> on your local server, but they won&#39;t get published by <code>rake generate</code>.</p>
 
 <p>Using the <code>rake preview</code> server is nice, but If you&#39;re a <a href="http://pow.cx">POW</a> user, you can set up your Octopress site like this.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">cd</span> ~/.pow
-</span><span class='line'>ln -s /path/to/octopress octopress
-</span><span class='line'><span class="nb">cd</span> -
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'><span class="nb">cd</span> ~/.pow
+</div><div class='line'>ln -s /path/to/octopress octopress
+</div><div class='line'><span class="nb">cd</span> -
+</div></pre></td></tr></table></div></figure>
 
 <p>Now that you&#39;re setup with POW, you&#39;ll just run <code>rake watch</code> and load up <code>http://octopress.dev</code> instead.</p>
 

@@ -106,48 +106,42 @@
 <p>Github Pages for users and organizations uses the master branch like the public directory on a web server, serving up the files at your Pages url <code>http://username.github.io</code>.
 As a result, you&#39;ll want to work on the source for your blog in the source branch and commit <em>the generated content</em> to the master branch. Octopress has a configuration task that helps you set all this up.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake setup<em>github</em>pages
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake setup_github_pages
+</div></pre></td></tr></table></div></figure>
 
-<p>The rake task will ask you for a URL of the Github repo. Copy the SSH or HTTPS URL from your newly created repository like: <code>git@github.com:username/username.github.io.git</code> and paste it in as a response.</p>
+<p>The rake task will ask you for a URL of the Github repo. Copy the SSH URL from your newly created repository like: <code>git@github.com:username/username.github.io.git</code> and paste it in as a response.</p>
 
 <p>This will:</p>
 
 <ol>
-<li>Ask for and store your Github Pages repository url.</li>
+<li>Store your Github Pages repository url.</li>
 <li>Rename the remote pointing to imathis/octopress from &#39;origin&#39; to &#39;octopress&#39;</li>
 <li>Add your Github Pages repository as the default origin remote.</li>
 <li>Switch the active branch from master to source.</li>
 <li>Configure your blog&#39;s url according to your repository.</li>
-<li>Setup a master branch in the <code>_deploy</code> directory for deployment.</li>
+<li>Setup a master branch in the _deploy directory for deployment.</li>
 </ol>
 
 <p>Next run:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate
-</span><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake generate
+</div><div class='line'>rake deploy
+</div></pre></td></tr></table></div></figure>
 
 <p>This will generate your blog, copy the generated files into <code>_deploy/</code>, add them to git, commit and push them up to the master branch. In a few seconds you should get an email
 from Github telling you that your commit has been received and will be published on your site.</p>
 
 <p><strong>Don&#39;t forget</strong> to commit the source for your blog.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s1">&#39;your message&#39;</span>
-</span><span class='line'>git push origin <span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>git add .
+</div><div class='line'>git commit -m <span class="s1">&#39;your message&#39;</span>
+</div><div class='line'>git push origin <span class="nb">source</span>
+</div></pre></td></tr></table></div></figure>
 
 <p><strong>Note:</strong> With new repositories, Github sets the default branch based on the branch you push first, and it looks there for the generated site content.
 If you&#39;re having trouble getting Github to publish your site, go to the admin panel for your repository and make sure that the master branch is the default branch.</p>
 
-<p>To read more on creating your first blog post, read <a href="/docs/blogging/">Blogging Basics</a></p>
+<p>To read more on creating your first blog post, read <a href="http://octopress.org/docs/blogging/">Blogging Basics</a></p>
 
 <h2>With Github Project pages (gh-pages)</h2>
 
@@ -156,9 +150,8 @@ Github will look for a <code>gh-pages</code> branch in your project&#39;s reposi
 
 <p>Here&#39;s now you can set up Octopress site to publish to your projects gh-pages repository:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake setup<em>github</em>pages
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake setup_github_pages
+</div></pre></td></tr></table></div></figure>
 
 <p>This will:</p>
 
@@ -166,16 +159,14 @@ Github will look for a <code>gh-pages</code> branch in your project&#39;s reposi
 <li>Ask you for the repository url for your project.</li>
 <li>Rename the remote pointing to imathis/octopress from &#39;origin&#39; to &#39;octopress&#39;</li>
 <li>Configure your blog for deploying to a subdirectory.</li>
-<li>Set up a gh-pages branch for your project in the <code>_deploy</code> directory, ready for deployment.</li>
+<li>Set up a gh-pages branch for your project in the _deploy directory, ready for deployment.</li>
 </ol>
 
 <p>Next run:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate
-</span><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake generate
+</div><div class='line'>rake deploy
+</div></pre></td></tr></table></div></figure>
 
 <p>This will generate your blog, copy the generated files into <code>_deploy/</code>, add them to git, commit and push them up to the master branch. In a few seconds you should get an email
 from Github telling you that your commit has been received and will be published on your site.</p>
@@ -183,13 +174,10 @@ from Github telling you that your commit has been received and will be published
 <p>Now you have a place to commit the generated content for your site, but you should also set up repository to store the source for your blog.
 After you set up a repository for your blog source, add it as the origin remote.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git remote add origin <span class="o">(</span>your repo url<span class="o">)</span>
-</span><span class='line'><span class="c"># set your new origin as the default branch</span>
-</span><span class='line'>git config branch.master.remote origin
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>git remote add origin <span class="o">(</span>your repo url<span class="o">)</span>
+</div><div class='line'><span class="c"># set your new origin as the default branch</span>
+</div><div class='line'>git config branch.master.remote origin
+</div></pre></td></tr></table></div></figure>
 
 <p>Now push your changes and you&#39;ll be all set.</p>
 
@@ -197,13 +185,10 @@ After you set up a repository for your blog source, add it as the origin remote.
 
 <p>First you&#39;ll need to create a file named <code>CNAME</code> in your blog&#39;s source:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;your-domain.com&#39;</span> &gt;&gt; <span class="nb">source</span>/CNAME
-</span><span class='line'><span class="c"># OR</span>
-</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;www.your-domain.com&#39;</span> &gt;&gt; <span class="nb">source</span>/CNAME
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'><span class="nb">echo</span> <span class="s1">&#39;your-domain.com&#39;</span> &gt;&gt; <span class="nb">source</span>/CNAME
+</div><div class='line'><span class="c"># OR</span>
+</div><div class='line'><span class="nb">echo</span> <span class="s1">&#39;www.your-domain.com&#39;</span> &gt;&gt; <span class="nb">source</span>/CNAME
+</div></pre></td></tr></table></div></figure>
 
 <p>Next, you’ll need to visit your domain registrar or DNS host and add a record for your domain name.</p>
 

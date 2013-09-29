@@ -101,21 +101,14 @@
 
 <p>To publish linked posts with Octopress simply add the url for the item you want to write about to the <code>external-url</code> variable in the yaml front matter of a blog post.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Sample Yaml Front Matter</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
-</span><span class='line'><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">post</span>
-</span><span class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Someone</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">Wrong&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">date</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2012-02-05 17:18</span>
-</span><span class='line'><span class="l-Scalar-Plain">comments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
-</span><span class='line'><span class="l-Scalar-Plain">external-url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://opinionguy.com/post/uninformed-rant-vs-straw-man/</span>
-</span><span class='line'><span class="nn">---</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Sample Yaml Front Matter</figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'><span class="nn">---</span>
+</div><div class='line'><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">post</span>
+</div><div class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Someone</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">Wrong&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">date</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2012-02-05 17:18</span>
+</div><div class='line'><span class="l-Scalar-Plain">comments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</div><div class='line'><span class="l-Scalar-Plain">external-url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://opinionguy.com/post/uninformed-rant-vs-straw-man/</span>
+</div><div class='line'><span class="nn">---</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>When you generate your blog, the title link will point to the external url. Also, each post will show it&#39;s own permalink, and in the feed there will be a permalink at the end of linklog posts.</p>
 
@@ -123,67 +116,44 @@
 
 <p>In the <code>_config.yml</code> there are some configurations you can change if you like.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Permalink and Linklog settings</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">permalink<em>label</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;infin;&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">permalink</em>label<em>feed</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;infin;</span><span class="nv"> </span><span class="s">Permalink&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">linklog</em>marker</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;rarr;&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">linklog<em>marker</em>position</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">after</span>
-</span><span class='line'><span class="l-Scalar-Plain">linklog<em>marker</em>position<em>feed</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">after</span>
-</span><span class='line'><span class="l-Scalar-Plain">standard</em>post_marker</span><span class="p-Indicator">:</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Permalink and Linklog settings</figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'><span class="l-Scalar-Plain">permalink_label</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;infin;&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">permalink_label_feed</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;infin;</span><span class="nv"> </span><span class="s">Permalink&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">linklog_marker</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;rarr;&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">linklog_marker_position</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">after</span>
+</div><div class='line'><span class="l-Scalar-Plain">linklog_marker_position_feed</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">after</span>
+</div><div class='line'><span class="l-Scalar-Plain">standard_post_marker</span><span class="p-Indicator">:</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>The default settings were inspired by <a href="http://marco.org">Marco Arment</a> with one exception, in his RSS feed the linklog marker comes before the title to help readers better distinguish linked posts from normal posts. To use that style simply change <code>linklog_marker_position_feed</code> to <code>before</code>.</p>
 
 <p>John Gruber&#39;s <a href="http://daringfireball.net">Daring Fireball</a> takes a different approach than Marco. Rather than mark his linked posts, he adds &#9733; to the beginning of each of his standard posts. If you wanted to copy that style, you&#39;d set it up like this.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Linklog settings like Daring Fireball</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">permalink<em>label</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;#9733;&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">permalink</em>label<em>feed</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;#9733;&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">linklog</em>marker</span><span class="p-Indicator">:</span>
-</span><span class='line'><span class="l-Scalar-Plain">linklog<em>marker</em>position</span><span class="p-Indicator">:</span>
-</span><span class='line'><span class="l-Scalar-Plain">linklog<em>marker</em>position<em>feed</span><span class="p-Indicator">:</span>
-</span><span class='line'><span class="l-Scalar-Plain">standard</em>post_marker</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;#9733;</span><span class="nv"> </span><span class="s">&quot;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Linklog settings like Daring Fireball</figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'><span class="l-Scalar-Plain">permalink_label</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;#9733;&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">permalink_label_feed</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;#9733;&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">linklog_marker</span><span class="p-Indicator">:</span>
+</div><div class='line'><span class="l-Scalar-Plain">linklog_marker_position</span><span class="p-Indicator">:</span>
+</div><div class='line'><span class="l-Scalar-Plain">linklog_marker_position_feed</span><span class="p-Indicator">:</span>
+</div><div class='line'><span class="l-Scalar-Plain">standard_post_marker</span><span class="p-Indicator">:</span> <span class="s">&quot;&amp;#9733;</span><span class="nv"> </span><span class="s">&quot;</span>
+</div></pre></td></tr></table></div></figure>
 
 <h2>Styling</h2>
 
 <p>To help distinguish them from standard posts, linked posts have a smaller font size in addition to the linklog marker. When an article is a linked post it is marked with the html5 attribute <code>data-linklog</code> to give you a hook to customize styles if you like. If you wanted to set a different color for linked post titles you could add this css to your <code>sass/custom/styles.scss</code>.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Customized linked post title</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="nc">.linklog</span> <span class="nc">.entry-title</span> <span class="nt">a</span> <span class="p">{</span>
-</span><span class='line'>  <span class="na">color</span><span class="o">:</span> <span class="nb">lime</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Customized linked post title</figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div></pre></td><td class='main  scss'><pre><div class='line'><span class="nc">.linklog</span> <span class="nc">.entry-title</span> <span class="nt">a</span> <span class="p">{</span>
+</div><div class='line'>  <span class="na">color</span><span class="o">:</span> <span class="nb">lime</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Styles for linklog markers and permalinks can also be customized.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Customize permalink styles</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="nc">.entry-title</span><span class="nd">:hover</span> <span class="nc">.linklog-marker</span> <span class="p">{</span>
-</span><span class='line'>  <span class="na">color</span><span class="o">:</span> <span class="nv">$link-color-hover</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nt">article</span> <span class="nt">a</span><span class="o">[</span><span class="nt">rel</span><span class="o">=</span><span class="nt">bookmark</span><span class="o">]</span> <span class="p">{</span>
-</span><span class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.2</span><span class="kt">em</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Customize permalink styles</figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div></pre></td><td class='main  scss'><pre><div class='line'><span class="nc">.entry-title</span><span class="nd">:hover</span> <span class="nc">.linklog-marker</span> <span class="p">{</span>
+</div><div class='line'>  <span class="na">color</span><span class="o">:</span> <span class="nv">$link-color-hover</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'> </div><div class='line'><span class="nt">article</span> <span class="nt">a</span><span class="o">[</span><span class="nt">rel</span><span class="o">=</span><span class="nt">bookmark</span><span class="o">]</span> <span class="p">{</span>
+</div><div class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.2</span><span class="kt">em</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div></pre></td></tr></table></div></figure>
 
   
 </article>

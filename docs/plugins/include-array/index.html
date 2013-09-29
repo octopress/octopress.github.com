@@ -104,9 +104,8 @@ This is mostly useful for those working on an Octopress theme.</p>
 
 <p>Jekyll allows you to include partials from the <code>/source/_includes</code> directory as follows:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>    &#x7b;&#x25; raw %}&#x7b;&#x25; include partial.html %}&#x7b;&#x25; endraw %}
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'>    &#x7b;&#x25; raw %}&#x7b;&#x25; include partial.html %}&#x7b;&#x25; endraw %}
+</div></pre></td></tr></table></div></figure>
 
 <p>This will embed the contents of <code>/source/_includes/partial.html</code> in place of the snippet above.</p>
 
@@ -114,15 +113,13 @@ This is mostly useful for those working on an Octopress theme.</p>
 
 <p>First add an array pointing to a list of partials underneath <code>/source/_includes</code></p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'>    <span class="l-Scalar-Plain">asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/social.html</span><span class="p-Indicator">]</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'>    <span class="l-Scalar-Plain">asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/social.html</span><span class="p-Indicator">]</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Now from within a template you can render the partials from the yaml array like this.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>    &#x7b;&#x25; raw %}&#x7b;&#x25; include_array asides %}&#x7b;&#x25; endraw %}
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'>    &#x7b;&#x25; raw %}&#x7b;&#x25; include_array asides %}&#x7b;&#x25; endraw %}
+</div></pre></td></tr></table></div></figure>
 
 <p>Octopress uses <code>include_array</code> to allow configuration of different sidebars for each layout.</p>
 

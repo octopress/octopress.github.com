@@ -128,27 +128,21 @@ code snippet
 
 <p><strong>1.</strong> Here&#39;s an example without setting the language.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>$ git clone git@github.com:imathis/octopress.git # fork octopress</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  plain'><pre><div class='line'>$ sudo make me a sandwich</div></pre></td></tr></table></div></figure>
 
 <p><em>The source:</em></p>
 <div class="highlight"><pre><code class="text">```
-$ git clone git@github.com:imathis/octopress.git # fork octopress
+$ sudo make me a sandwich
 ```
 </code></pre></div>
 <p><strong>2.</strong> This example uses syntax highlighting and a code link.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Discover if a number is prime </span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/' title='Download code'> Source Article</a></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">prime?</span>
-</span><span class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Discover if a number is prime<a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>link</a></figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div></pre></td><td class='main  ruby'><pre><div class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
+</div><div class='line'>  <span class="k">def</span> <span class="nf">prime?</span>
+</div><div class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
+</div><div class='line'>  <span class="k">end</span>
+</div><div class='line'><span class="k">end</span>
+</div></pre></td></tr></table></div></figure>
 
 <p><em>The source:</em></p>
 <div class="highlight"><pre><code class="text">``` ruby Discover if a number is prime http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/ Source Article
@@ -161,17 +155,11 @@ end
 </code></pre></div>
 <p><strong>3.</strong> This example uses a custom starting line number and marks lines 52 and 54 through 55.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Coffeescript Tricks</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>51</span>
-<span class='line-number marked'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number marked'>54</span>
-<span class='line-number marked'>55</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="c1"># Given an alphabet:</span>
-</span><span class='line marked start end'><span class="nv">alphabet = </span><span class="s">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
-</span><span class='line'>
-</span><span class='line marked start'><span class="c1"># Iterate over part of the alphabet:</span>
-</span><span class='line marked end'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">letter</span> <span class="k">for</span> <span class="nx">letter</span> <span class="k">in</span> <span class="nx">alphabet</span><span class="p">[</span><span class="mi">4</span><span class="p">..</span><span class="mi">8</span><span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Coffeescript Tricks</figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='51' class='line-number'></div><div data-line='52' class='line-number marked start end'></div><div data-line='53' class='line-number'></div><div data-line='54' class='line-number marked start'></div><div data-line='55' class='line-number marked end'></div></pre></td><td class='main  coffeescript'><pre><div class='line'><span class="c1"># Given an alphabet:</span>
+</div><div class='line marked start end'><span class="nv">alphabet = </span><span class="s">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+</div><div class='line'> </div><div class='line marked start'><span class="c1"># Iterate over part of the alphabet:</span>
+</div><div class='line marked end'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">letter</span> <span class="k">for</span> <span class="nx">letter</span> <span class="k">in</span> <span class="nx">alphabet</span><span class="p">[</span><span class="mi">4</span><span class="p">..</span><span class="mi">8</span><span class="p">]</span>
+</div></pre></td></tr></table></div></figure>
 
 <p><em>The source:</em></p>
 <div class="highlight"><pre><code class="text">``` coffeescript Coffeescript Tricks start:51 mark:52,54-55

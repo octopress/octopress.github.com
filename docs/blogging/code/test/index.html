@@ -85,596 +85,277 @@
     
   </header>
   
-  <p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>test.js</span><a href='/downloads/code/test.js' title='Download code'> download</a></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="kc">undefined</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">xui</span><span class="p">,</span>
-</span><span class='line'>    <span class="nb">window</span>     <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">string</span>     <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nb">document</span>   <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+  <div class="highlight"><pre><code class="text">So guys
+whats up
+</code></pre></div>
+<figure class='code'><figcaption>test.js<a href='/downloads/code/test.js'>view raw</a></figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div></pre></td><td class='main  js'><pre><div class='line'><span class="kd">var</span> <span class="kc">undefined</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">xui</span><span class="p">,</span>
+</div><div class='line'>    <span class="nb">window</span>     <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">string</span>     <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">),</span>
+</div><div class='line'>    <span class="nb">document</span>   <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
+</div></pre></td></tr></table></div></figure>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;</span>
-</span><span class='line'><span class="nt">&lt;html&gt;&lt;head&gt;</span>
-</span><span class='line'><span class="nt">&lt;title&gt;</span>A Tiny Page<span class="nt">&lt;/title&gt;</span>
-</span><span class='line'><span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'><span class="o">&lt;!</span><span class="nt">--</span>
-</span><span class='line'>      <span class="nt">p</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span><span class="m">15pt</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span><span class="m">#000</span> <span class="p">}</span>
-</span><span class='line'>    <span class="nt">--</span><span class="o">&gt;</span>
-</span><span class='line'><span class="nt">&lt;/style&gt;&lt;/head&gt;</span><span class="c">&lt;!-- real comment --&gt;</span>
-</span><span class='line'><span class="nt">&lt;body</span> <span class="na">bgcolor=</span><span class="s">&quot;#FFFFFF&quot;</span> <span class="na">text=</span><span class="s">&quot;#000000&quot;</span> <span class="na">link=</span><span class="s">&quot;#0000CC&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'><span class="nt">&lt;script </span><span class="na">language=</span><span class="s">&quot;javascript&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>      <span class="kd">function</span> <span class="nx">changeHeight</span><span class="p">(</span><span class="nx">h</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="kd">var</span> <span class="nx">tds</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">);</span>
-</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">tds</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>          <span class="nx">tds</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="nx">h</span> <span class="o">+</span> <span class="s2">&quot;px&quot;</span><span class="p">);</span>
-</span><span class='line'>      <span class="p">}}</span>
-</span><span class='line'><span class="nt">&lt;/script&gt;</span>
-</span><span class='line'><span class="nt">&lt;h1&gt;</span>abc<span class="nt">&lt;/h1&gt;</span>
-</span><span class='line'><span class="nt">&lt;h2&gt;</span>def<span class="nt">&lt;/h2&gt;</span>
-</span><span class='line'><span class="nt">&lt;p&gt;</span>Testing page<span class="nt">&lt;/p&gt;</span>
-</span><span class='line'><span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;</span>
+</div><div class='line'><span class="nt">&lt;html&gt;&lt;head&gt;</span>
+</div><div class='line'><span class="nt">&lt;title&gt;</span>A Tiny Page<span class="nt">&lt;/title&gt;</span>
+</div><div class='line'><span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
+</div><div class='line'><span class="o">&lt;!</span><span class="nt">--</span>
+</div><div class='line'>      <span class="nt">p</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span><span class="m">15pt</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span><span class="m">#000</span> <span class="p">}</span>
+</div><div class='line'>    <span class="nt">--</span><span class="o">&gt;</span>
+</div><div class='line'><span class="nt">&lt;/style&gt;&lt;/head&gt;</span><span class="c">&lt;!-- real comment --&gt;</span>
+</div><div class='line'><span class="nt">&lt;body</span> <span class="na">bgcolor=</span><span class="s">&quot;#FFFFFF&quot;</span> <span class="na">text=</span><span class="s">&quot;#000000&quot;</span> <span class="na">link=</span><span class="s">&quot;#0000CC&quot;</span><span class="nt">&gt;</span>
+</div><div class='line'><span class="nt">&lt;script </span><span class="na">language=</span><span class="s">&quot;javascript&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</div><div class='line'>      <span class="kd">function</span> <span class="nx">changeHeight</span><span class="p">(</span><span class="nx">h</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>        <span class="kd">var</span> <span class="nx">tds</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">);</span>
+</div><div class='line'>        <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">tds</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>          <span class="nx">tds</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="nx">h</span> <span class="o">+</span> <span class="s2">&quot;px&quot;</span><span class="p">);</span>
+</div><div class='line'>      <span class="p">}}</span>
+</div><div class='line'><span class="nt">&lt;/script&gt;</span>
+</div><div class='line'><span class="nt">&lt;h1&gt;</span>abc<span class="nt">&lt;/h1&gt;</span>
+</div><div class='line'><span class="nt">&lt;h2&gt;</span>def<span class="nt">&lt;/h2&gt;</span>
+</div><div class='line'><span class="nt">&lt;p&gt;</span>Testing page<span class="nt">&lt;/p&gt;</span>
+</div><div class='line'><span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
+</div></pre></td></tr></table></div></figure>
 
-<div><script src='https://gist.github.com/996818.js?file='></script>
-<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://github.com/gist/996818&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
+<figure class='code'><figcaption>Gist: 2219214<a href='https://gist.github.com/2219214'>Gist page</a></figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  rb'><pre><div class='line'><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;&lt;</span><span class="n">body</span><span class="o">&gt;</span><span class="no">You</span> <span class="n">are</span> <span class="n">being</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://github.com/gist/2219214&quot;</span><span class="o">&gt;</span><span class="n">redirected</span><span class="o">&lt;</span><span class="sr">/a&gt;.&lt;/</span><span class="n">body</span><span class="o">&gt;&lt;</span><span class="sr">/html&gt;</span>
+</div></pre></td></tr></table></div></figure>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Testing PHP (syntax<em>test.php) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
-</span><span class='line'><span class="k">require</em>once</span><span class="p">(</span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;g<em>campsiteDir&#39;</span><span class="p">]</span><span class="o">.</span> <span class="s2">&quot;/</span><span class="si">$ADMIN</em>DIR</span><span class="s2">/country/common.php&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="k">require<em>once</span><span class="p">(</span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;g</em>campsiteDir&#39;</span><span class="p">]</span><span class="o">.</span> <span class="s2">&quot;/classes/SimplePager.php&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">camp<em>load</em>translation<em>strings</span><span class="p">(</span><span class="s2">&quot;api&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">$f</em>country<em>language</em>selected</span> <span class="o">=</span> <span class="nx">camp<em>session</em>get</span><span class="p">(</span><span class="s1">&#39;f<em>language</em>selected&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nv">$f<em>country</em>offset</span> <span class="o">=</span> <span class="nx">camp<em>session</em>get</span><span class="p">(</span><span class="s1">&#39;f<em>country</em>offset&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$f<em>country</em>language<em>selected</span><span class="p">))</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nv">$f</em>country<em>language</em>selected</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="nv">$ItemsPerPage</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
-</span><span class='line'><span class="nv">$languages</span> <span class="o">=</span> <span class="nx">Language</span><span class="o">::</span><span class="na">GetLanguages</span><span class="p">(</span><span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">array</span><span class="p">(),</span> <span class="k">array</span><span class="p">(),</span> <span class="k">true</span><span class="p">);</span>
-</span><span class='line'><span class="nv">$numCountries</span> <span class="o">=</span> <span class="nx">Country</span><span class="o">::</span><span class="na">GetNumCountries</span><span class="p">(</span><span class="nv">$f<em>country</em>language<em>selected</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">$pager</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SimplePager</span><span class="p">(</span><span class="nv">$numCountries</span><span class="p">,</span> <span class="nv">$ItemsPerPage</span><span class="p">,</span> <span class="s2">&quot;index.php?&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">$crumbs</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
-</span><span class='line'><span class="nv">$crumbs</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">getGS</span><span class="p">(</span><span class="s2">&quot;Configure&quot;</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="nv">$crumbs</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">getGS</span><span class="p">(</span><span class="s2">&quot;Countries&quot;</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="k">echo</span> <span class="nx">camp</em>html<em>breadcrumbs</span><span class="p">(</span><span class="nv">$crumbs</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
-</span><span class='line'>
-</span><span class='line'><span class="cp">&lt;?php</span>  <span class="k">if</span> <span class="p">(</span><span class="nv">$g</em>user</span><span class="o">-&gt;</span><span class="na">hasPermission</span><span class="p">(</span><span class="s2">&quot;ManageCountries&quot;</span><span class="p">))</span> <span class="p">{</span> <span class="cp">?&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">&lt;table BORDER=&quot;0&quot; CELLSPACING=&quot;0&quot; CELLPADDING=&quot;1&quot;&gt;</span>
-</span><span class='line'><span class="x">    &lt;tr&gt;</span>
-</span><span class='line'><span class="x">        &lt;td&gt;&lt;a href=&quot;add.php&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="nx">putGS</span><span class="p">(</span><span class="s2">&quot;Add new&quot;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/a&gt;&lt;/td&gt;</span>
-</span><span class='line'><span class="x">    &lt;/tr&gt;</span>
-</span><span class='line'><span class="x">&lt;/table&gt;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Testing PHP (syntax_test.php) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div><div data-line='21' class='line-number'></div><div data-line='22' class='line-number'></div><div data-line='23' class='line-number'></div><div data-line='24' class='line-number'></div><div data-line='25' class='line-number'></div><div data-line='26' class='line-number'></div><div data-line='27' class='line-number'></div><div data-line='28' class='line-number'></div><div data-line='29' class='line-number'></div></pre></td><td class='main  php'><pre><div class='line'><span class="cp">&lt;?php</span>
+</div><div class='line'><span class="k">require_once</span><span class="p">(</span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;g_campsiteDir&#39;</span><span class="p">]</span><span class="o">.</span> <span class="s2">&quot;/</span><span class="si">$ADMIN_DIR</span><span class="s2">/country/common.php&quot;</span><span class="p">);</span>
+</div><div class='line'><span class="k">require_once</span><span class="p">(</span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;g_campsiteDir&#39;</span><span class="p">]</span><span class="o">.</span> <span class="s2">&quot;/classes/SimplePager.php&quot;</span><span class="p">);</span>
+</div><div class='line'><span class="nx">camp_load_translation_strings</span><span class="p">(</span><span class="s2">&quot;api&quot;</span><span class="p">);</span>
+</div><div class='line'> </div><div class='line'><span class="nv">$f_country_language_selected</span> <span class="o">=</span> <span class="nx">camp_session_get</span><span class="p">(</span><span class="s1">&#39;f_language_selected&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</div><div class='line'><span class="nv">$f_country_offset</span> <span class="o">=</span> <span class="nx">camp_session_get</span><span class="p">(</span><span class="s1">&#39;f_country_offset&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</div><div class='line'><span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$f_country_language_selected</span><span class="p">))</span> <span class="p">{</span>
+</div><div class='line'>    <span class="nv">$f_country_language_selected</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'><span class="nv">$ItemsPerPage</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</div><div class='line'><span class="nv">$languages</span> <span class="o">=</span> <span class="nx">Language</span><span class="o">::</span><span class="na">GetLanguages</span><span class="p">(</span><span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">array</span><span class="p">(),</span> <span class="k">array</span><span class="p">(),</span> <span class="k">true</span><span class="p">);</span>
+</div><div class='line'><span class="nv">$numCountries</span> <span class="o">=</span> <span class="nx">Country</span><span class="o">::</span><span class="na">GetNumCountries</span><span class="p">(</span><span class="nv">$f_country_language_selected</span><span class="p">);</span>
+</div><div class='line'> </div><div class='line'><span class="nv">$pager</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SimplePager</span><span class="p">(</span><span class="nv">$numCountries</span><span class="p">,</span> <span class="nv">$ItemsPerPage</span><span class="p">,</span> <span class="s2">&quot;index.php?&quot;</span><span class="p">);</span>
+</div><div class='line'> </div><div class='line'><span class="nv">$crumbs</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+</div><div class='line'><span class="nv">$crumbs</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">getGS</span><span class="p">(</span><span class="s2">&quot;Configure&quot;</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+</div><div class='line'><span class="nv">$crumbs</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">getGS</span><span class="p">(</span><span class="s2">&quot;Countries&quot;</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+</div><div class='line'><span class="k">echo</span> <span class="nx">camp_html_breadcrumbs</span><span class="p">(</span><span class="nv">$crumbs</span><span class="p">);</span>
+</div><div class='line'> </div><div class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</div><div class='line'> </div><div class='line'><span class="cp">&lt;?php</span>  <span class="k">if</span> <span class="p">(</span><span class="nv">$g_user</span><span class="o">-&gt;</span><span class="na">hasPermission</span><span class="p">(</span><span class="s2">&quot;ManageCountries&quot;</span><span class="p">))</span> <span class="p">{</span> <span class="cp">?&gt;</span><span class="x"></span>
+</div><div class='line'><span class="x">&lt;table BORDER=&quot;0&quot; CELLSPACING=&quot;0&quot; CELLPADDING=&quot;1&quot;&gt;</span>
+</div><div class='line'><span class="x">    &lt;tr&gt;</span>
+</div><div class='line'><span class="x">        &lt;td&gt;&lt;a href=&quot;add.php&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="nx">putGS</span><span class="p">(</span><span class="s2">&quot;Add new&quot;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/a&gt;&lt;/td&gt;</span>
+</div><div class='line'><span class="x">    &lt;/tr&gt;</span>
+</div><div class='line'><span class="x">&lt;/table&gt;</span>
+</div></pre></td></tr></table></div></figure>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Testing Objective C (Cocoa1AppDelegate.m) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="cp">#import &quot;Cocoa1AppDelegate.h&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@implementation</span> <span class="nc">Cocoa1AppDelegate</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@synthesize</span> <span class="n">window</span><span class="p">,</span><span class="n">siteUrl</span><span class="p">,</span><span class="n">pageContents</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationDidFinishLaunching:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o"><em></span><span class="p">)</span><span class="nv">aNotification</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="c1">// Insert code here to initialize your application</span>
-</span><span class='line'>    <span class="n">model</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Cocoa1Model</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">getSiteContents:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">model</span> <span class="nl">setPageUrl:</span><span class="p">[</span><span class="n">siteUrl</span> <span class="n">stringValue</span><span class="p">]];</span>
-</span><span class='line'>    <span class="n">NSString</span><span class="o"></em></span> <span class="n">reply</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span> <span class="n">getUrlAsString</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;pageSrc: %@&quot;</span><span class="p">,</span> <span class="n">reply</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">pageContents</span> <span class="nl">setString:</span><span class="n">reply</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">[[[</span><span class="n">pageContents</span> <span class="n">textStorage</span><span class="p">]</span> <span class="n">mutableString</span><span class="p">]</span> <span class="nl">appendString:</span><span class="n">reply</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@end</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Testing Objective C (Cocoa1AppDelegate.m) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div><div data-line='21' class='line-number'></div></pre></td><td class='main  objc'><pre><div class='line'><span class="cp">#import &quot;Cocoa1AppDelegate.h&quot;</span>
+</div><div class='line'> </div><div class='line'><span class="k">@implementation</span> <span class="nc">Cocoa1AppDelegate</span>
+</div><div class='line'> </div><div class='line'><span class="k">@synthesize</span> <span class="n">window</span><span class="p">,</span><span class="n">siteUrl</span><span class="p">,</span><span class="n">pageContents</span><span class="p">;</span>
+</div><div class='line'> </div><div class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationDidFinishLaunching:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span>
+</div><div class='line'><span class="p">{</span>
+</div><div class='line'>    <span class="c1">// Insert code here to initialize your application</span>
+</div><div class='line'>    <span class="n">model</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Cocoa1Model</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'> </div><div class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">getSiteContents:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
+</div><div class='line'>    <span class="p">[</span><span class="n">model</span> <span class="nl">setPageUrl:</span><span class="p">[</span><span class="n">siteUrl</span> <span class="n">stringValue</span><span class="p">]];</span>
+</div><div class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">reply</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span> <span class="n">getUrlAsString</span><span class="p">];</span>
+</div><div class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;pageSrc: %@&quot;</span><span class="p">,</span> <span class="n">reply</span><span class="p">);</span>
+</div><div class='line'>    <span class="p">[</span><span class="n">pageContents</span> <span class="nl">setString:</span><span class="n">reply</span><span class="p">];</span>
+</div><div class='line'>    <span class="p">[[[</span><span class="n">pageContents</span> <span class="n">textStorage</span><span class="p">]</span> <span class="n">mutableString</span><span class="p">]</span> <span class="nl">appendString:</span><span class="n">reply</span><span class="p">];</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'> </div><div class='line'><span class="k">@end</span>
+</div></pre></td></tr></table></div></figure>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Testing Haskel (syntax<em>test.hs) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-</pre></td><td class='code'><pre><code class='hs'><span class='line'><span class="cm">{-# LANGUAGE OverloadedStrings #-}</span>
-</span><span class='line'><span class="kr">module</span> <span class="nn">Main</span> <span class="kr">where</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">--import Prelude hiding (id)</span>
-</span><span class='line'><span class="c1">--import Control.Category (id)</span>
-</span><span class='line'><span class="kr">import</span> <span class="nn">Control.Arrow</span> <span class="p">((</span><span class="o">&gt;&gt;&gt;</span><span class="p">),</span> <span class="p">(</span><span class="o">***</span><span class="p">),</span> <span class="nf">arr</span><span class="p">)</span>
-</span><span class='line'><span class="kr">import</span> <span class="nn">Control.Monad</span> <span class="p">(</span><span class="nf">forM</em></span><span class="p">)</span>
-</span><span class='line'><span class="c1">-- import Data.Monoid (mempty, mconcat)</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">-- import System.FilePath</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">import</span> <span class="nn">Hakyll</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nf">main</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="nb">()</span>
-</span><span class='line'><span class="nf">main</span> <span class="ow">=</span> <span class="n">hakyll</span> <span class="o">$</span> <span class="kr">do</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">route</span>   <span class="s">&quot;css/<em>&quot;</span> <span class="o">$</span> <span class="n">setExtension</span> <span class="s">&quot;css&quot;</span>
-</span><span class='line'>    <span class="n">compile</span> <span class="s">&quot;css/</em>&quot;</span> <span class="o">$</span> <span class="n">byExtension</span> <span class="p">(</span><span class="ne">error</span> <span class="s">&quot;Not a (S)CSS file&quot;</span><span class="p">)</span>
-</span><span class='line'>        <span class="p">[</span> <span class="p">(</span><span class="s">&quot;.css&quot;</span><span class="p">,</span>  <span class="n">compressCssCompiler</span><span class="p">)</span>
-</span><span class='line'>        <span class="p">,</span> <span class="p">(</span><span class="s">&quot;.scss&quot;</span><span class="p">,</span> <span class="n">sass</span><span class="p">)</span>
-</span><span class='line'>        <span class="p">]</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">route</span>   <span class="s">&quot;js/<strong>&quot;</span> <span class="n">idRoute</span>
-</span><span class='line'>    <span class="n">compile</span> <span class="s">&quot;js/</strong>&quot;</span> <span class="n">copyFileCompiler</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">route</span>   <span class="s">&quot;img/<em>&quot;</span> <span class="n">idRoute</span>
-</span><span class='line'>    <span class="n">compile</span> <span class="s">&quot;img/</em>&quot;</span> <span class="n">copyFileCompiler</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">compile</span> <span class="s">&quot;templates/*&quot;</span> <span class="n">templateCompiler</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">forM_</span> <span class="p">[</span><span class="s">&quot;test.md&quot;</span><span class="p">,</span> <span class="s">&quot;index.md&quot;</span><span class="p">]</span> <span class="o">$</span> <span class="nf">&lt;/span&gt;<span class="n">page</span> <span class="ow">-&gt;</span> <span class="kr">do</span>
-</span><span class='line'>        <span class="n">route</span>   <span class="n">page</span> <span class="o">$</span> <span class="n">setExtension</span> <span class="s">&quot;html&quot;</span>
-</span><span class='line'>        <span class="n">compile</span> <span class="n">page</span> <span class="o">$</span> <span class="n">pageCompiler</span>
-</span><span class='line'>            <span class="o">&gt;&gt;&gt;</span> <span class="n">applyTemplateCompiler</span> <span class="s">&quot;templates/default.html&quot;</span>
-</span><span class='line'>            <span class="o">&gt;&gt;&gt;</span> <span class="n">relativizeUrlsCompiler</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">sass</span> <span class="ow">::</span> <span class="kt">Compiler</span> <span class="kt">Resource</span> <span class="kt">String</span>
-</span><span class='line'><span class="nf">sass</span> <span class="ow">=</span> <span class="n">getResourceString</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">unixFilter</span> <span class="s">&quot;sass&quot;</span> <span class="p">[</span><span class="s">&quot;-s&quot;</span><span class="p">,</span> <span class="s">&quot;--scss&quot;</span><span class="p">]</span>
-</span><span class='line'>                         <span class="o">&gt;&gt;&gt;</span> <span class="n">arr</span> <span class="n">compressCss</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Testing Haskel (syntax_test.hs) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div><div data-line='21' class='line-number'></div><div data-line='22' class='line-number'></div><div data-line='23' class='line-number'></div><div data-line='24' class='line-number'></div><div data-line='25' class='line-number'></div><div data-line='26' class='line-number'></div><div data-line='27' class='line-number'></div><div data-line='28' class='line-number'></div><div data-line='29' class='line-number'></div><div data-line='30' class='line-number'></div><div data-line='31' class='line-number'></div><div data-line='32' class='line-number'></div><div data-line='33' class='line-number'></div><div data-line='34' class='line-number'></div><div data-line='35' class='line-number'></div><div data-line='36' class='line-number'></div><div data-line='37' class='line-number'></div><div data-line='38' class='line-number'></div><div data-line='39' class='line-number'></div><div data-line='40' class='line-number'></div></pre></td><td class='main  hs'><pre><div class='line'><span class="cm">{-# LANGUAGE OverloadedStrings #-}</span>
+</div><div class='line'><span class="kr">module</span> <span class="nn">Main</span> <span class="kr">where</span>
+</div><div class='line'> </div><div class='line'><span class="c1">--import Prelude hiding (id)</span>
+</div><div class='line'><span class="c1">--import Control.Category (id)</span>
+</div><div class='line'><span class="kr">import</span> <span class="nn">Control.Arrow</span> <span class="p">((</span><span class="o">&gt;&gt;&gt;</span><span class="p">),</span> <span class="p">(</span><span class="o">***</span><span class="p">),</span> <span class="nf">arr</span><span class="p">)</span>
+</div><div class='line'><span class="kr">import</span> <span class="nn">Control.Monad</span> <span class="p">(</span><span class="nf">forM_</span><span class="p">)</span>
+</div><div class='line'><span class="c1">-- import Data.Monoid (mempty, mconcat)</span>
+</div><div class='line'> </div><div class='line'><span class="c1">-- import System.FilePath</span>
+</div><div class='line'> </div><div class='line'><span class="kr">import</span> <span class="nn">Hakyll</span>
+</div><div class='line'> </div><div class='line'> </div><div class='line'><span class="nf">main</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="nb">()</span>
+</div><div class='line'><span class="nf">main</span> <span class="ow">=</span> <span class="n">hakyll</span> <span class="o">$</span> <span class="kr">do</span>
+</div><div class='line'> </div><div class='line'>    <span class="n">route</span>   <span class="s">&quot;css/*&quot;</span> <span class="o">$</span> <span class="n">setExtension</span> <span class="s">&quot;css&quot;</span>
+</div><div class='line'>    <span class="n">compile</span> <span class="s">&quot;css/*&quot;</span> <span class="o">$</span> <span class="n">byExtension</span> <span class="p">(</span><span class="ne">error</span> <span class="s">&quot;Not a (S)CSS file&quot;</span><span class="p">)</span>
+</div><div class='line'>        <span class="p">[</span> <span class="p">(</span><span class="s">&quot;.css&quot;</span><span class="p">,</span>  <span class="n">compressCssCompiler</span><span class="p">)</span>
+</div><div class='line'>        <span class="p">,</span> <span class="p">(</span><span class="s">&quot;.scss&quot;</span><span class="p">,</span> <span class="n">sass</span><span class="p">)</span>
+</div><div class='line'>        <span class="p">]</span>
+</div><div class='line'> </div><div class='line'>    <span class="n">route</span>   <span class="s">&quot;js/**&quot;</span> <span class="n">idRoute</span>
+</div><div class='line'>    <span class="n">compile</span> <span class="s">&quot;js/**&quot;</span> <span class="n">copyFileCompiler</span>
+</div><div class='line'> </div><div class='line'>    <span class="n">route</span>   <span class="s">&quot;img/*&quot;</span> <span class="n">idRoute</span>
+</div><div class='line'>    <span class="n">compile</span> <span class="s">&quot;img/*&quot;</span> <span class="n">copyFileCompiler</span>
+</div><div class='line'> </div><div class='line'>    <span class="n">compile</span> <span class="s">&quot;templates/*&quot;</span> <span class="n">templateCompiler</span>
+</div><div class='line'> </div><div class='line'>    <span class="n">forM_</span> <span class="p">[</span><span class="s">&quot;test.md&quot;</span><span class="p">,</span> <span class="s">&quot;index.md&quot;</span><span class="p">]</span> <span class="o">$</span> <span class="nf">\</span><span class="n">page</span> <span class="ow">-&gt;</span> <span class="kr">do</span>
+</div><div class='line'>        <span class="n">route</span>   <span class="n">page</span> <span class="o">$</span> <span class="n">setExtension</span> <span class="s">&quot;html&quot;</span>
+</div><div class='line'>        <span class="n">compile</span> <span class="n">page</span> <span class="o">$</span> <span class="n">pageCompiler</span>
+</div><div class='line'>            <span class="o">&gt;&gt;&gt;</span> <span class="n">applyTemplateCompiler</span> <span class="s">&quot;templates/default.html&quot;</span>
+</div><div class='line'>            <span class="o">&gt;&gt;&gt;</span> <span class="n">relativizeUrlsCompiler</span>
+</div><div class='line'> </div><div class='line'><span class="nf">sass</span> <span class="ow">::</span> <span class="kt">Compiler</span> <span class="kt">Resource</span> <span class="kt">String</span>
+</div><div class='line'><span class="nf">sass</span> <span class="ow">=</span> <span class="n">getResourceString</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">unixFilter</span> <span class="s">&quot;sass&quot;</span> <span class="p">[</span><span class="s">&quot;-s&quot;</span><span class="p">,</span> <span class="s">&quot;--scss&quot;</span><span class="p">]</span>
+</div><div class='line'>                         <span class="o">&gt;&gt;&gt;</span> <span class="n">arr</span> <span class="n">compressCss</span>
+</div></pre></td></tr></table></div></figure>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Testing Bash (syntax<em>test.sh) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/bash</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">cd</span> <span class="nv">$ROOT</em>DIR</span>
-</span><span class='line'><span class="nv">DOT<em>FILES</span><span class="o">=</span><span class="s2">&quot;lastpass weechat ssh Xauthority&quot;</span>
-</span><span class='line'><span class="k">for </span>dotfile in <span class="nv">$DOT</em>FILES</span>; <span class="k">do </span>conform<em>link <span class="s2">&quot;$DATA</em>DIR/$dotfile&quot;</span> <span class="s2">&quot;.$dotfile&quot;</span>; <span class="k">done</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># TODO: refactor with suffix variables (or common cron values)</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">case</span> <span class="s2">&quot;$PLATFORM&quot;</span> in
-</span><span class='line'>  linux<span class="o">)</span>
-</span><span class='line'>        <span class="c">#conform<em>link &quot;$CONF</em>DIR/shell/zshenv&quot; &quot;.zshenv&quot;</span>
-</span><span class='line'>        crontab -l &gt; <span class="nv">$ROOT<em>DIR</span>/tmp/crontab-conflict-arch
-</span><span class='line'>        <span class="nb">cd</span> <span class="nv">$ROOT</em>DIR</span>/<span class="nv">$CONF<em>DIR</span>/cron
-</span><span class='line'>        <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$(diff ~/tmp/crontab-conflict-arch crontab-current-arch)&quot;</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>
-</span><span class='line'>            <span class="o">]]</span>;
-</span><span class='line'>            <span class="k">then</span> <span class="c"># no difference with current backup</span>
-</span><span class='line'>                logger <span class="s2">&quot;$LOG</em>PREFIX: crontab live settings match stored &quot;</span><span class="se">&lt;/span&gt;
-</span><span class='line'>                    <span class="s2">&quot;settings; no restore required&quot;</span>
-</span><span class='line'>                rm ~/tmp/crontab-conflict-arch
-</span><span class='line'>            <span class="k">else</span> <span class="c"># current crontab settings in file do not match live settings</span>
-</span><span class='line'>                crontab <span class="nv">$ROOT<em>DIR</span>/<span class="nv">$CONF</em>DIR</span>/cron/crontab-current-arch
-</span><span class='line'>                logger <span class="s2">&quot;$LOG_PREFIX: crontab stored settings conflict with &quot;</span><span class="se">&lt;/span&gt;
-</span><span class='line'>                    <span class="s2">&quot;live settings; stored settings restored. &quot;</span><span class="se">&lt;/span&gt;
-</span><span class='line'>                    <span class="s2">&quot;Previous settings recorded in ~/tmp/crontab-conflict-arch.&quot;</span>
-</span><span class='line'>        <span class="k">fi</span>
-</span><span class='line'>    ;;
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Testing Bash (syntax_test.sh) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div><div data-line='21' class='line-number'></div><div data-line='22' class='line-number'></div><div data-line='23' class='line-number'></div><div data-line='24' class='line-number'></div><div data-line='25' class='line-number'></div><div data-line='26' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'><span class="c">#!/bin/bash</span>
+</div><div class='line'> </div><div class='line'><span class="nb">cd</span> <span class="nv">$ROOT_DIR</span>
+</div><div class='line'><span class="nv">DOT_FILES</span><span class="o">=</span><span class="s2">&quot;lastpass weechat ssh Xauthority&quot;</span>
+</div><div class='line'><span class="k">for </span>dotfile in <span class="nv">$DOT_FILES</span>; <span class="k">do </span>conform_link <span class="s2">&quot;$DATA_DIR/$dotfile&quot;</span> <span class="s2">&quot;.$dotfile&quot;</span>; <span class="k">done</span>
+</div><div class='line'> </div><div class='line'><span class="c"># TODO: refactor with suffix variables (or common cron values)</span>
+</div><div class='line'> </div><div class='line'><span class="k">case</span> <span class="s2">&quot;$PLATFORM&quot;</span> in
+</div><div class='line'>    linux<span class="o">)</span>
+</div><div class='line'>        <span class="c">#conform_link &quot;$CONF_DIR/shell/zshenv&quot; &quot;.zshenv&quot;</span>
+</div><div class='line'>        crontab -l &gt; <span class="nv">$ROOT_DIR</span>/tmp/crontab-conflict-arch
+</div><div class='line'>        <span class="nb">cd</span> <span class="nv">$ROOT_DIR</span>/<span class="nv">$CONF_DIR</span>/cron
+</div><div class='line'>        <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$(diff ~/tmp/crontab-conflict-arch crontab-current-arch)&quot;</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>
+</div><div class='line'>            <span class="o">]]</span>;
+</div><div class='line'>            <span class="k">then</span> <span class="c"># no difference with current backup</span>
+</div><div class='line'>                logger <span class="s2">&quot;$LOG_PREFIX: crontab live settings match stored &quot;</span><span class="se">\</span>
+</div><div class='line'>                    <span class="s2">&quot;settings; no restore required&quot;</span>
+</div><div class='line'>                rm ~/tmp/crontab-conflict-arch
+</div><div class='line'>            <span class="k">else</span> <span class="c"># current crontab settings in file do not match live settings</span>
+</div><div class='line'>                crontab <span class="nv">$ROOT_DIR</span>/<span class="nv">$CONF_DIR</span>/cron/crontab-current-arch
+</div><div class='line'>                logger <span class="s2">&quot;$LOG_PREFIX: crontab stored settings conflict with &quot;</span><span class="se">\</span>
+</div><div class='line'>                    <span class="s2">&quot;live settings; stored settings restored. &quot;</span><span class="se">\</span>
+</div><div class='line'>                    <span class="s2">&quot;Previous settings recorded in ~/tmp/crontab-conflict-arch.&quot;</span>
+</div><div class='line'>        <span class="k">fi</span>
+</div><div class='line'>    ;;
+</div></pre></td></tr></table></div></figure>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Testing Python (syntax<em>test.py) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-</pre></td><td class='code'><pre><code class='py'><span class='line'><span class="c"># test python (sample from offlineimap)</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">class</span> <span class="nc">ExitNotifyThread</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
-</span><span class='line'>    <span class="sd">&quot;&quot;&quot;This class is designed to alert a &quot;monitor&quot; to the fact that a thread has</span>
-</span><span class='line'><span class="sd">    exited and to provide for the ability for it to find out why.&quot;&quot;&quot;</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">global</span> <span class="n">exitthreads</span><span class="p">,</span> <span class="n">profiledir</span>
-</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">threadid</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</em>ident</span><span class="p">()</span>
-</span><span class='line'>        <span class="k">try</span><span class="p">:</span>
-</span><span class='line'>            <span class="k">if</span> <span class="ow">not</span> <span class="n">profiledir</span><span class="p">:</span>          <span class="c"># normal case</span>
-</span><span class='line'>                <span class="n">Thread</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-</span><span class='line'>            <span class="k">else</span><span class="p">:</span>
-</span><span class='line'>                <span class="k">try</span><span class="p">:</span>
-</span><span class='line'>                    <span class="kn">import</span> <span class="nn">cProfile</span> <span class="kn">as</span> <span class="nn">profile</span>
-</span><span class='line'>                <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-</span><span class='line'>                    <span class="kn">import</span> <span class="nn">profile</span>
-</span><span class='line'>                <span class="n">prof</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">Profile</span><span class="p">()</span>
-</span><span class='line'>                <span class="k">try</span><span class="p">:</span>
-</span><span class='line'>                    <span class="n">prof</span> <span class="o">=</span> <span class="n">prof</span><span class="o">.</span><span class="n">runctx</span><span class="p">(</span><span class="s">&quot;Thread.run(self)&quot;</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="nb">locals</span><span class="p">())</span>
-</span><span class='line'>                <span class="k">except</span> <span class="ne">SystemExit</span><span class="p">:</span>
-</span><span class='line'>                    <span class="k">pass</span>
-</span><span class='line'>                <span class="n">prof</span><span class="o">.</span><span class="n">dump<em>stats</span><span class="p">(</span> \
-</span><span class='line'>                            <span class="n">profiledir</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">threadid</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;</em>&quot;</span> <span class="o">+</span> \
-</span><span class='line'>                            <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;.prof&quot;</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">except</span><span class="p">:</span>
-</span><span class='line'>            <span class="bp">self</span><span class="o">.</span><span class="n">setExitCause</span><span class="p">(</span><span class="s">&#39;EXCEPTION&#39;</span><span class="p">)</span>
-</span><span class='line'>            <span class="k">if</span> <span class="n">sys</span><span class="p">:</span>
-</span><span class='line'>                <span class="bp">self</span><span class="o">.</span><span class="n">setExitException</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">exc<em>info</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
-</span><span class='line'>                <span class="n">tb</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format</em>exc</span><span class="p">()</span>
-</span><span class='line'>                <span class="bp">self</span><span class="o">.</span><span class="n">setExitStackTrace</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
-</span><span class='line'>            <span class="bp">self</span><span class="o">.</span><span class="n">setExitCause</span><span class="p">(</span><span class="s">&#39;NORMAL&#39;</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;exitmessage&#39;</span><span class="p">):</span>
-</span><span class='line'>            <span class="bp">self</span><span class="o">.</span><span class="n">setExitMessage</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">if</span> <span class="n">exitthreads</span><span class="p">:</span>
-</span><span class='line'>            <span class="n">exitthreads</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">setExitCause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cause</span><span class="p">):</span>
-</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitcause</span> <span class="o">=</span> <span class="n">cause</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">getExitCause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>        <span class="sd">&quot;&quot;&quot;Returns the cause of the exit, one of:</span>
-</span><span class='line'><span class="sd">        &#39;EXCEPTION&#39; -- the thread aborted because of an exception</span>
-</span><span class='line'><span class="sd">        &#39;NORMAL&#39; -- normal termination.&quot;&quot;&quot;</span>
-</span><span class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitcause</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">setExitException</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc</span><span class="p">):</span>
-</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitexception</span> <span class="o">=</span> <span class="n">exc</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">getExitException</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>        <span class="sd">&quot;&quot;&quot;If getExitCause() is &#39;EXCEPTION&#39;, holds the value from</span>
-</span><span class='line'><span class="sd">        sys.exc_info()[1] for this exception.&quot;&quot;&quot;</span>
-</span><span class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitexception</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">setExitStackTrace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">st</span><span class="p">):</span>
-</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitstacktrace</span> <span class="o">=</span> <span class="n">st</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">getExitStackTrace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>        <span class="sd">&quot;&quot;&quot;If getExitCause() is &#39;EXCEPTION&#39;, returns a string representing</span>
-</span><span class='line'><span class="sd">        the stack trace for this exception.&quot;&quot;&quot;</span>
-</span><span class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitstacktrace</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">setExitMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
-</span><span class='line'>        <span class="sd">&quot;&quot;&quot;Sets the exit message to be fetched by a subsequent call to</span>
-</span><span class='line'><span class="sd">        getExitMessage.  This message may be any object or type except</span>
-</span><span class='line'><span class="sd">        None.&quot;&quot;&quot;</span>
-</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitmessage</span> <span class="o">=</span> <span class="n">msg</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">getExitMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>        <span class="sd">&quot;&quot;&quot;For any exit cause, returns the message previously set by</span>
-</span><span class='line'><span class="sd">        a call to setExitMessage(), or None if there was no such message</span>
-</span><span class='line'><span class="sd">        set.&quot;&quot;&quot;</span>
-</span><span class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitmessage</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Testing Python (syntax_test.py) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div><div data-line='21' class='line-number'></div><div data-line='22' class='line-number'></div><div data-line='23' class='line-number'></div><div data-line='24' class='line-number'></div><div data-line='25' class='line-number'></div><div data-line='26' class='line-number'></div><div data-line='27' class='line-number'></div><div data-line='28' class='line-number'></div><div data-line='29' class='line-number'></div><div data-line='30' class='line-number'></div><div data-line='31' class='line-number'></div><div data-line='32' class='line-number'></div><div data-line='33' class='line-number'></div><div data-line='34' class='line-number'></div><div data-line='35' class='line-number'></div><div data-line='36' class='line-number'></div><div data-line='37' class='line-number'></div><div data-line='38' class='line-number'></div><div data-line='39' class='line-number'></div><div data-line='40' class='line-number'></div><div data-line='41' class='line-number'></div><div data-line='42' class='line-number'></div><div data-line='43' class='line-number'></div><div data-line='44' class='line-number'></div><div data-line='45' class='line-number'></div><div data-line='46' class='line-number'></div><div data-line='47' class='line-number'></div><div data-line='48' class='line-number'></div><div data-line='49' class='line-number'></div><div data-line='50' class='line-number'></div><div data-line='51' class='line-number'></div><div data-line='52' class='line-number'></div><div data-line='53' class='line-number'></div><div data-line='54' class='line-number'></div><div data-line='55' class='line-number'></div><div data-line='56' class='line-number'></div><div data-line='57' class='line-number'></div><div data-line='58' class='line-number'></div><div data-line='59' class='line-number'></div><div data-line='60' class='line-number'></div><div data-line='61' class='line-number'></div><div data-line='62' class='line-number'></div><div data-line='63' class='line-number'></div><div data-line='64' class='line-number'></div><div data-line='65' class='line-number'></div><div data-line='66' class='line-number'></div><div data-line='67' class='line-number'></div></pre></td><td class='main  py'><pre><div class='line'><span class="c"># test python (sample from offlineimap)</span>
+</div><div class='line'> </div><div class='line'><span class="k">class</span> <span class="nc">ExitNotifyThread</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
+</div><div class='line'>    <span class="sd">&quot;&quot;&quot;This class is designed to alert a &quot;monitor&quot; to the fact that a thread has</span>
+</div><div class='line'><span class="sd">    exited and to provide for the ability for it to find out why.&quot;&quot;&quot;</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="k">global</span> <span class="n">exitthreads</span><span class="p">,</span> <span class="n">profiledir</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">threadid</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get_ident</span><span class="p">()</span>
+</div><div class='line'>        <span class="k">try</span><span class="p">:</span>
+</div><div class='line'>            <span class="k">if</span> <span class="ow">not</span> <span class="n">profiledir</span><span class="p">:</span>          <span class="c"># normal case</span>
+</div><div class='line'>                <span class="n">Thread</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</div><div class='line'>            <span class="k">else</span><span class="p">:</span>
+</div><div class='line'>                <span class="k">try</span><span class="p">:</span>
+</div><div class='line'>                    <span class="kn">import</span> <span class="nn">cProfile</span> <span class="kn">as</span> <span class="nn">profile</span>
+</div><div class='line'>                <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+</div><div class='line'>                    <span class="kn">import</span> <span class="nn">profile</span>
+</div><div class='line'>                <span class="n">prof</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">Profile</span><span class="p">()</span>
+</div><div class='line'>                <span class="k">try</span><span class="p">:</span>
+</div><div class='line'>                    <span class="n">prof</span> <span class="o">=</span> <span class="n">prof</span><span class="o">.</span><span class="n">runctx</span><span class="p">(</span><span class="s">&quot;Thread.run(self)&quot;</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="nb">locals</span><span class="p">())</span>
+</div><div class='line'>                <span class="k">except</span> <span class="ne">SystemExit</span><span class="p">:</span>
+</div><div class='line'>                    <span class="k">pass</span>
+</div><div class='line'>                <span class="n">prof</span><span class="o">.</span><span class="n">dump_stats</span><span class="p">(</span> \
+</div><div class='line'>                            <span class="n">profiledir</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">threadid</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;_&quot;</span> <span class="o">+</span> \
+</div><div class='line'>                            <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;.prof&quot;</span><span class="p">)</span>
+</div><div class='line'>        <span class="k">except</span><span class="p">:</span>
+</div><div class='line'>            <span class="bp">self</span><span class="o">.</span><span class="n">setExitCause</span><span class="p">(</span><span class="s">&#39;EXCEPTION&#39;</span><span class="p">)</span>
+</div><div class='line'>            <span class="k">if</span> <span class="n">sys</span><span class="p">:</span>
+</div><div class='line'>                <span class="bp">self</span><span class="o">.</span><span class="n">setExitException</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+</div><div class='line'>                <span class="n">tb</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">()</span>
+</div><div class='line'>                <span class="bp">self</span><span class="o">.</span><span class="n">setExitStackTrace</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
+</div><div class='line'>        <span class="k">else</span><span class="p">:</span>
+</div><div class='line'>            <span class="bp">self</span><span class="o">.</span><span class="n">setExitCause</span><span class="p">(</span><span class="s">&#39;NORMAL&#39;</span><span class="p">)</span>
+</div><div class='line'>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;exitmessage&#39;</span><span class="p">):</span>
+</div><div class='line'>            <span class="bp">self</span><span class="o">.</span><span class="n">setExitMessage</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+</div><div class='line'> </div><div class='line'>        <span class="k">if</span> <span class="n">exitthreads</span><span class="p">:</span>
+</div><div class='line'>            <span class="n">exitthreads</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+</div><div class='line'> </div><div class='line'>    <span class="k">def</span> <span class="nf">setExitCause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cause</span><span class="p">):</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitcause</span> <span class="o">=</span> <span class="n">cause</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">getExitCause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;Returns the cause of the exit, one of:</span>
+</div><div class='line'><span class="sd">        &#39;EXCEPTION&#39; -- the thread aborted because of an exception</span>
+</div><div class='line'><span class="sd">        &#39;NORMAL&#39; -- normal termination.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitcause</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">setExitException</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc</span><span class="p">):</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitexception</span> <span class="o">=</span> <span class="n">exc</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">getExitException</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;If getExitCause() is &#39;EXCEPTION&#39;, holds the value from</span>
+</div><div class='line'><span class="sd">        sys.exc_info()[1] for this exception.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitexception</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">setExitStackTrace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">st</span><span class="p">):</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitstacktrace</span> <span class="o">=</span> <span class="n">st</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">getExitStackTrace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;If getExitCause() is &#39;EXCEPTION&#39;, returns a string representing</span>
+</div><div class='line'><span class="sd">        the stack trace for this exception.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitstacktrace</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">setExitMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;Sets the exit message to be fetched by a subsequent call to</span>
+</div><div class='line'><span class="sd">        getExitMessage.  This message may be any object or type except</span>
+</div><div class='line'><span class="sd">        None.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitmessage</span> <span class="o">=</span> <span class="n">msg</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">getExitMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;For any exit cause, returns the message previously set by</span>
+</div><div class='line'><span class="sd">        a call to setExitMessage(), or None if there was no such message</span>
+</div><div class='line'><span class="sd">        set.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitmessage</span>
+</div></pre></td></tr></table></div></figure>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Testing Perl (syntax<em>test.pl) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="c1">#!perl -w</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># Time-stamp: &lt;2002/04/06, 13:12:13 (EST), maverick, csvformat.pl&gt;</span>
-</span><span class='line'><span class="c1"># Two pass CSV file to table formatter</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">$delim</span> <span class="o">=</span> <span class="nv">$#ARGV</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="p">?</span> <span class="nv">$ARGV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="s">&#39;,&#39;</span><span class="p">;</span>
-</span><span class='line'><span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&quot;Split pattern: $delim\n&quot;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># first pass</span>
-</span><span class='line'><span class="nb">open</span> <span class="n">F</span><span class="p">,</span> <span class="s">&quot;&lt;$ARGV[0]&quot;</span> <span class="ow">or</span> <span class="nb">die</span><span class="p">;</span>
-</span><span class='line'><span class="k">while</span><span class="p">(</span><span class="sr">&lt;F&gt;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="nb">chomp</span><span class="p">;</span>
-</span><span class='line'>  <span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="nb">map</span> <span class="p">{</span> <span class="nv">$max</span><span class="p">[</span><span class="nv">$</em></span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="nv">$<em></span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nv">$</em></span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nv">$max</span><span class="p">[</span><span class="nv">$<em></span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
-</span><span class='line'>    <span class="p">(</span><span class="nb">map</span> <span class="p">{[</span><span class="nb">length</span> <span class="nv">$</em></span><span class="p">,</span> <span class="nv">$i</span><span class="o">++</span><span class="p">]}</span> <span class="nb">split</span><span class="p">(</span><span class="nv">$delim</span><span class="p">));</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="nb">close</span> <span class="n">F</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#39;Field width:   &#39;</span><span class="p">,</span> <span class="nb">join</span><span class="p">(</span><span class="s">&#39;, &#39;</span><span class="p">,</span> <span class="nv">@max</span><span class="p">),</span> <span class="s">&quot;\n&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="k">print</span> <span class="bp">STDERR</span> <span class="nb">join</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">,</span> <span class="nb">map</span> <span class="p">{</span><span class="s">&#39;-&#39;</span> <span class="n">x</span> <span class="nv">$<em></span><span class="p">}</span> <span class="nv">@max</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># second pass</span>
-</span><span class='line'><span class="nb">open</span> <span class="n">F</span><span class="p">,</span> <span class="s">&quot;&lt;$ARGV[0]&quot;</span> <span class="ow">or</span> <span class="nb">die</span><span class="p">;</span>
-</span><span class='line'><span class="k">while</span><span class="p">(</span><span class="sr">&lt;F&gt;</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">{</span>
-</span><span class='line'>  <span class="nb">chomp</span><span class="p">;</span>
-</span><span class='line'>  <span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="nb">map</span> <span class="p">{</span> <span class="nb">printf</span><span class="p">(</span><span class="s">&quot;%-$max[$</em>-&gt;[1]]s &quot;</span><span class="p">,</span> <span class="nv">$<em></span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">}</span>
-</span><span class='line'>    <span class="p">(</span><span class="nb">map</span> <span class="p">{[</span><span class="nv">$</em></span><span class="p">,</span> <span class="nv">$i</span><span class="o">++</span><span class="p">]}</span> <span class="nb">split</span><span class="p">(</span><span class="nv">$delim</span><span class="p">));</span>
-</span><span class='line'>  <span class="k">print</span> <span class="s">&quot;\n&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="nb">close</span> <span class="n">F</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Testing Perl (syntax_test.pl) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div><div data-line='21' class='line-number'></div><div data-line='22' class='line-number'></div><div data-line='23' class='line-number'></div><div data-line='24' class='line-number'></div><div data-line='25' class='line-number'></div><div data-line='26' class='line-number'></div><div data-line='27' class='line-number'></div><div data-line='28' class='line-number'></div><div data-line='29' class='line-number'></div><div data-line='30' class='line-number'></div><div data-line='31' class='line-number'></div><div data-line='32' class='line-number'></div><div data-line='33' class='line-number'></div></pre></td><td class='main  perl'><pre><div class='line'><span class="c1">#!perl -w</span>
+</div><div class='line'> </div><div class='line'><span class="c1"># Time-stamp: &lt;2002/04/06, 13:12:13 (EST), maverick, csvformat.pl&gt;</span>
+</div><div class='line'><span class="c1"># Two pass CSV file to table formatter</span>
+</div><div class='line'> </div><div class='line'><span class="nv">$delim</span> <span class="o">=</span> <span class="nv">$#ARGV</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="p">?</span> <span class="nv">$ARGV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="s">&#39;,&#39;</span><span class="p">;</span>
+</div><div class='line'><span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&quot;Split pattern: $delim\n&quot;</span><span class="p">;</span>
+</div><div class='line'> </div><div class='line'><span class="c1"># first pass</span>
+</div><div class='line'><span class="nb">open</span> <span class="n">F</span><span class="p">,</span> <span class="s">&quot;&lt;$ARGV[0]&quot;</span> <span class="ow">or</span> <span class="nb">die</span><span class="p">;</span>
+</div><div class='line'><span class="k">while</span><span class="p">(</span><span class="sr">&lt;F&gt;</span><span class="p">)</span>
+</div><div class='line'><span class="p">{</span>
+</div><div class='line'>  <span class="nb">chomp</span><span class="p">;</span>
+</div><div class='line'>  <span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</div><div class='line'>  <span class="nb">map</span> <span class="p">{</span> <span class="nv">$max</span><span class="p">[</span><span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nv">$max</span><span class="p">[</span><span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+</div><div class='line'>    <span class="p">(</span><span class="nb">map</span> <span class="p">{[</span><span class="nb">length</span> <span class="nv">$_</span><span class="p">,</span> <span class="nv">$i</span><span class="o">++</span><span class="p">]}</span> <span class="nb">split</span><span class="p">(</span><span class="nv">$delim</span><span class="p">));</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'><span class="nb">close</span> <span class="n">F</span><span class="p">;</span>
+</div><div class='line'> </div><div class='line'><span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#39;Field width:   &#39;</span><span class="p">,</span> <span class="nb">join</span><span class="p">(</span><span class="s">&#39;, &#39;</span><span class="p">,</span> <span class="nv">@max</span><span class="p">),</span> <span class="s">&quot;\n&quot;</span><span class="p">;</span>
+</div><div class='line'><span class="k">print</span> <span class="bp">STDERR</span> <span class="nb">join</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">,</span> <span class="nb">map</span> <span class="p">{</span><span class="s">&#39;-&#39;</span> <span class="n">x</span> <span class="nv">$_</span><span class="p">}</span> <span class="nv">@max</span><span class="p">);</span>
+</div><div class='line'> </div><div class='line'><span class="c1"># second pass</span>
+</div><div class='line'><span class="nb">open</span> <span class="n">F</span><span class="p">,</span> <span class="s">&quot;&lt;$ARGV[0]&quot;</span> <span class="ow">or</span> <span class="nb">die</span><span class="p">;</span>
+</div><div class='line'><span class="k">while</span><span class="p">(</span><span class="sr">&lt;F&gt;</span><span class="p">)</span>
+</div><div class='line'>  <span class="p">{</span>
+</div><div class='line'>  <span class="nb">chomp</span><span class="p">;</span>
+</div><div class='line'>  <span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</div><div class='line'>  <span class="nb">map</span> <span class="p">{</span> <span class="nb">printf</span><span class="p">(</span><span class="s">&quot;%-$max[$_-&gt;[1]]s &quot;</span><span class="p">,</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">}</span>
+</div><div class='line'>    <span class="p">(</span><span class="nb">map</span> <span class="p">{[</span><span class="nv">$_</span><span class="p">,</span> <span class="nv">$i</span><span class="o">++</span><span class="p">]}</span> <span class="nb">split</span><span class="p">(</span><span class="nv">$delim</span><span class="p">));</span>
+</div><div class='line'>  <span class="k">print</span> <span class="s">&quot;\n&quot;</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'><span class="nb">close</span> <span class="n">F</span><span class="p">;</span>
+</div></pre></td></tr></table></div></figure>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Test Java (syntax_test.java) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">java.util.TreeSet</span><span class="o">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GetEnv</span> <span class="o">{</span>
-</span><span class='line'>  <span class="cm">/**</span>
-</span><span class='line'><span class="cm">   * let&#39;s test generics</span>
-</span><span class='line'><span class="cm">   * @param args the command line arguments</span>
-</span><span class='line'><span class="cm">   */</span>
-</span><span class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>    <span class="c1">// get a map of environment variables</span>
-</span><span class='line'>    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">env</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">();</span>
-</span><span class='line'>    <span class="c1">// build a sorted set out of the keys and iterate</span>
-</span><span class='line'>    <span class="k">for</span><span class="o">(</span><span class="n">String</span> <span class="nl">k:</span> <span class="k">new</span> <span class="n">TreeSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">env</span><span class="o">.</span><span class="na">keySet</span><span class="o">()))</span> <span class="o">{</span>
-</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%s = %s\n&quot;</span><span class="o">,</span> <span class="n">k</span><span class="o">,</span> <span class="n">env</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">k</span><span class="o">));</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>  <span class="o">}</span>    <span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Test Java (syntax_test.java) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div></pre></td><td class='main  java'><pre><div class='line'><span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+</div><div class='line'><span class="kn">import</span> <span class="nn">java.util.TreeSet</span><span class="o">;</span>
+</div><div class='line'> </div><div class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GetEnv</span> <span class="o">{</span>
+</div><div class='line'>  <span class="cm">/**</span>
+</div><div class='line'><span class="cm">   * let&#39;s test generics</span>
+</div><div class='line'><span class="cm">   * @param args the command line arguments</span>
+</div><div class='line'><span class="cm">   */</span>
+</div><div class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</div><div class='line'>    <span class="c1">// get a map of environment variables</span>
+</div><div class='line'>    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">env</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">();</span>
+</div><div class='line'>    <span class="c1">// build a sorted set out of the keys and iterate</span>
+</div><div class='line'>    <span class="k">for</span><span class="o">(</span><span class="n">String</span> <span class="nl">k:</span> <span class="k">new</span> <span class="n">TreeSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">env</span><span class="o">.</span><span class="na">keySet</span><span class="o">()))</span> <span class="o">{</span>
+</div><div class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%s = %s\n&quot;</span><span class="o">,</span> <span class="n">k</span><span class="o">,</span> <span class="n">env</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">k</span><span class="o">));</span>
+</div><div class='line'>    <span class="o">}</span>
+</div><div class='line'>  <span class="o">}</span>    <span class="o">}</span>
+</div></pre></td></tr></table></div></figure>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Test C (syntax<em>test.c) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#define UNICODE</span>
-</span><span class='line'><span class="cp">#include &lt;windows.h&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kt">int</span> <span class="n">speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">speed1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">speed2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 1-20</span>
-</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Set Mouse Speed by Maverick</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI</em>GETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Current speed: %2d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed1</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed2</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">// set speed to first value</span>
-</span><span class='line'>    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">speed</span> <span class="o">==</span> <span class="n">speed1</span> <span class="o">||</span> <span class="n">speed</span> <span class="o">==</span> <span class="n">speed2</span><span class="p">)</span> <span class="c1">// alternate</span>
-</span><span class='line'>    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span> <span class="o">+</span> <span class="n">speed2</span> <span class="o">-</span> <span class="n">speed</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">else</span>
-</span><span class='line'>    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span><span class="p">;</span>  <span class="c1">// start with first value</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI<em>SETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI</em>GETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;New speed:     %2d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Test C (syntax_test.c) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div><div data-line='21' class='line-number'></div><div data-line='22' class='line-number'></div><div data-line='23' class='line-number'></div><div data-line='24' class='line-number'></div><div data-line='25' class='line-number'></div><div data-line='26' class='line-number'></div></pre></td><td class='main  c'><pre><div class='line'><span class="cp">#define UNICODE</span>
+</div><div class='line'><span class="cp">#include &lt;windows.h&gt;</span>
+</div><div class='line'> </div><div class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>  <span class="kt">int</span> <span class="n">speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">speed1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">speed2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 1-20</span>
+</div><div class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Set Mouse Speed by Maverick</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</div><div class='line'> </div><div class='line'>  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI_GETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</div><div class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Current speed: %2d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
+</div><div class='line'> </div><div class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</div><div class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed1</span><span class="p">);</span>
+</div><div class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed2</span><span class="p">);</span>
+</div><div class='line'> </div><div class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">// set speed to first value</span>
+</div><div class='line'>    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span><span class="p">;</span>
+</div><div class='line'>  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">speed</span> <span class="o">==</span> <span class="n">speed1</span> <span class="o">||</span> <span class="n">speed</span> <span class="o">==</span> <span class="n">speed2</span><span class="p">)</span> <span class="c1">// alternate</span>
+</div><div class='line'>    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span> <span class="o">+</span> <span class="n">speed2</span> <span class="o">-</span> <span class="n">speed</span><span class="p">;</span>
+</div><div class='line'>  <span class="k">else</span>
+</div><div class='line'>    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span><span class="p">;</span>  <span class="c1">// start with first value</span>
+</div><div class='line'> </div><div class='line'>  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI_SETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</div><div class='line'>  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI_GETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</div><div class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;New speed:     %2d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
+</div><div class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div></pre></td></tr></table></div></figure>
 
   
 </article>

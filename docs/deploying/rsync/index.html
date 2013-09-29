@@ -101,23 +101,17 @@
 
 <p>Add your server configurations to the <code>Rakefile</code> under Rsync deploy config. To deploy with rsync, be sure your public key is listed in your server&#39;s <code>~/.ssh/authorized_keys</code> file.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ssh<em>user</span>       <span class="o">=</span> <span class="s2">&quot;user@domain.com&quot;</span>
-</span><span class='line'><span class="n">document</em>root</span>  <span class="o">=</span> <span class="s2">&quot;~/website.com/&quot;</span>
-</span><span class='line'><span class="n">rsync<em>delete</span>   <span class="o">=</span> <span class="kp">true</span>
-</span><span class='line'><span class="n">deploy</em>default</span> <span class="o">=</span> <span class="s2">&quot;rsync&quot;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  ruby'><pre><div class='line'><span class="n">ssh_user</span>       <span class="o">=</span> <span class="s2">&quot;user@domain.com&quot;</span>
+</div><div class='line'><span class="n">document_root</span>  <span class="o">=</span> <span class="s2">&quot;~/website.com/&quot;</span>
+</div><div class='line'><span class="n">rsync_delete</span>   <span class="o">=</span> <span class="kp">true</span>
+</div><div class='line'><span class="n">deploy_default</span> <span class="o">=</span> <span class="s2">&quot;rsync&quot;</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Now if you run</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate   <span class="c"># If you haven&#39;t generated your blog yet</span>
-</span><span class='line'>rake deploy     <span class="c"># Syncs your blog via ssh</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake generate   <span class="c"># If you haven&#39;t generated your blog yet</span>
+</div><div class='line'>rake deploy     <span class="c"># Syncs your blog via ssh</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>in your terminal, your <code>public</code> directory will be synced to your server&#39;s document root.</p>
 
@@ -138,13 +132,10 @@
 
 <p>When syncing, rsync can exclude files or directories locally or on the server. Simply add an <code>rsync-exclude</code> file to the root directory of your project like this:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>rsync-exclude</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>some-file.txt
-</span><span class='line'>some-directory/
-</span><span class='line'>*.mp4
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>rsync-exclude</figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>some-file.txt
+</div><div class='line'>some-directory/
+</div><div class='line'>*.mp4
+</div></pre></td></tr></table></div></figure>
 
 <p>Note: using excludes will prevent rsync from uploading local files, or if the delete option is specified, it will prevent rsync from deleting excluded items on the server.</p>
 
@@ -153,41 +144,30 @@
 <p>You&#39;ll want to keep your blog source in a remote git repository,
 so either <a href="https://github.com/repositories/new">set up a Github repository</a> or <a href="#self_hosted_git">host your own</a> and then do this.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># Since you cloned Octopress, you&#39;ll need to change the origin remote</span>
-</span><span class='line'>git remote rename origin octopress
-</span><span class='line'>git remote add origin <span class="o">(</span>your repository url<span class="o">)</span>
-</span><span class='line'><span class="c"># set your new origin as the default branch</span>
-</span><span class='line'>git config branch.master.remote origin
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'><span class="c"># Since you cloned Octopress, you&#39;ll need to change the origin remote</span>
+</div><div class='line'>git remote rename origin octopress
+</div><div class='line'>git remote add origin <span class="o">(</span>your repository url<span class="o">)</span>
+</div><div class='line'><span class="c"># set your new origin as the default branch</span>
+</div><div class='line'>git config branch.master.remote origin
+</div></pre></td></tr></table></div></figure>
 
 <h2 id="self_hosted_git">Host Your Own Remote Repository</h2>
 
 <p>If you want to set up a private git repository on your own server, here&#39;s how you&#39;d do it. You&#39;ll need SSH access to follow along.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>ssh user@host.com
-</span><span class='line'>mkdir -p git/octopress.git
-</span><span class='line'><span class="nb">cd </span>git/octopress.git
-</span><span class='line'>git init --bare
-</span><span class='line'><span class="nb">pwd</span>  <span class="c"># print the working directory, you&#39;ll need it below.</span>
-</span><span class='line'><span class="nb">logout</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>ssh user@host.com
+</div><div class='line'>mkdir -p git/octopress.git
+</div><div class='line'><span class="nb">cd </span>git/octopress.git
+</div><div class='line'>git init --bare
+</div><div class='line'><span class="nb">pwd</span>  <span class="c"># print the working directory, you&#39;ll need it below.</span>
+</div><div class='line'><span class="nb">logout</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>The url for your remote repository is <code>ssh://user@host.com/(output of pwd above)</code></p>
 
 <h2>Deploying to a subdirectory</h2>
 
-<p>If, for example, you wanted to host an Octopress blog at <code>http://yoursite.com/blog/</code> you would need to configure Octopress for <a href="/docs/deploying/subdir">deploying to a subdirectory</a>.</p>
+<p>If for you wanted to host an Octopress blog at <code>http://yoursite.com/blog/</code> you would need to configure Octopress for <a href="/docs/deploying/subdir">deploying to a subdirectory</a>.</p>
 
   
 </article>

@@ -110,17 +110,14 @@
 <p>By default Octopress generates your blog&#39;s post index at your site&#39;s root directory.
 If you&#39;d rather publish your blog index somewhere else like <code>blog/index.html</code> do this in your terminal.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>    mv <span class="nb">source</span>/index.html <span class="nb">source</span>/blog/index.html
-</span><span class='line'>    rake new_page<span class="o">[</span>index.html<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>    mv <span class="nb">source</span>/index.html <span class="nb">source</span>/blog/index.html
+</div><div class='line'>    rake new_page<span class="o">[</span>index.html<span class="o">]</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Next you&#39;ll want to update your <code>Rakefile</code> to be sure your new blog index is preserved when you <a href="/docs/updating">update Octopress</a>.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>    <span class="n">blog<em>index</em>dir</span> <span class="o">=</span> <span class="s1">&#39;source/blog&#39;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  ruby'><pre><div class='line'>    <span class="n">blog_index_dir</span> <span class="o">=</span> <span class="s1">&#39;source/blog&#39;</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Remember to update the main navigation for your site, since currently the blog link points to <code>/</code>. Skip down to the section on <a href="#changing_navigation">changing navigation</a>, add a &#39;home&#39; link and update the &#39;blog&#39; link to point to <code>/blog/</code>.</p>
 
@@ -130,21 +127,14 @@ If you&#39;d rather publish your blog index somewhere else like <code>blog/index
 
 <p>If you want to add scripts or tags to the <code>&lt;HEAD&gt;</code> take a look at <code>/source/_includes/custom/head.html</code>.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>&lt;HEAD&gt; (source/_includes/custom/head.html) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>&#x7b;&#x25; comment %}
-</span><span class='line'>To customize the favicon, assign it to &quot;/url/to/favicon.png&quot;
-</span><span class='line'>&#x7b;&#x25; endcomment %}
-</span><span class='line'>&#x7b;&#x25; assign favicon = false %}
-</span><span class='line'><span class="c">&lt;!--Fonts from Google&#39;s Web font directory at http://google.com/webfonts --&gt;</span>
-</span><span class='line'><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&#39;http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic&#39;</span> <span class="na">rel=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">type=</span><span class="s">&#39;text/css&#39;</span><span class="nt">&gt;</span>
-</span><span class='line'><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&#39;http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&#39;</span> <span class="na">rel=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">type=</span><span class="s">&#39;text/css&#39;</span><span class="nt">&gt;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>&lt;HEAD&gt; (source/_includes/custom/head.html) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'>&#x7b;&#x25; comment %}
+</div><div class='line'>To customize the favicon, assign it to &quot;/url/to/favicon.png&quot;
+</div><div class='line'>&#x7b;&#x25; endcomment %}
+</div><div class='line'>&#x7b;&#x25; assign favicon = false %}
+</div><div class='line'><span class="c">&lt;!--Fonts from Google&#39;s Web font directory at http://google.com/webfonts --&gt;</span>
+</div><div class='line'><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&#39;http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic&#39;</span> <span class="na">rel=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">type=</span><span class="s">&#39;text/css&#39;</span><span class="nt">&gt;</span>
+</div><div class='line'><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&#39;http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&#39;</span> <span class="na">rel=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">type=</span><span class="s">&#39;text/css&#39;</span><span class="nt">&gt;</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Here you can easily change or remove the <a href="http://google.com/webfonts">Google Webfonts</a>, insert javascripts, etc.</p>
 
@@ -155,34 +145,25 @@ If you&#39;d rather publish your blog index somewhere else like <code>blog/index
 <p>Octopress integrates with some <a href="/docs/configuring/#third_party">3rd party services</a> like Twitter, Pinboard and Delicious which appear in the sidebar.
 In the <code>_config.yml</code> you can rearrange these, create custom sidebars for each layout, and add your own sidebar sections.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Sidebar configuration (<em>config.yml) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">default</em>asides</span><span class="p-Indicator">:</span>   <span class="p-Indicator">[</span><span class="nv">asides/recent<em>posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
-</span><span class='line'><span class="c1"># blog</em>index<em>asides:</span>
-</span><span class='line'><span class="c1"># post</em>asides:</span>
-</span><span class='line'><span class="c1"># page_asides:</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Sidebar configuration (_config.yml) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span>   <span class="p-Indicator">[</span><span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
+</div><div class='line'><span class="c1"># blog_index_asides:</span>
+</div><div class='line'><span class="c1"># post_asides:</span>
+</div><div class='line'><span class="c1"># page_asides:</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>If you want to add a section to your sidebar, create a new file in <code>source/_includes/custom/asides/</code>.
 Since many people probably want to add an About Me section, there&#39;s already an <code>about.html</code> file in there waiting to be added. Here&#39;s a look.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>About Me (source/<em>includes/custom/asides/about.html) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>File /Users/parkermoore/code/octodocs/.themes/classic/source/</em>includes/custom/asides/about.html could not be found
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>About Me (source/_includes/custom/asides/about.html) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'>File /Users/parkermoore/code/octodocs/.themes/classic/source/_includes/custom/asides/about.html could not be found
+</div></pre></td></tr></table></div></figure>
 
 <p>Whenever you add a section to the sidebar, follow this pattern, with a <code>&lt;section&gt;</code> block and an <code>&lt;h1&gt;</code> for a title. To add it to the sidebar, edit the <code>_config.yml</code> and add it to the list of asides.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Sidebar configuration (<em>config.yml) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">default</em>asides</span><span class="p-Indicator">:</span>     <span class="p-Indicator">[</span><span class="nv">asides/recent<em>posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
-</span><span class='line'><span class="l-Scalar-Plain">blog</em>index<em>asides</span><span class="p-Indicator">:</span>  <span class="p-Indicator">[</span><span class="nv">custom/asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/recent</em>posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
-</span><span class='line'><span class="l-Scalar-Plain">post<em>asides</span><span class="p-Indicator">:</span>        <span class="p-Indicator">[</span><span class="nv">custom/asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/recent</em>posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
-</span><span class='line'><span class="c1"># page_asides:</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Sidebar configuration (_config.yml) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span>     <span class="p-Indicator">[</span><span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
+</div><div class='line'><span class="l-Scalar-Plain">blog_index_asides</span><span class="p-Indicator">:</span>  <span class="p-Indicator">[</span><span class="nv">custom/asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
+</div><div class='line'><span class="l-Scalar-Plain">post_asides</span><span class="p-Indicator">:</span>        <span class="p-Indicator">[</span><span class="nv">custom/asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
+</div><div class='line'><span class="c1"># page_asides:</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>In the configuration above I&#39;ve added the about page to the blog index and post pages. Since <code>page_asides</code> isn&#39;t being set, it will inherit from the default list.</p>
 
@@ -194,33 +175,23 @@ Since many people probably want to add an About Me section, there&#39;s already 
 
 <p>The header title and subtitle should be configured in the <code>_config.yml</code> If you want to make other changes to the header, edit <code>/source/_includes/custom/header.html</code> which looks like this:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Header (source/<em>includes/custom/header.html) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;hgroup&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;h1&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&#x7b;&#x7b; root</em>url }}/&quot;</span><span class="nt">&gt;</span>&#x7b;&#x7b; site.title }}<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
-</span><span class='line'>  &#x7b;&#x25; if site.subtitle %}
-</span><span class='line'>    <span class="nt">&lt;h2&gt;</span>&#x7b;&#x7b; site.subtitle }}<span class="nt">&lt;/h2&gt;</span>
-</span><span class='line'>  &#x7b;&#x25; endif %}
-</span><span class='line'><span class="nt">&lt;/hgroup&gt;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Header (source/_includes/custom/header.html) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'><span class="nt">&lt;hgroup&gt;</span>
+</div><div class='line'>  <span class="nt">&lt;h1&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&#x7b;&#x7b; root_url }}/&quot;</span><span class="nt">&gt;</span>&#x7b;&#x7b; site.title }}<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+</div><div class='line'>  &#x7b;&#x25; if site.subtitle %}
+</div><div class='line'>    <span class="nt">&lt;h2&gt;</span>&#x7b;&#x7b; site.subtitle }}<span class="nt">&lt;/h2&gt;</span>
+</div><div class='line'>  &#x7b;&#x25; endif %}
+</div><div class='line'><span class="nt">&lt;/hgroup&gt;</span>
+</div></pre></td></tr></table></div></figure>
 
 <h3 id="changing_navigation">Changing the Navigation</h3>
 
 <p>To change or add links to the main navigation, edit <code>/source/_includes/custom/navigation.html</code> which looks like this:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Navigation (source/<em>includes/custom/navigation.html) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;main-navigation&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&#x7b;&#x7b; root</em>url }}/&quot;</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&#x7b;&#x7b; root_url }}/archives/&quot;</span><span class="nt">&gt;</span>Archives<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Navigation (source/_includes/custom/navigation.html) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;main-navigation&quot;</span><span class="nt">&gt;</span>
+</div><div class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&#x7b;&#x7b; root_url }}/&quot;</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</div><div class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&#x7b;&#x7b; root_url }}/archives/&quot;</span><span class="nt">&gt;</span>Archives<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</div><div class='line'><span class="nt">&lt;/ul&gt;</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>The <code>href</code> for each link begins with <code>{{ root_url }}</code> (this helps Octopress write urls differently if a site is deployed to a subdirectory).
 If you&#39;re deploying your site to a subdirectory like <code>yoursite.com/octopress</code> you&#39;ll want to add this to any links you add.</p>
@@ -229,15 +200,11 @@ If you&#39;re deploying your site to a subdirectory like <code>yoursite.com/octo
 
 <p>You can customize the footer in <code>source/_includes/custom/footer.html</code> which looks like this:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><figcaption><span>Footer (source/_includes/custom/footer.html) </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;p&gt;</span>
-</span><span class='line'>  Copyright <span class="ni">&amp;copy;</span> &#x7b;&#x7b; site.time | date: &quot;%Y&quot; }} - &#x7b;&#x7b; site.author }} -
-</span><span class='line'>  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;credit&quot;</span><span class="nt">&gt;</span>Powered by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://octopress.org&quot;</span><span class="nt">&gt;</span>Octopress<span class="nt">&lt;/a&gt;&lt;/span&gt;</span>
-</span><span class='line'><span class="nt">&lt;/p&gt;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><figcaption>Footer (source/_includes/custom/footer.html) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'><span class="nt">&lt;p&gt;</span>
+</div><div class='line'>  Copyright <span class="ni">&amp;copy;</span> &#x7b;&#x7b; site.time | date: &quot;%Y&quot; }} - &#x7b;&#x7b; site.author }} -
+</div><div class='line'>  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;credit&quot;</span><span class="nt">&gt;</span>Powered by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://octopress.org&quot;</span><span class="nt">&gt;</span>Octopress<span class="nt">&lt;/a&gt;&lt;/span&gt;</span>
+</div><div class='line'><span class="nt">&lt;/p&gt;</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Change this however you like, but be cool and keep the Octopress link in there.</p>
 

@@ -100,66 +100,37 @@
   <p>If you&#39;re deploying to a subdirectory on your site, or if you&#39;re using Github&#39;s project pages, make sure you set up your urls correctly in your configs.
 You can do this <em>almost</em> automatically:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>    rake set<em>root</em>dir<span class="o">[</span>your/path<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c"># To go back to publishing to the document root</span>
-</span><span class='line'>    rake set<em>root</em>dir<span class="o">[</span>/<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>    rake set_root_dir<span class="o">[</span>your/path<span class="o">]</span>
+</div><div class='line'> </div><div class='line'>    <span class="c"># To go back to publishing to the document root</span>
+</div><div class='line'>    rake set_root_dir<span class="o">[</span>/<span class="o">]</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>Then update your <code>_config.yml</code> and <code>Rakefile</code> as follows:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>    <span class="c"># <em>config.yml</span>
-</span><span class='line'>    url: http://yoursite.com/your/path
-</span><span class='line'>
-</span><span class='line'>    <span class="c"># Rakefile (if deploying with rsync)</span>
-</span><span class='line'>    <span class="nv">document</em>root</span> <span class="o">=</span> <span class="s2">&quot;~/yoursite.com/your/path&quot;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>    <span class="c"># _config.yml</span>
+</div><div class='line'>    url: http://yoursite.com/your/path
+</div><div class='line'> </div><div class='line'>    <span class="c"># Rakefile (if deploying with rsync)</span>
+</div><div class='line'>    <span class="nv">document_root</span> <span class="o">=</span> <span class="s2">&quot;~/yoursite.com/your/path&quot;</span>
+</div></pre></td></tr></table></div></figure>
 
 <p>To manually configure deployment to a subdirectory, you&#39;ll change <code>_config.yml</code>, <code>config.rb</code> and <code>Rakefile</code>.
 Here&#39;s an example for deploying a site to the /awesome subdirectory:</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>    <span class="c"># <em>config.yml</span>
-</span><span class='line'>    destination: public/awesome
-</span><span class='line'>    url: http://example.com/awesome
-</span><span class='line'>    subscribe</em>rss: /awesome/atom.xml
-</span><span class='line'>    root: /awesome
-</span><span class='line'>
-</span><span class='line'>    <span class="c"># config.rb - for Compass &amp; Sass</span>
-</span><span class='line'>    <span class="nv">http<em>path</span> <span class="o">=</span> <span class="s2">&quot;/awesome&quot;</span>
-</span><span class='line'>    <span class="nv">http</em>images<em>path</span> <span class="o">=</span> <span class="s2">&quot;/awesome/images&quot;</span>
-</span><span class='line'>    <span class="nv">http</em>fonts<em>path</span> <span class="o">=</span> <span class="s2">&quot;/awesome/fonts&quot;</span>
-</span><span class='line'>    <span class="nv">css</em>dir</span> <span class="o">=</span> <span class="s2">&quot;public/awesome/stylesheets&quot;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c"># Rakefile</span>
-</span><span class='line'>    <span class="nv">public<em>dir</span> <span class="o">=</span> <span class="s2">&quot;public/awesome&quot;</span>
-</span><span class='line'>    <span class="c"># If deploying with rsync, update your Rakefile path</span>
-</span><span class='line'>    <span class="nv">document</em>root</span> <span class="o">=</span> <span class="s2">&quot;~/yoursite.com/awesome&quot;</span>
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>    <span class="c"># _config.yml</span>
+</div><div class='line'>    destination: public/awesome
+</div><div class='line'>    url: http://example.com/awesome
+</div><div class='line'>    subscribe_rss: /awesome/atom.xml
+</div><div class='line'>    root: /awesome
+</div><div class='line'> </div><div class='line'>    <span class="c"># config.rb - for Compass &amp; Sass</span>
+</div><div class='line'>    <span class="nv">http_path</span> <span class="o">=</span> <span class="s2">&quot;/awesome&quot;</span>
+</div><div class='line'>    <span class="nv">http_images_path</span> <span class="o">=</span> <span class="s2">&quot;/awesome/images&quot;</span>
+</div><div class='line'>    <span class="nv">http_fonts_path</span> <span class="o">=</span> <span class="s2">&quot;/awesome/fonts&quot;</span>
+</div><div class='line'>    <span class="nv">css_dir</span> <span class="o">=</span> <span class="s2">&quot;public/awesome/stylesheets&quot;</span>
+</div><div class='line'> </div><div class='line'>    <span class="c"># Rakefile</span>
+</div><div class='line'>    <span class="nv">public_dir</span> <span class="o">=</span> <span class="s2">&quot;public/awesome&quot;</span>
+</div><div class='line'>    <span class="c"># If deploying with rsync, update your Rakefile path</span>
+</div><div class='line'>    <span class="nv">document_root</span> <span class="o">=</span> <span class="s2">&quot;~/yoursite.com/awesome&quot;</span>
+</div></pre></td></tr></table></div></figure>
 
   
 </article>

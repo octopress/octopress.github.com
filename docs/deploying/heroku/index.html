@@ -101,34 +101,30 @@
 
 <h2>Basic Octopress setup</h2>
 
-<p>First make sure you&#39;ve installed the <a href="https://toolbelt.heroku.com/">Heroku toolbelt</a>. (Note: the <code>heroku</code> gem is deprecated.)</p>
+<p>First make sure you&#39;ve installed the Heroku gem</p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>gem install heroku
+</div></pre></td></tr></table></div></figure>
 
 <p>Next create a heroku app for deployment. If this is your first time using Heroku, this command will ask for your account credentials,
 and automatically upload your public SSH key. If you don&#39;t already have a public key follow <a href="http://help.github.com/set-up-git-redirect/">Github&#39;s guide and create one</a>.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>heroku create
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>heroku create
+</div></pre></td></tr></table></div></figure>
 
 <p>This will create a new Heroku app for you to deploy to and add a git remote named &#39;heroku&#39;.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># Set heroku to be the default remote for push/fetch</span>
-</span><span class='line'>git config branch.master.remote heroku
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'><span class="c"># Set heroku to be the default remote for push/fetch</span>
+</div><div class='line'>git config branch.master.remote heroku
+</div></pre></td></tr></table></div></figure>
 
 <p>Edit the <code>.gitignore</code> in the root of your repository and remove <code>public</code>. This will let you add generated content for deploying it to Heroku.</p>
 
-<p>&lt;!&#8211;escape&#8211;&gt;<div class='escape-wrapper'><notextile>&lt;!&#8211;content&#8211;&gt;<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate
-</span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s1">&#39;site updated&#39;</span>
-</span><span class='line'>git push heroku master
-</span></code></pre></td></tr></table></div></figure>&lt;!&#8211;end-content&#8211;&gt;</notextile></div>&lt;!&#8211;end-escape&#8211;&gt;</p>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake generate
+</div><div class='line'>git add .
+</div><div class='line'>git commit -m <span class="s1">&#39;site updated&#39;</span>
+</div><div class='line'>git push heroku master
+</div></pre></td></tr></table></div></figure>
 
 <p>That&#39;s it, you just deployed to Heroku. If you want to set up a custom domain check out the <a href="http://devcenter.heroku.com/articles/custom-domains">docs at Heroku</a>.</p>
 
