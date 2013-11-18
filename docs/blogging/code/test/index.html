@@ -118,8 +118,19 @@ whats up
 </div><div class='line'><span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
 </div></pre></td></tr></table></div></figure>
 
-<figure class='code'><figcaption>Gist: 2219214<a href='https://gist.github.com/2219214'>Gist page</a></figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  rb'><pre><div class='line'><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;&lt;</span><span class="n">body</span><span class="o">&gt;</span><span class="no">You</span> <span class="n">are</span> <span class="n">being</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://github.com/gist/2219214&quot;</span><span class="o">&gt;</span><span class="n">redirected</span><span class="o">&lt;</span><span class="sr">/a&gt;.&lt;/</span><span class="n">body</span><span class="o">&gt;&lt;</span><span class="sr">/html&gt;</span>
-</div></pre></td></tr></table></div></figure>
+<div><script src='https://gist.github.com/2219214.js'></script>
+<noscript><pre><code>desc &quot;Edit a post (defaults to most recent)&quot;
+task :edit_post, :title do |t, args|
+  args.with_defaults(:title =&gt; false)
+  posts = Dir.glob(&quot;#{source_dir}/#{posts_dir}/*.*&quot;)
+  post = (args.title) ? post = posts.keep_if {|post| post =~ /#{args.title}/}.last : posts.last
+  if post
+    puts &quot;Opening #{post} with #{editor}...&quot;
+    system &quot;#{ENV[&#39;EDITOR&#39;]} #{post} &amp;&quot;
+  else
+    puts &quot;No posts were found with \&quot;#{args.title}\&quot; in the title.&quot;
+  end
+end</code></pre></noscript></div>
 
 <figure class='code'><figcaption>Testing PHP (syntax_test.php) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div><div data-line='21' class='line-number'></div><div data-line='22' class='line-number'></div><div data-line='23' class='line-number'></div><div data-line='24' class='line-number'></div><div data-line='25' class='line-number'></div><div data-line='26' class='line-number'></div><div data-line='27' class='line-number'></div><div data-line='28' class='line-number'></div><div data-line='29' class='line-number'></div></pre></td><td class='main  php'><pre><div class='line'><span class="cp">&lt;?php</span>
 </div><div class='line'><span class="k">require_once</span><span class="p">(</span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;g_campsiteDir&#39;</span><span class="p">]</span><span class="o">.</span> <span class="s2">&quot;/</span><span class="si">$ADMIN_DIR</span><span class="s2">/country/common.php&quot;</span><span class="p">);</span>
