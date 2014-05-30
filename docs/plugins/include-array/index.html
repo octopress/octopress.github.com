@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Include Array Plugin - Octopress</title>
+  <meta name="author" content="Brandon Mathis">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://octopress.org/docs/plugins/include-array/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml">
+  
+
+<!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul role=main-navigation>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/docs">Documentation</a></li>
+  <li><a href="/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Include Array Plugin</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-02T00:10:00-04:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2011</time></p>
+  </header>
+  
+  <p>This plugin was created for Octopress by <a href="http://www.woodwardjd.com">Jason Woodward</a> to make it possible to manage order of the sidebar partials from the <code>_config.yml</code>.
+This is mostly useful for those working on an Octopress theme.</p>
+
+<h3>First, How Partials Work</h3>
+
+<p>Jekyll allows you to include partials from the <code>/source/_includes</code> directory as follows:</p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'>    &#x7b;&#x25; raw %}&#x7b;&#x25; include partial.html %}&#x7b;&#x25; endraw %}
+</div></pre></td></tr></table></div></figure>
+
+<p>This will embed the contents of <code>/source/_includes/partial.html</code> in place of the snippet above.</p>
+
+<h3>Now, How Include Array Works</h3>
+
+<p>First add an array pointing to a list of partials underneath <code>/source/_includes</code></p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  yaml'><pre><div class='line'>    <span class="l-Scalar-Plain">asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/social.html</span><span class="p-Indicator">]</span>
+</div></pre></td></tr></table></div></figure>
+
+<p>Now from within a template you can render the partials from the yaml array like this.</p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'>    &#x7b;&#x25; raw %}&#x7b;&#x25; include_array asides %}&#x7b;&#x25; endraw %}
+</div></pre></td></tr></table></div></figure>
+
+<p>Octopress uses <code>include_array</code> to allow configuration of different sidebars for each layout.</p>
+
+  
+</article>
+
+
+
+</div>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+</body>
+</html>

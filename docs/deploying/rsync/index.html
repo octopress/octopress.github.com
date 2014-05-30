@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Deploying with rsync - Octopress</title>
+  <meta name="author" content="Brandon Mathis">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://octopress.org/docs/deploying/rsync/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml">
+  
+
+<!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul role=main-navigation>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/docs">Documentation</a></li>
+  <li><a href="/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Deploying With Rsync</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-10T17:53:00-04:00" pubdate data-updated="true">Sep 10<span>th</span>, 2011</time></p>
+  </header>
+  
+  <h2 id="rsync">Deploying with rsync via SSH</h2>
+
+<p>Add your server configurations to the <code>Rakefile</code> under Rsync deploy config. To deploy with rsync, be sure your public key is listed in your server&#39;s <code>~/.ssh/authorized_keys</code> file.</p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  ruby'><pre><div class='line'><span class="n">ssh_user</span>       <span class="o">=</span> <span class="s2">&quot;user@domain.com&quot;</span>
+</div><div class='line'><span class="n">document_root</span>  <span class="o">=</span> <span class="s2">&quot;~/website.com/&quot;</span>
+</div><div class='line'><span class="n">rsync_delete</span>   <span class="o">=</span> <span class="kp">true</span>
+</div><div class='line'><span class="n">deploy_default</span> <span class="o">=</span> <span class="s2">&quot;rsync&quot;</span>
+</div></pre></td></tr></table></div></figure>
+
+<p>Now if you run</p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake generate   <span class="c"># If you haven&#39;t generated your blog yet</span>
+</div><div class='line'>rake deploy     <span class="c"># Syncs your blog via ssh</span>
+</div></pre></td></tr></table></div></figure>
+
+<p>in your terminal, your <code>public</code> directory will be synced to your server&#39;s document root.</p>
+
+<h2 id="delete">Regarding rsync delete</h2>
+
+<p>If you choose to delete on sync, rsync will create a 1:1 match. Files will be added, updated <em>and deleted</em> from your deploy directory to mirror your local copy.</p>
+
+<p>If you do not choose to delete:</p>
+
+<ul>
+<li>You can store files beneath your site&#39;s deploy directory which aren&#39;t found in your local version.</li>
+<li>Files you have removed from your local site must be removed manually from the server.</li>
+</ul>
+
+<h3 id="exclude">Excluding files from sync</h3>
+
+<p>If you would like to keep your Octopress files synced but also want the convenience of keeping some files or directories on the server without having to mirror them locally, you can exclude them from rsync.</p>
+
+<p>When syncing, rsync can exclude files or directories locally or on the server. Simply add an <code>rsync-exclude</code> file to the root directory of your project like this:</p>
+
+<figure class='code'><figcaption>rsync-exclude</figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>some-file.txt
+</div><div class='line'>some-directory/
+</div><div class='line'>*.mp4
+</div></pre></td></tr></table></div></figure>
+
+<p>Note: using excludes will prevent rsync from uploading local files, or if the delete option is specified, it will prevent rsync from deleting excluded items on the server.</p>
+
+<h2>Version control</h2>
+
+<p>You&#39;ll want to keep your blog source in a remote git repository,
+so either <a href="https://github.com/repositories/new">set up a Github repository</a> or <a href="#self_hosted_git">host your own</a> and then do this.</p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'><span class="c"># Since you cloned Octopress, you&#39;ll need to change the origin remote</span>
+</div><div class='line'>git remote rename origin octopress
+</div><div class='line'>git remote add origin <span class="o">(</span>your repository url<span class="o">)</span>
+</div><div class='line'><span class="c"># set your new origin as the default branch</span>
+</div><div class='line'>git config branch.master.remote origin
+</div></pre></td></tr></table></div></figure>
+
+<h2 id="self_hosted_git">Host Your Own Remote Repository</h2>
+
+<p>If you want to set up a private git repository on your own server, here&#39;s how you&#39;d do it. You&#39;ll need SSH access to follow along.</p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>ssh user@host.com
+</div><div class='line'>mkdir -p git/octopress.git
+</div><div class='line'><span class="nb">cd </span>git/octopress.git
+</div><div class='line'>git init --bare
+</div><div class='line'><span class="nb">pwd</span>  <span class="c"># print the working directory, you&#39;ll need it below.</span>
+</div><div class='line'><span class="nb">logout</span>
+</div></pre></td></tr></table></div></figure>
+
+<p>The url for your remote repository is <code>ssh://user@host.com/(output of pwd above)</code></p>
+
+<h2>Deploying to a subdirectory</h2>
+
+<p>If for you wanted to host an Octopress blog at <code>http://yoursite.com/blog/</code> you would need to configure Octopress for <a href="/docs/deploying/subdir">deploying to a subdirectory</a>.</p>
+
+  
+</article>
+
+
+
+</div>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+</body>
+</html>
