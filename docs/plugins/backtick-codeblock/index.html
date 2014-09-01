@@ -94,14 +94,14 @@
   
 
 
-<time datetime="2011-07-26T23:42:00-04:00" pubdate data-updated="true">Jul 26<span>th</span>, 2011</time></p>
+<time datetime="2011-07-26T23:42:00-05:00" pubdate data-updated="true">Jul 26<span>th</span>, 2011</time></p>
   </header>
   
   <p>With the <code>backtick_codeblock</code> filter you can use Github&#39;s lovely back tick syntax highlighting blocks.
 Simply start a line with three back ticks followed by a space and the language you&#39;re using.</p>
 
 <h2>Syntax</h2>
-<div class="highlight"><pre><code class="text">``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
+<div class="highlight"><pre><code class="text">``` [language] [title] [url] [link text]
 code snippet
 ```
 </code></pre></div>
@@ -151,23 +151,6 @@ class Fixnum
     (&#39;1&#39; * self) !~ /^1?$|^(11+?)\1+$/
   end
 end
-```
-</code></pre></div>
-<p><strong>3.</strong> This example uses a custom starting line number and marks lines 52 and 54 through 55.</p>
-
-<figure class='code'><figcaption>Coffeescript Tricks</figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='51' class='line-number'></div><div data-line='52' class='line-number marked start end'></div><div data-line='53' class='line-number'></div><div data-line='54' class='line-number marked start'></div><div data-line='55' class='line-number marked end'></div></pre></td><td class='main  coffeescript'><pre><div class='line'><span class="c1"># Given an alphabet:</span>
-</div><div class='line marked start end'><span class="nv">alphabet = </span><span class="s">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
-</div><div class='line'> </div><div class='line marked start'><span class="c1"># Iterate over part of the alphabet:</span>
-</div><div class='line marked end'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">letter</span> <span class="k">for</span> <span class="nx">letter</span> <span class="k">in</span> <span class="nx">alphabet</span><span class="p">[</span><span class="mi">4</span><span class="p">..</span><span class="mi">8</span><span class="p">]</span>
-</div></pre></td></tr></table></div></figure>
-
-<p><em>The source:</em></p>
-<div class="highlight"><pre><code class="text">``` coffeescript Coffeescript Tricks start:51 mark:52,54-55
-# Given an alphabet:
-alphabet = &#39;abcdefghijklmnopqrstuvwxyz&#39;
-
-# Iterate over part of the alphabet:
-console.log letter for letter in alphabet[4..8]
 ```
 </code></pre></div>
 <h3>Other ways to embed code snippets</h3>

@@ -3,7 +3,7 @@
   <title><![CDATA[Octopress]]></title>
   <link href="http://octopress.org/atom.xml" rel="self"/>
   <link href="http://octopress.org/"/>
-  <updated>2014-07-13T22:21:14-04:00</updated>
+  <updated>2014-08-31T22:42:59-05:00</updated>
   <id>http://octopress.org/</id>
   <author>
     <name><![CDATA[Brandon Mathis]]></name>
@@ -20,7 +20,7 @@
 
 <title type="html"><![CDATA[Octopress 2.0 Surfaces]]></title>
 <link href="http://octopress.org/2011/07/23/octopress-20-surfaces/"/>
-<updated>2011-07-23T18:05:00-04:00</updated>
+<updated>2011-07-23T18:05:00-05:00</updated>
 <id>http://octopress.org/2011/07/23/octopress-20-surfaces</id>
 
       <content type="html"><![CDATA[<p>Octopress is a framework designed by <a href="http://brandonmathis.com">Brandon Mathis</a> for <a href="http://github.com/mojombo/jekyll">Jekyll</a>, the blog aware static site generator powering <a href="http://pages.github.com">Github Pages</a>.

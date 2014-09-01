@@ -96,7 +96,7 @@
 
 
   
-<time datetime="2011-07-22T09:13:00-04:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2011</time></p>
+<time datetime="2011-07-22T09:13:00-05:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2011</time></p>
   </header>
   
   <p>Import files on your filesystem into any blog post as embedded code snippets with syntax highlighting and a download link.
@@ -104,7 +104,7 @@ In the <code>_config.yml</code> you can set your <code>code_dir</code> but the d
 use the following tag to embed it in a post.</p>
 
 <h2>Syntax</h2>
-<div class="highlight"><pre><code class="text">{% include_code [title] [lang:language] path/to/file [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}
+<div class="highlight"><pre><code class="text">{% include_code [title] [lang:language] path/to/file %}
 </code></pre></div>
 <h3>Basic options</h3>
 
@@ -179,60 +179,6 @@ use the following tag to embed it in a post.</p>
 </code></pre></div>
 <p>This includes a file from <code>source/downloads/code/ruby/test.rb</code>.</p>
 
-<h3>Including part of a file</h3>
-
-<p><strong>3.</strong> Embed a file starting from a specific line.</p>
-
-<figure class='code'><figcaption>test.js<a href='/downloads/code/test.js'>view raw</a></figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div></pre></td><td class='main  js'><pre><div class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">idExpr</span>     <span class="o">=</span> <span class="sr">/^#/</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">tagExpr</span>    <span class="o">=</span> <span class="sr">/&lt;([\w:]+)/</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">slice</span>      <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="p">};</span>
-</div><div class='line'>    <span class="k">try</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">slice</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span><span class="p">;</span> <span class="p">}</span>
-</div><div class='line'>    <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span> <span class="nx">slice</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">ret</span><span class="o">=</span><span class="p">[];</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
-</div><div class='line'>        <span class="nx">ret</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span> <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span> <span class="p">};</span> <span class="p">}</span>
-</div><div class='line'> </div><div class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">x$</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">xui</span> <span class="o">=</span> <span class="nx">xui</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
-</div><div class='line'>    <span class="k">return</span> <span class="k">new</span> <span class="nx">xui</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">);</span>
-</div><div class='line'><span class="p">};</span>
-</div></pre></td></tr></table></div></figure>
-
-<p><em>The source:</em> </p>
-<div class="highlight"><pre><code class="text">{% include_code test.js start:10 %} 
-</code></pre></div>
-<p><strong>4.</strong> Embed a file ending at a specific line.</p>
-
-<figure class='code'><figcaption>test.js<a href='/downloads/code/test.js'>view raw</a></figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div></pre></td><td class='main  js'><pre><div class='line'><span class="cm">/**</span>
-</div><div class='line'><span class="cm">sample javascript from xui</span>
-</div><div class='line'><span class="cm">*/</span>
-</div><div class='line'> </div><div class='line'><span class="kd">var</span> <span class="kc">undefined</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">xui</span><span class="p">,</span>
-</div><div class='line'>    <span class="nb">window</span>     <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">string</span>     <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">),</span>
-</div><div class='line'>    <span class="nb">document</span>   <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
-</div></pre></td></tr></table></div></figure>
-
-<p><em>The source:</em></p>
-<div class="highlight"><pre><code class="text">{% include_code test.js end:10 %}
-</code></pre></div>
-<p><strong>5.</strong> Display only the lines in a specific range.</p>
-
-<figure class='code'><figcaption>test.js<a href='/downloads/code/test.js'>view raw</a></figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div></pre></td><td class='main  js'><pre><div class='line'><span class="kd">var</span> <span class="kc">undefined</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">xui</span><span class="p">,</span>
-</div><div class='line'>    <span class="nb">window</span>     <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">string</span>     <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">),</span>
-</div><div class='line'>    <span class="nb">document</span>   <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">idExpr</span>     <span class="o">=</span> <span class="sr">/^#/</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">tagExpr</span>    <span class="o">=</span> <span class="sr">/&lt;([\w:]+)/</span><span class="p">,</span>
-</div><div class='line'>    <span class="nx">slice</span>      <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="p">};</span>
-</div><div class='line'>    <span class="k">try</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">slice</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span><span class="p">;</span> <span class="p">}</span>
-</div><div class='line'>    <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span> <span class="nx">slice</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">ret</span><span class="o">=</span><span class="p">[];</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
-</div><div class='line'>        <span class="nx">ret</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span> <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span> <span class="p">};</span> <span class="p">}</span>
-</div></pre></td></tr></table></div></figure>
-
-<p><em>The source:</em></p>
-<div class="highlight"><pre><code class="text">{% include_code test.js range:5-16 %}
-</code></pre></div>
 <h3>Other ways to embed code snippets</h3>
 
 <p>You might also like to <a href="/docs/plugins/backtick-codeblock">use back tick code blocks</a> or <a href="/docs/plugins/gist-tag">embed GitHub gists</a>.</p>
