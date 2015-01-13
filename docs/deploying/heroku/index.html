@@ -118,7 +118,7 @@ and automatically upload your public SSH key. If you don&#39;t already have a pu
 </div><div class='line'>git config branch.master.remote heroku
 </div></pre></td></tr></table></div></figure>
 
-<p>Edit the <code>.gitignore</code> in the root of your repository and remove <code>public</code>. This will let you add generated content for deploying it to Heroku.</p>
+<p>Edit the <code>.gitignore</code> in the root of your repository by removing <code>public</code> and <code>Gemfile.lock</code>. This will let you add generated content for deploying it to Heroku.</p>
 
 <figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  sh'><pre><div class='line'>rake generate
 </div><div class='line'>git add .
@@ -139,7 +139,7 @@ and automatically upload your public SSH key. If you don&#39;t already have a pu
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Brandon Mathis -
+  Copyright &copy; 2015 - Brandon Mathis -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

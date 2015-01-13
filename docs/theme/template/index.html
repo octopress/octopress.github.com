@@ -119,6 +119,11 @@ If you&#39;d rather publish your blog index somewhere else like <code>blog/index
 <figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  ruby'><pre><div class='line'>    <span class="n">blog_index_dir</span> <span class="o">=</span> <span class="s1">&#39;source/blog&#39;</span>
 </div></pre></td></tr></table></div></figure>
 
+<p>Then you may also need to update <code>_config.yml</code> to specify the pagination path in order to generate the list of blog posts on the index page.</p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  ruby'><pre><div class='line'>    <span class="n">paginate_path</span><span class="p">:</span> <span class="s2">&quot;blog/posts/:num&quot;</span>
+</div></pre></td></tr></table></div></figure>
+
 <p>Remember to update the main navigation for your site, since currently the blog link points to <code>/</code>. Skip down to the section on <a href="#changing_navigation">changing navigation</a>, add a &#39;home&#39; link and update the &#39;blog&#39; link to point to <code>/blog/</code>.</p>
 
 <p>Finally, <code>source/index.html</code> can become the landing page of your wildest dreams.</p>
@@ -154,7 +159,10 @@ In the <code>_config.yml</code> you can rearrange these, create custom sidebars 
 <p>If you want to add a section to your sidebar, create a new file in <code>source/_includes/custom/asides/</code>.
 Since many people probably want to add an About Me section, there&#39;s already an <code>about.html</code> file in there waiting to be added. Here&#39;s a look.</p>
 
-<figure class='code'><figcaption>About Me (source/_includes/custom/asides/about.html) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'>File /Users/imathis/workspace/octodev/docs/.themes/classic/source/_includes/custom/asides/about.html could not be found
+<figure class='code'><figcaption>About Me (source/_includes/custom/asides/about.html) </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div></pre></td><td class='main  html'><pre><div class='line'><span class="nt">&lt;section&gt;</span>
+</div><div class='line'>    <span class="nt">&lt;h1&gt;</span>About Me<span class="nt">&lt;/h1&gt;</span>
+</div><div class='line'>    <span class="nt">&lt;p&gt;</span>A little something about me.<span class="nt">&lt;/p&gt;</span>
+</div><div class='line'><span class="nt">&lt;/section&gt;</span>
 </div></pre></td></tr></table></div></figure>
 
 <p>Whenever you add a section to the sidebar, follow this pattern, with a <code>&lt;section&gt;</code> block and an <code>&lt;h1&gt;</code> for a title. To add it to the sidebar, edit the <code>_config.yml</code> and add it to the list of asides.</p>
@@ -219,7 +227,7 @@ If you&#39;re deploying your site to a subdirectory like <code>yoursite.com/octo
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Brandon Mathis -
+  Copyright &copy; 2015 - Brandon Mathis -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
