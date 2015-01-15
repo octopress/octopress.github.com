@@ -3,7 +3,7 @@
   <title><![CDATA[Octopress]]></title>
   <link href="http://octopress.org/atom.xml" rel="self"/>
   <link href="http://octopress.org/"/>
-  <updated>2015-01-12T21:47:06-06:00</updated>
+  <updated>2015-01-15T13:46:48-06:00</updated>
   <id>http://octopress.org/</id>
   <author>
     <name><![CDATA[Brandon Mathis]]></name>
@@ -11,6 +11,92 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Octopress 3.0 is coming]]></title>
+<link href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/"/>
+<updated>2015-01-15T13:07:00-06:00</updated>
+<id>http://octopress.org/2015/01/15/octopress-3.0-is-coming</id>
+
+      <content type="html"><![CDATA[<p>The way Octopress is being distributed and maintained is nearing its end. There are many things I&#39;ve always disliked about how Octopress works. So before I talk about the exciting part, I&#39;d like to tell you what&#39;s wrong with Octopress.</p>
+
+<h3>What&#39;s wrong?</h3>
+
+<p>If I&#39;m being harsh, I&#39;ll tell you that as it is now, Octopress is basically some guy&#39;s Jekyll blog you can fork and modify. The first, and most obvious flaw, is that Octopress is distributed through Git. I want to punch through a wall when I think about users wrestling with merge conflicts from updating their sites. It’s absurd.</p>
+
+<p>Octopress is released a single product, but it&#39;s a collection of plugins and configurations which are hard to disentangle. if you want to change or remove anything you&#39;re leaving the &quot;golden path&quot; and updates will be painful, if not impossible — short of copy and paste. Even <em>I</em> can&#39;t remove things from Octopress. If I want to stop maintaining a plugin it will also disappear for anyone who updates. While some have suggested using Git tags as a kind of steam-punk versioning, that simply will not solve the real problem. This isn&#39;t how software products should be distributed. Git is for collaborators; not users.</p>
+
+<p>Then there are the themes. I planned to create a system for distributing themes independently from Octopress, but I hadn’t solved it when I released 2.0. Even then, I&#39;ve come across quite a few websites with Octopress theme galleries. While there are some nice ones, they are all distributed through git and installed with an ill-conceived rake task that was never meant to be used for this. All of this is a constant reminder that many people are spending time building on my mistakes.</p>
+
+<p><span class='pullquote-right' data-pullquote='the part I dislike the most is the notion that Octopress and Jekyll are different communities.'>However, the part I dislike the most is the notion that Octopress and Jekyll are different communities. Because Octopress is single product with a theme, plugins, and command line automation, the best I could offer the Jekyll community was a pile of source code. It was effectively a salvage yard of ideas on Jekyll blogging.</span></p>
+
+<p>I&#39;ve spent the two and a half years working on the next version of Octopress. Two years ago, Parker Moore joined the team and with his help. I’ve finally built something I’m proud of.</p>
+
+<h3>What&#39;s coming?</h3>
+
+<p>This release is a full rewrite. Octopress as it is now will be replaced by a selection of gems, each semantically versioned with is own documentation and tests. Of the gems I’ve written for this release, some are replacements for plugins that were originally integrated into Octopress and others are completely new. I will be working on a migration guide for current Octopress users, but each plugin can be used on any Jekyll site. <strong>There will no longer be a division between Octopress and Jekyll.</strong></p>
+
+<p>Here’s a brief overview of the core components of the new Octopress.</p>
+
+<p><strong>The Octopress CLI</strong> replaces the old Rakefile and has some new tricks too. With <a href="https://github.com/octopress/octopress">octopress</a> and the <a href="https://github.com/octopress/deploy">octopress-deploy</a> gem you can:</p>
+
+<ul>
+<li>Quickly create new pages, posts, drafts, and collections.</li>
+<li>Upgrade your drafts workflow with the <code>publish</code> and <code>unpublish</code> commands.</li>
+<li>Use templates, like: <code>octopress new post --template sponsor</code>.</li>
+<li>Deploy via Git, Rsync, and S3.</li>
+<li>View local documentation with the <code>docs</code> command.</li>
+</ul>
+
+<p>That last one is actually pretty neat. Each Octopress gem integrates its documentation with the Octopress CLI so when you run <code>octopress docs</code> from your site, you’ll see the documentation for the exact version of every plugin your site is using. Switch to a different site with different plugins and you’ll see a different docs site. Third-party gem-based plugin can easily integrate their documentation too. I’m even using this documentation system to build the new Octopress website.</p>
+
+<p><a href="https://github.com/octopress/ink">Octopress Ink</a> is a framework I’ve built for helping plugin authors rapidly build powerful plugins and themes for Jekyll sites. It has some crazy cool features.</p>
+
+<ul>
+<li>Plugins are easily installed and removed; they only affect the build. A user&#39;s source is left alone.</li>
+<li>Use a plugin&#39;s layouts, includes, pages and files right from the gem, for example: <code>&#123;% include twitter:feed.html %&#125;</code>.</li>
+<li>Plugin Javascripts, Stylesheets, images, fonts, etc. are easily integrated.</li>
+<li>Each plugin’s javascripts and stylesheets are compiled, compressed, and fingerprinted automatically.</li>
+<li>Users can override or disable any component of a plugin.</li>
+<li>Each plugin is configured independently at <code>_plugins/plugin_name/config.yml</code>, so no more pollution of Jekyll&#39;s _config.yml.</li>
+<li>Generate a plugin scaffold with <code>octopress ink new &lt;PLUGIN_NAME&gt;</code> and build powerful, gem-based plugins quickly.</li>
+</ul>
+
+<p>In order to remain sane working on all this, I created some new developer tools as well. If you are building Jekyll plugins or even just working with advanced templates, these should be helpful.</p>
+
+<p><a href="https://github.com/imathis/clash">Clash</a> is a simple static-site test suite. It can build Jekyll sites with different configurations and it compares output with a simple but powerful diff system.</p>
+
+<p><a href="https://github.com/octopress/debugger">Octopress Debugger</a> lets you add a Liquid tag <code>&#123;% debug %&#125;</code>, to your sites and interact with the <code>site</code>, <code>page</code> and, <code>scopes</code> instances in an interactive ruby console. This makes it easy to see how variables are set, or even step through a for loop. It’s a cool way to see what Jekyll is doing under the hood as it builds your site.</p>
+
+<p>Finally, I’m working on a new theme. It’s called “Octopress Genesis”, and it will demonstrate many of the features of Octopress Ink and set a pattern for how Jekyll themes should be created. Once that’s finished, I’ll use it for the new docs site and launch this beast.</p>
+
+<p>There’s a lot more — around 30 gems at this point — and if you’re curious, you can browse the <a href="https://github.com/octopress">Octopress organization on GitHub</a>. Quite a few people have been using these plugins already and their issues and pull-requests have been a great help.</p>
+
+<h3>The release plan</h3>
+
+<p>For the release, I plan to do the following:</p>
+
+<ol>
+<li>Finish Octopress Genesis</li>
+<li>Write a migration guide</li>
+<li>Move the <code>master</code> branch to the <code>legacy</code> branch for maintenance releases and modify rake tasks accordingly.</li>
+<li>Move <code>imathis/octopress</code> to the Octopress org on GitHub.</li>
+<li>Release the new docs site.</li>
+<li>Release Octopress as 3.0 and Octopress Ink as 1.0</li>
+</ol>
+
+<p>After the release, I will begin closing out issues and pull requests that can be resolved by replacing old plugins with gems. Anyone who wants to help with that effort will earn a special place in my heart. Working on the “legacy codebase” is very challenging and I intend to avoid anything but critical updates in the future.</p>
+
+<p>Thanks to everyone for your help, encouragement, and patience as I figure out what I’m doing in public. I can’t wait to ship this and I look forward to a bright future with a better Octopress.</p>
+
+<p>— Brandon Mathis</p>
+<p><a rel="bookmark" href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
